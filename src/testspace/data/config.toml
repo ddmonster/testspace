@@ -1,0 +1,2 @@
+[database]
+SQLALCHEMY_DATABASE_URL = "sqlite:///{data}\\testspace.db"

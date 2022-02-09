@@ -1,0 +1,7 @@
+/.venv
+*.pyc
+/dist
+/.vscode
+/src/*.egg-info
+*.db
+/src/alembic

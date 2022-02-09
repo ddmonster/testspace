@@ -1,0 +1,4 @@
+global-exclude *.pyc
+graft src/data
+prune src/alembic
+exclude src/alembic.ini
