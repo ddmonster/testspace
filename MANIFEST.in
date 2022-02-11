@@ -1,4 +1,5 @@
-global-exclude *.pyc
-graft src/data
 prune src/alembic
+graft src/testspace
 exclude src/alembic.ini
+global-exclude *.pyc
+global-exclude __pycache__

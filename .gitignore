@@ -1,7 +1,6 @@
 /.venv
 *.pyc
 /dist
-/.vscode
+/.vscode/launch.json
 /src/*.egg-info
 *.db
-/src/alembic

@@ -16,6 +16,8 @@ DATA_DIR = set_data_dir(env)
 
 PROJECT_DATA_DIR = PACKAGE_PATH.joinpath("data")
 
+INDEX_PATH = PROJECT_DATA_DIR.joinpath("html")
+
 config_toml = toml.load(PROJECT_DATA_DIR.joinpath("config.toml"))
 
 class TomlConfig:
@@ -33,3 +35,7 @@ class TomlConfig:
 
 tomlconfig = TomlConfig(PROJECT_DATA_DIR.joinpath("config.toml"))
 tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"] = tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"].format(data=PROJECT_DATA_DIR)
+
+
+
+app_key = "asdasd"

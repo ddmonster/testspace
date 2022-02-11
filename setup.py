@@ -31,5 +31,6 @@ setup(
         "sqlalchemy",
         "toml",
         "environs",
+        "python-multipart"
     ],
 )

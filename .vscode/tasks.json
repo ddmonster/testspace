@@ -1,0 +1,46 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "alembic setup database",
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m alembic revision --autogenerate -m ${input:message} && ${command:python.interpreterPath} -m alembic upgrade head",
+            "windows": {
+                "command": "${command:python.interpreterPath} -m alembic revision --autogenerate -m ${input:message} && ${command:python.interpreterPath} -m alembic upgrade head "
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/src"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "build python pakage",
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m build",
+            "windows": {
+                "command": "${command:python.interpreterPath} -m build"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "message",
+            "description": "message:",
+            "default": "Hello",
+            "type": "promptString"
+        },
+    ]
+}
