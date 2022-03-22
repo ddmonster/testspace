@@ -1,68 +1,68 @@
-from typing import Dict
+from typing import Dict, Optional
+
+from sqlalchemy import Column, DateTime, Integer, Table
 from testspace.db.base_class import Base
-from testspace.db.session import get_session, Query
-import math
-from uuid import UUID
-class TableCRUD:
-    @classmethod
-    def page(cls, page:int, page_size=100):
-        r'''
-        get specific page from table
+from sqlalchemy.ext.declarative import declared_attr
+from sqlalchemy.dialects.postgresql import UUID
+# https://docs.sqlalchemy.org/en/14/dialects/postgresql.html#dialect-postgresql
 
-        Args:
-            page:       start from 0 if extend the edge will raise Exception("out of page size")
-            page_size:  defult 100 use to count the total pages all_rows/page_size
-        '''
-        _pages = math.ceil(cls.row_count()/page_size) - 1
-        if page > _pages:
-            raise Exception("out of page size")
-        with get_session() as session:
-            return session.query(cls).offset(page*page_size).limit(page_size).all()
+import datetime
+import json
+def curtime():
+    return datetime.datetime.now()
+def uuid_v4():
+    import uuid
+    return str(uuid.uuid4())
+    
+def json_str_to_dict(json_str:str)->dict:
+    return json.loads(json_str)
 
-    @classmethod
-    def page_description(cls,  page_size=100):
-        rows = cls.row_count()
-        return {
-            "total_items": rows,
-            "max_index": math.ceil(rows/page_size) - 1,
-            "page_size": page_size
-        }
+def dict_to_json_str(dict_obj:dict)->str:
+    return json.dumps(dict_obj)
+class BaseMixin(object):
+    '''
+    Note: make class name as table name
+    __name__: str
+    __db_prefix__: Optional[str] = None
+    __table__:Table
+    __table_args__ = {"extend_existing":True}
 
-    @classmethod
-    def row_count(cls):
-        with get_session() as session:
-            return session.query(cls).count()
+    internal columns:
+    
+        id = Column(Integer, primary_key=True)
+        
+        uuid = Column(UUID, unique=True, nullable=False, default=uuid_v4)
+        
+        created_at = Column(DateTime, default=curtime)
+        
+        updated_at = Column(DateTime, default=curtime, onupdate=curtime)
+        
+        update_by = Column(UUID)
+        
+        create_by = Column(UUID)
 
-    @classmethod
-    def select_by_uuid(cls, uuid:UUID):
-        with get_session() as session:
-            item = cls._get_item_by_uuid(session, uuid).first()
-            if not item:
-                raise Exception(f"no such item {uuid} in {cls.__name__}")
-            return item
+    '''
+    __name__: str
+    __db_prefix__: Optional[str] = None
+    __table__:Table
+    __table_args__ = {"extend_existing":True}
 
-    @classmethod
-    def update_item(cls, uuid, **kw):
-        with get_session() as session:
-            query = session.query(cls).filter_by(uuid=uuid.__str__())
-            item = query.first()
-            if not item:
-                raise Exception(f"no such item {uuid} in {cls.__name__}")
+    id = Column(Integer, primary_key=True)
+    uuid = Column(UUID(as_uuid=True), unique=True, nullable=False, default=uuid_v4)
+    created_at = Column(DateTime, default=curtime)
+    updated_at = Column(DateTime, default=curtime, onupdate=curtime)
+    update_by = Column(UUID(as_uuid=True))
+    create_by = Column(UUID(as_uuid=True))
+    
+    # Generate __tablename__ automatically
+    @declared_attr
+    def __tablename__(cls) -> str:
+        if getattr(cls, '__db_prefix__', None):
+            return f"{cls.__db_prefix__}_{cls.__name__}".lower()
+        return cls.__name__.lower()
 
-            query.update(kw)
-            session.commit()
-            session.refresh(item)
-            return item
 
-    @classmethod
-    def add(cls, obj):
-        with get_session() as session:
-            session.add(obj)
-            session.commit()
-            session.refresh(obj)
-        return obj
 
-    @classmethod
-    def _get_item_by_uuid(cls,session,uuid) -> Query:
-        return session.query(cls).filter_by(uuid=uuid.__str__())
+
+
         

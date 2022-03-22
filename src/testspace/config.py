@@ -34,7 +34,8 @@ class TomlConfig:
         return str(self._dict)
 
 tomlconfig = TomlConfig(PROJECT_DATA_DIR.joinpath("config.toml"))
-tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"] = tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"].format(data=PROJECT_DATA_DIR)
+if tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"].startswith('sqlite'):
+    tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"] = tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"].format(data=PROJECT_DATA_DIR)
 
 
 

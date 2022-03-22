@@ -1,6 +1,4 @@
 /.venv
 *.pyc
 /dist
-/.vscode/launch.json
 /src/*.egg-info
-*.db

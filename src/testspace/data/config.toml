@@ -1,2 +1,3 @@
 [database]
-SQLALCHEMY_DATABASE_URL = "sqlite:///{data}\\testspace.db"
+# SQLALCHEMY_DATABASE_URL = "sqlite:///{data}\\testspace.db"
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:1996222@localhost:5432/postgres"

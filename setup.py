@@ -29,8 +29,14 @@ setup(
         "fastapi",
         "uvicorn",
         "sqlalchemy",
+        "psycopg2"
         "toml",
         "environs",
-        "python-multipart"
+        "python-multipart",
+        "alembic",
+        "fastapi_websocket_pubsub",
+        "python-jose",
+        "passlib[bcrypt]",
+        'loguru'
     ],
 )

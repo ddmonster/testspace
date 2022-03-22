@@ -4,19 +4,38 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "alembic setup database",
+            "label": "alembic generate script",
             "type": "shell",
-            "command": "${command:python.interpreterPath} -m alembic revision --autogenerate -m ${input:message} && ${command:python.interpreterPath} -m alembic upgrade head",
+            "command": "${command:python.interpreterPath} -m alembic revision --autogenerate -m \"${input:message}\" ",
             "windows": {
-                "command": "${command:python.interpreterPath} -m alembic revision --autogenerate -m ${input:message} && ${command:python.interpreterPath} -m alembic upgrade head "
+                "command": "$env:PYTHONPATH;${command:python.interpreterPath} -m alembic revision --autogenerate -m ${input:message}  "
             },
             "options": {
-                "cwd": "${workspaceFolder}/src"
+                "cwd": "${workspaceFolder}",
+                // "PYTHONPATH": "${workspaceFolder}\\src\\testspace;${workspaceFolder}\\tests;"
             },
             "presentation": {
                 "reveal": "always",
                 "panel": "new"
-            }
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "alembic commit change",
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m alembic upgrade head",
+            "windows": {
+                "command": "$env:PYTHONPATH;${command:python.interpreterPath}  -m alembic upgrade head"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}",
+                // "PYTHONPATH": "${workspaceFolder}\\src\\testspace;${workspaceFolder}\\tests;"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
         },
         {
             "label": "build python pakage",

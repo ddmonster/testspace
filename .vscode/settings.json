@@ -1,0 +1,7 @@
+{"terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder}\\src;${workspaceFolder}\\tests;"
+
+
+}
+
+}
