@@ -10,7 +10,7 @@ def set_page_enable_api(router:APIRouter, cls, ItemProps: BaseModel):
     """
     @router.get("/page/description", response_model=PageDescription )
     @router.get("/page/{index}", response_model=List[ItemProps])
-    @router.get("/{uuid}", response_model=ItemProps)
+
     """
     @router.get("/page/description", response_model=PageDescription )
     async def  get_page_description(page_size:Optional[int]=None, session: Session = Depends(get_db)):
@@ -26,7 +26,7 @@ def set_page_enable_api(router:APIRouter, cls, ItemProps: BaseModel):
                 return R_page(session ,cls,index,page_size)
             return R_page(session ,cls,index)
 
-    @router.get("/item/{uuid}", response_model=ItemProps)
-    async def get_Item_by_uuid(uuid: UUID,session: Session = Depends(get_db)):
-        with session.begin() as s :
-            return R_get_by_uuid(session ,cls,uuid)
+    # @router.get("/item/{uuid}", response_model=ItemProps)
+    # async def get_Item_by_uuid(uuid: UUID,session: Session = Depends(get_db)):
+    #     with session.begin() as s :
+    #         return R_get_by_uuid(session ,cls,uuid)

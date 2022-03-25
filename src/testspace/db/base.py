@@ -1,4 +1,4 @@
-from .base_class import Base
+from testspace.db.base_class import Base
 from pathlib import Path
 import importlib
 
@@ -16,4 +16,4 @@ for mod in cur_path.iterdir():
     importlib.import_module(f'testspace.models.{mod_name}')
 if __name__ == "__main__":
     from testspace.db.session import engine
-    Base.metadata.create_all(bind = engine)
+    Base.metadata.create_all(bind = engine, checkfirst=True)

@@ -1,10 +1,8 @@
-import asyncio
-import imp
 import logging
 from fastapi import FastAPI, APIRouter
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, RedirectResponse
-from testspace.config import INDEX_PATH
+from testspace.config import ROOT_PATH
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from testspace.components.middleware import error_handler
@@ -31,9 +29,10 @@ async def startup_event():
     with openSession() as s:
         admin = R_get_user_by_name(s,'admin')
         if admin is None:
+            pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
             user = CreateUser(username='admin',\
                 accountname="Admin",\
-                    email='', password="123",admin=True)
+                    email='', password=pwd_context.hash("123"),admin=True)
             C_create_user(s,create_schema=user)
 
 # error_handler(app)
@@ -92,11 +91,11 @@ app.add_middleware(
 
 
 # Index
-app.mount("/static",StaticFiles(directory=INDEX_PATH),"static")
+app.mount("/static",StaticFiles(directory=ROOT_PATH),"static")
 
 @app.get("/index", response_class=HTMLResponse)
 def index():
-    index = INDEX_PATH.joinpath("index.html")
+    index = ROOT_PATH.joinpath("index.html")
     if index.exists():
         return index.read_text()
     else:

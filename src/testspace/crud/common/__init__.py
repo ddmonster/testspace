@@ -21,8 +21,10 @@ def R_page(s: Session, cls:DBModels, page:int, page_size=100) -> List[DBModels]:
     '''
     row_count = s.query(cls).count()
     _pages = math.ceil(row_count/page_size) - 1
+    if _pages == -1:
+        return []
     if page > _pages:
-        raise Exception("out of page size")
+        raise Exception(f"out of page size max:{_pages}")
     return s.query(cls).offset(page*page_size).limit(page_size).all()
 
 def R_page_description(s: Session,cls:DBModels,  page_size=100)-> PageDescription:

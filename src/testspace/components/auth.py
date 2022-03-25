@@ -12,7 +12,7 @@ from testspace.crud.user import R_get_user_by_name
 from testspace.db.session import  openSession
 from testspace.schemas.user import UserProps
 from testspace.log import logger
-
+from testspace.config import SECRET_KEY
 class Token(BaseModel):
     access_token: str
     token_type: str
@@ -21,10 +21,10 @@ class TokenData(BaseModel):
     username: Optional[str] = None
 
 
-SECRET_KEY = "5aaca26c7bb7d1d8d2312498006db19cfe3953152a2541ab725ce8098c7d506c"
+
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 720
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def get_user_by_name(name:str):
@@ -63,7 +63,7 @@ async def get_current_user(auth_token: Optional[str]= Cookie(None)):
     )
     if auth_token is None:
         raise credentials_exception
-   
+
     try:
         payload = jwt.decode(auth_token, SECRET_KEY, algorithms=[ALGORITHM])
         username: str = payload.get("sub")
@@ -79,7 +79,7 @@ async def get_current_user(auth_token: Optional[str]= Cookie(None)):
     return user
 
 def set_auth(app:FastAPI):
-    @app.post("/token",tags=["login"])
+    @app.post("/login",tags=["user login"])
     async def login(response: Response, form_data: OAuth2PasswordRequestForm = Depends()):
         user = authenticate_user(form_data.username, form_data.password)
         if not user:
@@ -106,7 +106,7 @@ def set_auth(app:FastAPI):
 
     @app.middleware("http")
     async def auth_get(request:Request, call_next):
-        '''extract user from incomming request and set header "authorized-user: [username]"   '''
+        '''extract user from incomming request cookie and set header "authorized-user: [username]"   '''
         path = request.url.path
         if path not in ["/redoc","/docs","/index","/openapi.json","/token","/"]:
             # pass

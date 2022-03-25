@@ -16,7 +16,7 @@ DATA_DIR = set_data_dir(env)
 
 PROJECT_DATA_DIR = PACKAGE_PATH.joinpath("data")
 
-INDEX_PATH = PROJECT_DATA_DIR.joinpath("html")
+ROOT_PATH = PROJECT_DATA_DIR.joinpath("html")
 
 config_toml = toml.load(PROJECT_DATA_DIR.joinpath("config.toml"))
 
@@ -37,6 +37,6 @@ tomlconfig = TomlConfig(PROJECT_DATA_DIR.joinpath("config.toml"))
 if tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"].startswith('sqlite'):
     tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"] = tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"].format(data=PROJECT_DATA_DIR)
 
-
+SECRET_KEY = "5aaca26c7bb7d1d8d2312498006db19cfe3953152a2541ab725ce8098c7d506c"
 
 app_key = "asdasd"
