@@ -12,7 +12,7 @@ class Testcase(Base, BaseMixin):
     suites = UUIDList()
     lables = StringList()
     deleted = Column(Boolean, default=False)
-
+    enums = JsonText()
 class TestSuite(Base, BaseMixin):
     name = Column(String)
     description = Column(Text)
@@ -22,4 +22,5 @@ class TestSuite(Base, BaseMixin):
 class TestPlan(Base, BaseMixin):
     name = Column(String)
     description = Column(Text)
+    enums = JsonText()
 

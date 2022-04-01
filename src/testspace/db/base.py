@@ -14,6 +14,10 @@ for mod in cur_path.iterdir():
     elif mod.name != '__pycache__' or mod.name != '__init__.py':
         continue
     importlib.import_module(f'testspace.models.{mod_name}')
+    
+def create_schema():
+    from testspace.db.session import engine
+    Base.metadata.create_all(bind = engine, checkfirst=True)
 if __name__ == "__main__":
     from testspace.db.session import engine
     Base.metadata.create_all(bind = engine, checkfirst=True)

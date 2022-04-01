@@ -1,4 +1,5 @@
 import logging
+from sys import prefix
 from fastapi import FastAPI, APIRouter
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, RedirectResponse
@@ -25,8 +26,10 @@ from testspace.db.session import openSession
 app = FastAPI()
 @app.on_event("startup")
 async def startup_event():
-    set_auth(app)
+    
     with openSession() as s:
+        from testspace.db.base import create_schema
+        create_schema()
         admin = R_get_user_by_name(s,'admin')
         if admin is None:
             pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -35,12 +38,13 @@ async def startup_event():
                     email='', password=pwd_context.hash("123"),admin=True)
             C_create_user(s,create_schema=user)
 
-# error_handler(app)
-
+error_handler(app)
+set_auth(app)
 
 # router
 def register_routers(app: FastAPI):
     import importlib
+    router = APIRouter(prefix="/api")
     cur_path = Path(__file__).parent.joinpath("api")
     # get all modules in the routers package
     have_router = lambda module: isinstance(module.router, APIRouter) if hasattr(module,'router') else False
@@ -53,7 +57,9 @@ def register_routers(app: FastAPI):
             continue
         module = importlib.import_module(f'testspace.api.{mod_name}')
         if have_router(module):
-            app.include_router(module.router,prefix=f"/{mod_name}")
+            router.include_router(module.router,prefix=f"/{mod_name}")
+            
+    app.include_router(router)
 register_routers(app)
 
 
@@ -78,6 +84,7 @@ logging.getLogger('sqlalchemy.engine').setLevel(logging.DEBUG)
 # CROS
 origins = [
     "http://localhost",
+    "http://127.0.0.1:3000",
     "http://localhost:3000",
 ]
 

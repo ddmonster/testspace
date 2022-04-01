@@ -53,7 +53,7 @@ class TestSuitProps(UseORM, CommonProps):
 class TestSuitCreate(BaseModel):
     name:str
     description: str
-    enums: dict
+    enums: Optional[dict]
     create_by: Optional[UUID]
     testplans:List[UUID]
 class TestSuitUpdate(BaseModel):
@@ -67,16 +67,17 @@ class TestSuitUpdate(BaseModel):
 class TestPlanProps(UseORM,CommonProps):
     name: str
     description:str
-
+    enums:dict
 class TestPlanCreate(BaseModel):
     name: str
     description:str
     create_by:UUID
-    
+    enums: Optional[dict]
 class TestPlanUpdate(BaseModel):
     name: Optional[str]
     description:Optional[str]
     update_by:Optional[UUID]
+    enums: Optional[dict]
     
 
 

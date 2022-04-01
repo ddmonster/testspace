@@ -9,8 +9,7 @@ class User(Base, BaseMixin):
     email = Column(String, index=True,)
     active = Column(Boolean, default=False)
     admin = Column(Boolean, default=False)
-
-            
+    
 
     def __repr__(self):
         return "<User {}>".format(self.username)

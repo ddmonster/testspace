@@ -20,7 +20,9 @@ class Token(BaseModel):
 class TokenData(BaseModel):
     username: Optional[str] = None
 
-
+class LoginArgs(BaseModel):
+    username:str
+    password:str
 
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 720
@@ -55,17 +57,17 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
-async def get_current_user(auth_token: Optional[str]= Cookie(None)):
+async def get_current_user(access_token: Optional[str]= Cookie(None)):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
         headers={"WWW-Authenticate": "Bearer"},
     )
-    if auth_token is None:
+    if access_token is None:
         raise credentials_exception
 
     try:
-        payload = jwt.decode(auth_token, SECRET_KEY, algorithms=[ALGORITHM])
+        payload = jwt.decode(access_token, SECRET_KEY, algorithms=[ALGORITHM])
         username: str = payload.get("sub")
         print(payload)
         if username is None:
@@ -79,8 +81,8 @@ async def get_current_user(auth_token: Optional[str]= Cookie(None)):
     return user
 
 def set_auth(app:FastAPI):
-    @app.post("/login",tags=["user login"])
-    async def login(response: Response, form_data: OAuth2PasswordRequestForm = Depends()):
+    @app.post("/login", tags=["user login"], response_model=Token)
+    async def login(response: Response, form_data: LoginArgs):
         user = authenticate_user(form_data.username, form_data.password)
         if not user:
             raise HTTPException(
@@ -92,31 +94,28 @@ def set_auth(app:FastAPI):
         access_token = create_access_token(
             data={"sub": user.username}, expires_delta=access_token_expires
         )
-        response.set_cookie(key="auth_token",value=access_token)
+        response.set_cookie(key="access_token", value=access_token)
         return {"access_token": access_token, "token_type": "bearer"}
 
 
-    @app.get("/users/me", response_model=UserProps)
-    async def read_users_me(authorized_user: Optional[str] = Header(None)):
-        '''  return current login user '''
-        logger.info(authorized_user)
-        return get_user_by_name(authorized_user)
 
 
 
     @app.middleware("http")
     async def auth_get(request:Request, call_next):
-        '''extract user from incomming request cookie and set header "authorized-user: [username]"   '''
+        '''  '''
         path = request.url.path
-        if path not in ["/redoc","/docs","/index","/openapi.json","/token","/"]:
+        if path not in ["/redoc","/docs","/index","/openapi.json","/login","/"] and request.method != "OPTIONS":
             # pass
             try:
-                user = await get_current_user(request.cookies.get("auth_token"))
-                logger.info(f"{request.cookies.get('auth_token')} >>>>>>>>>")
+                token = request.cookies.get("access_token")
+                if token is None:
+                    token = request.headers.get("access_token",default=None)
+                user = await get_current_user(token)
+                logger.info(f"{request.cookies.get('access_token')} >>>>>>>>>")
             except HTTPException as e:
                 return Response(e.detail,status_code=e.status_code,headers=e.headers)
             request.headers.__dict__["_list"].append(("authorized-user".encode(),f"{user.username}".encode()))
-            logger.info(f"{user.username} >>>>>>>>>")
         response = await call_next(request)
 
         return response
