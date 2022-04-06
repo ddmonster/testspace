@@ -10,17 +10,19 @@ class Testcase(Base, BaseMixin):
     affect = StringList()
     component = StringList()
     suites = UUIDList()
-    lables = StringList()
+    labels = StringList()
     deleted = Column(Boolean, default=False)
     enums = JsonText()
 class TestSuite(Base, BaseMixin):
     name = Column(String)
     description = Column(Text)
     enums = JsonText()
+    labels = StringList()
     testplans = UUIDList()
     
 class TestPlan(Base, BaseMixin):
     name = Column(String)
     description = Column(Text)
+    labels = StringList()
     enums = JsonText()
 

@@ -19,6 +19,8 @@ def R_page(s: Session, cls:DBModels, page:int, page_size=100) -> List[DBModels]:
         page:       start from 0 if extend the edge will raise Exception("out of page size")
         page_size:  defult 100 use to count the total pages all_rows/page_size
     '''
+    if page_size == -1:
+        return s.query(cls).all()
     row_count = s.query(cls).count()
     _pages = math.ceil(row_count/page_size) - 1
     if _pages == -1:
@@ -28,10 +30,11 @@ def R_page(s: Session, cls:DBModels, page:int, page_size=100) -> List[DBModels]:
     return s.query(cls).offset(page*page_size).limit(page_size).all()
 
 def R_page_description(s: Session,cls:DBModels,  page_size=100)-> PageDescription:
-    row_count =  s.query(cls).count()
-    if page_size == -1:
-        return PageDescription(total_items= row_count,page_size = page_size,max_index=0)
-    return PageDescription(total_items= row_count,page_size = page_size,max_index=math.ceil(row_count/page_size) - 1)
+    with s.begin():
+        row_count =  s.query(cls).count()
+        if page_size == -1:
+            return PageDescription(total_items= row_count,page_size = page_size,max_index=0)
+        return PageDescription(total_items= row_count,page_size = page_size,max_index=math.ceil(row_count/page_size) - 1)
 
 def R_get_by_uuid(s: Session, cls:DBModels, uuid) -> Union[None, DBModels]:
     rs = s.query(cls).filter_by(uuid=uuid).first()

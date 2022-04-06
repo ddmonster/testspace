@@ -16,8 +16,8 @@ for mod in cur_path.iterdir():
     importlib.import_module(f'testspace.models.{mod_name}')
     
 def create_schema():
-    from testspace.db.session import engine
+    from testspace.db.Session import engine
     Base.metadata.create_all(bind = engine, checkfirst=True)
 if __name__ == "__main__":
-    from testspace.db.session import engine
+    from testspace.db.Session import engine
     Base.metadata.create_all(bind = engine, checkfirst=True)

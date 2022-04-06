@@ -7,37 +7,34 @@ from testspace.config import ROOT_PATH
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from testspace.components.middleware import error_handler
-from testspace.components.auth import set_auth
+from testspace.components.auth import set_auth,pwd_context
+from testspace.components.cache import register_redis
 from passlib.context import CryptContext
 from testspace.models.user import User
 from testspace.schemas.user import CreateUser
 from loguru import logger
 from testspace.crud.user import R_get_user_by_name, C_create_user
 from testspace.schemas.user import CreateUser
-from testspace.db.session import openSession
-# if User.get("admin") is None:
-#     pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-#     password = pwd_context.hash("123456")
-#     user = User(**CreateUser(username="admin", accountname="Admin",email="aaa@aa.com",password=password, admin=True).dict())
-#     user.flush()
-
+from testspace.db.Session import openSession
 
 
 app = FastAPI()
+
+
 @app.on_event("startup")
 async def startup_event():
-    
     with openSession() as s:
-        from testspace.db.base import create_schema
+        from testspace.db.Base import create_schema
         create_schema()
         admin = R_get_user_by_name(s,'admin')
         if admin is None:
-            pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
             user = CreateUser(username='admin',\
                 accountname="Admin",\
                     email='', password=pwd_context.hash("123"),admin=True)
             C_create_user(s,create_schema=user)
-
+            
+            
+register_redis(app)
 error_handler(app)
 set_auth(app)
 
@@ -62,19 +59,6 @@ def register_routers(app: FastAPI):
     app.include_router(router)
 register_routers(app)
 
-
-# pubsub 
-from fastapi_websocket_pubsub import PubSubEndpoint, ALL_TOPICS
-import logging
-from fastapi_websocket_rpc.logger import logging_config, LoggingModes
-import asyncio
-from testspace.components.pubsub import endpoint
-async def call_back(data,topic):
-    # print(">>>>>>>>>>>>>>>>>>>",data,topic)
-    pass
-logging_config.set_mode(LoggingModes.UVICORN,level=logging.DEBUG)
-
-endpoint.register_route(app, "/pubsub")
 
 # task = endpoint.subscribe(ALL_TOPICS, call_back)
 # asyncio.create_task(task)

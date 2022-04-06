@@ -19,7 +19,7 @@ class TestcaseProps(UseORM,CommonProps):
     affect : List[str]
     component : List[str]
     suites: List[UUID]
-    lables : List[str]
+    labels : List[str]
     deleted: bool
 
 class TestcaseUpdate(BaseModel):
@@ -31,7 +31,7 @@ class TestcaseUpdate(BaseModel):
     affect : Optional[List[str]]
     component : Optional[List[str]]
     suites: Optional[List[UUID]]
-    lables : Optional[List[str]]
+    labels : Optional[List[str]]
     deleted: Optional[bool]
 
 class TestcaseCreate(BaseModel):
@@ -43,19 +43,21 @@ class TestcaseCreate(BaseModel):
     affect : Optional[List[str]]
     component : Optional[List[str]]
     suites: Optional[List[UUID]]
-    lables : Optional[List[str]]
+    labels : Optional[List[str]]
 
 class TestSuitProps(UseORM, CommonProps):
     name:str
     description: str
     enums: dict
     testplans:List[UUID]
+    labels : List[str]
 class TestSuitCreate(BaseModel):
     name:str
     description: str
     enums: Optional[dict]
     create_by: Optional[UUID]
     testplans:List[UUID]
+    labels : Optional[List[str]]
 class TestSuitUpdate(BaseModel):
     uuid:Optional[UUID]
     update_by: Optional[UUID]
@@ -63,21 +65,24 @@ class TestSuitUpdate(BaseModel):
     description: Optional[str]
     enums: Optional[dict]
     testplans:Optional[List[UUID]]
-    
+    labels : Optional[List[str]]
 class TestPlanProps(UseORM,CommonProps):
     name: str
     description:str
     enums:dict
+    labels: List[str]
 class TestPlanCreate(BaseModel):
     name: str
     description:str
-    create_by:UUID
+    create_by:Optional[UUID]
     enums: Optional[dict]
+    labels: Optional[List[str]]
 class TestPlanUpdate(BaseModel):
     name: Optional[str]
     description:Optional[str]
     update_by:Optional[UUID]
     enums: Optional[dict]
+    labels : Optional[List[str]]
     
 
 

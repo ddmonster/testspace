@@ -52,6 +52,22 @@
                 "panel": "new"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "start testspace server",
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m testspace",
+            "windows": {
+                "command": "${command:python.interpreterPath} -m testspace"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
         }
     ],
     "inputs": [

@@ -37,6 +37,7 @@ setup(
         "fastapi_websocket_pubsub",
         "python-jose",
         "passlib[bcrypt]",
-        'loguru'
+        'loguru',
+        "aioredis"
     ],
 )

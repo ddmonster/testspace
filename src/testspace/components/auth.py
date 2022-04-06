@@ -1,5 +1,7 @@
 from datetime import datetime, timedelta
-from typing import Optional
+from enum import Enum
+from optparse import Option
+from typing import Optional,Union
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from fastapi import Cookie, Depends, HTTPException, FastAPI, status, Request, Header
 from fastapi.responses import Response
@@ -8,21 +10,30 @@ from passlib.context import CryptContext
 from jose import JWTError, jwt
 from pydantic import BaseModel
 
-from testspace.crud.user import R_get_user_by_name
-from testspace.db.session import  openSession
+from testspace.crud.user import R_get_user_by_email, R_get_user_by_name
+from testspace.db.Session import  session
 from testspace.schemas.user import UserProps
+from testspace.utils.ContextVarsWapper import ContextWarpper
 from testspace.log import logger
 from testspace.config import SECRET_KEY
+
+current_user:Union[UserProps,None] = ContextWarpper("current access user",None)
+
+
+
 class Token(BaseModel):
     access_token: str
     token_type: str
 
 class TokenData(BaseModel):
     username: Optional[str] = None
-
+class LoginType(str, Enum):
+    email = "email"
+    username ="username"
 class LoginArgs(BaseModel):
-    username:str
+    account:str
     password:str
+    login_type:str
 
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 720
@@ -30,17 +41,20 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def get_user_by_name(name:str):
-    with openSession() as s:
-        return R_get_user_by_name(s,name)
-
+    return R_get_user_by_name(session,name)
+def get_user_by_email(mail:str):
+    return R_get_user_by_email(session,mail)
 def verify_password(plain_password, hashed_password):
     return pwd_context.verify(plain_password, hashed_password)
 
 def get_password_hash(password):
     return pwd_context.hash(password)
 
-def authenticate_user(username: str, password: str):
-    user = get_user_by_name(username)
+def authenticate_user(value: str, password: str, login_type="username"):
+    if login_type == LoginType.username:
+        user = get_user_by_name(value)
+    elif login_type == LoginType.email:
+        user = get_user_by_email(value)
     if not user:
         return False
     if not verify_password(password, user.password):
@@ -80,14 +94,17 @@ async def get_current_user(access_token: Optional[str]= Cookie(None)):
         raise credentials_exception
     return user
 
+
+
+
 def set_auth(app:FastAPI):
     @app.post("/login", tags=["user login"], response_model=Token)
-    async def login(response: Response, form_data: LoginArgs):
-        user = authenticate_user(form_data.username, form_data.password)
+    async def login(response: Response, login_data: LoginArgs):
+        user = authenticate_user(login_data.account, login_data.password, login_data.login_type)
         if not user:
             raise HTTPException(
                 status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Incorrect username or password",
+                detail="Incorrect account or password",
                 headers={"WWW-Authenticate": "Bearer"},
             )
         access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
@@ -112,6 +129,7 @@ def set_auth(app:FastAPI):
                 if token is None:
                     token = request.headers.get("access_token",default=None)
                 user = await get_current_user(token)
+                current_user.set(user)
                 logger.info(f"{request.cookies.get('access_token')} >>>>>>>>>")
             except HTTPException as e:
                 return Response(e.detail,status_code=e.status_code,headers=e.headers)

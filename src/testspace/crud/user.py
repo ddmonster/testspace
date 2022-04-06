@@ -12,3 +12,6 @@ def C_create_user(s:Session, create_schema:CreateUser) -> UserProps:
 
 def R_get_user_by_name(s:Session, name:str) -> Union[None,UserProps]:
     return s.query(User).filter_by(username=name).first()
+
+def R_get_user_by_email(s:Session, mail:str) -> Union[None,UserProps]:
+    return s.query(User).filter_by(mail=mail).first()

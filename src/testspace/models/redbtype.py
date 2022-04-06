@@ -1,3 +1,4 @@
+from email.policy import default
 from typing import Union, List
 from pydantic import Json
 from sqlalchemy import Column,String
@@ -15,5 +16,5 @@ def UUIDList(*args,**kwargs) -> Union[Column, List[UUID]]:
     return Column(ARRAY(UUID(as_uuid=True),as_tuple=True),*args, **kwargs)
 
 def JsonText(*args, **kwargs) ->Union[Column,Json]:
-    return Column(JSON(astext_type=True),*args,**kwargs)
+    return Column(JSON(astext_type=True),*args,**kwargs,default={})
 

@@ -15,6 +15,7 @@ class UserProps(UseConfig):
     email: str
     active: bool
     admin: bool
+    avatar:str
     created_at: datetime
     updated_at: datetime
 
@@ -24,8 +25,12 @@ class CreateUser(UseConfig):
     email: str
     password: str
     admin: Optional[bool]
+    avatar:Optional[str]
 
 class UpdateUser(UseConfig):
-    username: Optional[str] = None
-    accountname: Optional[str] = None
-    email: Optional[str] = None
+    username: Optional[str]
+    accountname: Optional[str] 
+    email: Optional[str] 
+    avatar:Optional[str]
+    password: Optional[str]
+    admin: Optional[bool]
