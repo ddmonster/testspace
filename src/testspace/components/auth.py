@@ -12,12 +12,10 @@ from pydantic import BaseModel
 
 from testspace.crud.user import R_get_user_by_email, R_get_user_by_name
 from testspace.db.Session import  session
-from testspace.schemas.user import UserProps
-from testspace.utils.ContextVarsWapper import ContextWarpper
 from testspace.log import logger
 from testspace.config import SECRET_KEY
+from . import current_user
 
-current_user:Union[UserProps,None] = ContextWarpper("current access user",None)
 
 
 
@@ -55,6 +53,8 @@ def authenticate_user(value: str, password: str, login_type="username"):
         user = get_user_by_name(value)
     elif login_type == LoginType.email:
         user = get_user_by_email(value)
+    else:
+        raise Exception(f"unsupported login_type {login_type}")
     if not user:
         return False
     if not verify_password(password, user.password):

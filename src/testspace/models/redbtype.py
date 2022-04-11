@@ -16,5 +16,5 @@ def UUIDList(*args,**kwargs) -> Union[Column, List[UUID]]:
     return Column(ARRAY(UUID(as_uuid=True),as_tuple=True),*args, **kwargs)
 
 def JsonText(*args, **kwargs) ->Union[Column,Json]:
-    return Column(JSON(astext_type=True),*args,**kwargs,default={})
+    return Column(JSON(astext_type=True),*args,**kwargs)
 

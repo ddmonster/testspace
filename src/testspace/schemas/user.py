@@ -1,23 +1,19 @@
 
 
 from pydantic import BaseModel
-from datetime import datetime
 from typing import Optional
-from uuid import UUID
+from . import CommonProps
 class UseConfig(BaseModel):
     class Config:
         orm_mode = True
 
-class UserProps(UseConfig):
-    uuid:UUID
+class UserProps(UseConfig,CommonProps):
     username: str
     accountname: str
     email: str
     active: bool
     admin: bool
     avatar:str
-    created_at: datetime
-    updated_at: datetime
 
 class CreateUser(UseConfig):
     username: str

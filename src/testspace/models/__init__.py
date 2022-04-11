@@ -1,3 +1,4 @@
+from email.policy import default
 from typing import Dict, Optional
 
 from sqlalchemy import Column, DateTime, Integer, Table
@@ -5,7 +6,7 @@ from testspace.db.base_class import Base
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.dialects.postgresql import UUID
 # https://docs.sqlalchemy.org/en/14/dialects/postgresql.html#dialect-postgresql
-
+from testspace.components import current_user
 import datetime
 import json
 def curtime():

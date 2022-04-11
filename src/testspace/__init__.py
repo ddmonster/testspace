@@ -6,7 +6,7 @@ from fastapi.responses import HTMLResponse, RedirectResponse
 from testspace.config import ROOT_PATH
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
-from testspace.components.middleware import error_handler
+from testspace.components.middleware import antd_adapter
 from testspace.components.auth import set_auth,pwd_context
 from testspace.components.cache import register_redis
 from passlib.context import CryptContext
@@ -30,12 +30,12 @@ async def startup_event():
         if admin is None:
             user = CreateUser(username='admin',\
                 accountname="Admin",\
-                    email='', password=pwd_context.hash("123"),admin=True)
+                    email='', password=pwd_context.hash("123"),admin=True,avatar="icons/icons8-avatar-64.png")
             C_create_user(s,create_schema=user)
             
             
 register_redis(app)
-error_handler(app)
+antd_adapter(app)
 set_auth(app)
 
 # router

@@ -1,3 +1,4 @@
+from optparse import Option
 from pydoc import describe
 from typing import Optional,List
 from pydantic import BaseModel
@@ -53,7 +54,7 @@ class TestSuitProps(UseORM, CommonProps):
     labels : List[str]
 class TestSuitCreate(BaseModel):
     name:str
-    description: str
+    description: Optional[str]
     enums: Optional[dict]
     create_by: Optional[UUID]
     testplans:List[UUID]
@@ -71,9 +72,10 @@ class TestPlanProps(UseORM,CommonProps):
     description:str
     enums:dict
     labels: List[str]
+    testsuits:Optional[List[TestSuitProps]]
 class TestPlanCreate(BaseModel):
     name: str
-    description:str
+    description:Optional[str]
     create_by:Optional[UUID]
     enums: Optional[dict]
     labels: Optional[List[str]]

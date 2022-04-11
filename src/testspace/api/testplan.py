@@ -1,5 +1,5 @@
 
-from fastapi import APIRouter, Depends, Header, Path
+from fastapi import APIRouter, Depends, Header, Path, Query
 from testspace.models.testcase import TestPlan
 from testspace.schemas.testcase import *
 from .import set_page_enable_api
@@ -17,9 +17,16 @@ set_page_enable_api(router,TestPlan,TestPlanProps)
 def create_testplan(plan:TestPlanCreate):
     return C_create_testplan(session,plan)
 
-@router.get("/{uuid}",response_model=TestPlanProps)
-def get_testplan(uuid:UUID):
-    return R_get_testplan_by_uuid(session,uuid)
+
+
+@router.get("/{uuid}", response_model=TestPlanProps)
+def get_testplan(uuid:UUID, details:bool = False):
+    testplan =  R_get_testplan_by_uuid(session,uuid)
+    testplan_props = TestPlanProps.from_orm(testplan)
+    if details:
+        testplan_props.testsuits = R_get_testsuits_by_testplan_uuid(session,uuid)
+    
+    return testplan_props
 
 @router.patch("/{uuid}", response_model=TestPlanProps)
 def update_testplan(uuid:UUID,plan:TestPlanUpdate):
