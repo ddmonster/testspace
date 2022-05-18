@@ -14,6 +14,7 @@ class UserProps(UseConfig,CommonProps):
     active: bool
     admin: bool
     avatar:str
+    password: Optional[str]
 
 class CreateUser(UseConfig):
     username: str

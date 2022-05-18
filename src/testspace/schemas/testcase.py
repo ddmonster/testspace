@@ -1,13 +1,16 @@
-from optparse import Option
-from pydoc import describe
+
 from typing import Optional,List
 from pydantic import BaseModel
 from uuid import UUID
-from . import CommonProps
+
+from testspace.models.testcase import Testcase
+from . import AdditionalProp, CommonProps
 class UseORM(BaseModel):
     class Config:
         orm_mode = True
-
+class UseArbitrary(BaseModel):
+    class Config:
+        arbitrary_types_allowed = True
 
 class Steps(UseORM):
     type:str
@@ -52,6 +55,7 @@ class TestSuitProps(UseORM, CommonProps):
     enums: dict
     testplans:List[UUID]
     labels : List[str]
+    
 class TestSuitCreate(BaseModel):
     name:str
     description: Optional[str]
@@ -59,7 +63,8 @@ class TestSuitCreate(BaseModel):
     create_by: Optional[UUID]
     testplans:List[UUID]
     labels : Optional[List[str]]
-class TestSuitUpdate(BaseModel):
+    
+class TestSuitUpdate(UseArbitrary,BaseModel):
     uuid:Optional[UUID]
     update_by: Optional[UUID]
     name:Optional[str]
@@ -67,12 +72,13 @@ class TestSuitUpdate(BaseModel):
     enums: Optional[dict]
     testplans:Optional[List[UUID]]
     labels : Optional[List[str]]
-class TestPlanProps(UseORM,CommonProps):
+    testcases: AdditionalProp[List[TestcaseProps]]
+class TestPlanProps(UseArbitrary,UseORM,CommonProps):
     name: str
     description:str
     enums:dict
     labels: List[str]
-    testsuits:Optional[List[TestSuitProps]]
+    testsuits:AdditionalProp[List[TestSuitProps]]
 class TestPlanCreate(BaseModel):
     name: str
     description:Optional[str]

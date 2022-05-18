@@ -24,7 +24,7 @@ class Token(BaseModel):
     token_type: str
 
 class TokenData(BaseModel):
-    username: Optional[str] = None
+    username: str
 class LoginType(str, Enum):
     email = "email"
     username ="username"
@@ -132,7 +132,7 @@ def set_auth(app:FastAPI):
                 current_user.set(user)
                 logger.info(f"{request.cookies.get('access_token')} >>>>>>>>>")
             except HTTPException as e:
-                return Response(e.detail,status_code=e.status_code,headers=e.headers)
+                return Response(e.detail,status_code=e.status_code,headers=e.headers )
             request.headers.__dict__["_list"].append(("authorized-user".encode(),f"{user.username}".encode()))
         response = await call_next(request)
 
