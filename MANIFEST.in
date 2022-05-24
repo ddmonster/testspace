@@ -3,3 +3,4 @@ graft src/testspace
 exclude src/alembic.ini
 global-exclude *.pyc
 global-exclude __pycache__
+include requirements.txt

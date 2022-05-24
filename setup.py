@@ -6,8 +6,8 @@ with open(path.joinpath("README.md"), "r", encoding="utf-8") as fh:
     
 requirements = []
 print(path.joinpath("requirements.txt"))
-# with open(path.joinpath("requirements.txt")) as f:
-#     requirements = f.readlines()
+with open(path.joinpath("requirements.txt")) as f:
+    requirements = f.readlines()
     
 
 print(find_packages(where="src"))
