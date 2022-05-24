@@ -2,8 +2,6 @@
 from typing import Optional,List
 from pydantic import BaseModel
 from uuid import UUID
-
-from testspace.models.testcase import Testcase
 from . import AdditionalProp, CommonProps
 class UseORM(BaseModel):
     class Config:

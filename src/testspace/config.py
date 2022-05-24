@@ -28,14 +28,14 @@ class TomlConfig:
         return self._dict.get(key)
     def __setitem__(self, key, value):
         self._dict[key] = value
+    def __getattr__(self, __name: str):
+        return self._dict[__name]
     def update(self):
         toml.dump(self._dict,self.path.open("w"))
     def __str__(self) -> str:
         return str(self._dict)
 
 tomlconfig = TomlConfig(PROJECT_DATA_DIR.joinpath("config.toml"))
-if tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"].startswith('sqlite'):
-    tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"] = tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"].format(data=PROJECT_DATA_DIR)
 
 SECRET_KEY = "5aaca26c7bb7d1d8d2312498006db19cfe3953152a2541ab725ce8098c7d506c"
 

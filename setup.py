@@ -1,23 +1,27 @@
 from setuptools import setup, find_packages
-
-with open("README.md", "r", encoding="utf-8") as fh:
+import pathlib
+path = pathlib.Path(__file__).parent
+with open(path.joinpath("README.md"), "r", encoding="utf-8") as fh:
     long_description = fh.read()
     
-with open('requirements.txt') as f:
-    requirements = f.readlines()
+requirements = []
+print(path.joinpath("requirements.txt"))
+# with open(path.joinpath("requirements.txt")) as f:
+#     requirements = f.readlines()
+    
+
 print(find_packages(where="src"))
 setup(
     name="testspace",
-    version="0.0.1",
     author="ddmonster.wei",
     author_email="ddmonster.wei@outlook.com",
-    description="used for test job",
+    description="simple your test work",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    # url="https://github.com/pypa/sampleproject",
-    # project_urls={
-    #     "Bug Tracker": "https://github.com/pypa/sampleproject/issues",
-    # },
+    url="https://github.com/ddmonster/testspace",
+    project_urls={
+        "Bug Tracker": "https://github.com/ddmonster/testspace/issues",
+    },
     include_package_data=True,
     zip_safe=False,
     classifiers=[
@@ -28,5 +32,5 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     python_requires=">=3.6",
-    install_requires = requirements
+    install_requires = requirements,
 )

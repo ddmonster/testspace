@@ -38,14 +38,14 @@
             "problemMatcher": []
         },
         {
-            "label": "build python pakage",
+            "label": "build testspace pakage",
             "type": "shell",
-            "command": "${command:python.interpreterPath} -m build",
+            "command": "pip freeze > requirements.txt ; ${command:python.interpreterPath} -m build",
             "windows": {
                 "command": "${command:python.interpreterPath} -m build"
             },
             "options": {
-                "cwd": "${workspaceFolder}"
+                // "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 "reveal": "always",

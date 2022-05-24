@@ -1,7 +1,7 @@
 
 from contextvars import ContextVar
 from typing import Any, Optional, TypeVar, Generic
-
+__all__ = ["ContextWarpper"]
 T = TypeVar("T")
 
 class ContextWarpper(Generic[T]):
@@ -14,8 +14,5 @@ class ContextWarpper(Generic[T]):
     
     def set(self,value:T):
         self.__var.set(value)
-        
-    def __str__(self) -> str:
-        return self.__var.get().__str__()
 
 

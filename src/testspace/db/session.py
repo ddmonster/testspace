@@ -2,9 +2,15 @@ from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session, scoped_session
 from testspace.config import tomlconfig
-from contextvars import ContextVar
-from testspace.utils.ContextVarsWapper import ContextWarpper
-SQLALCHEMY_DATABASE_URL  = tomlconfig["database"]["SQLALCHEMY_DATABASE_URL"]
+
+
+__all__ = [
+    'session',
+    'openSession',
+    "get_db"
+]
+
+SQLALCHEMY_DATABASE_URL  = tomlconfig.database.SQLALCHEMY_DATABASE_URL
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 # async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread":False})
