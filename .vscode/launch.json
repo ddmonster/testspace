@@ -12,7 +12,10 @@
             "module": "uvicorn",
             "args": [
                 "testspace:app",
+                "--host",
+                "0.0.0.0",
                 "--reload",
+
             ],
 
             // "jinja": true,

@@ -2,6 +2,9 @@ from setuptools import setup, find_packages
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
+    
+with open('requirements.txt') as f:
+    requirements = f.readlines()
 print(find_packages(where="src"))
 setup(
     name="testspace",
@@ -25,19 +28,5 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     python_requires=">=3.6",
-    install_requires = [
-        "fastapi",
-        "uvicorn",
-        "sqlalchemy",
-        "psycopg2"
-        "toml",
-        "environs",
-        "python-multipart",
-        "alembic",
-        "fastapi_websocket_pubsub",
-        "python-jose",
-        "passlib[bcrypt]",
-        'loguru',
-        "aioredis"
-    ],
+    install_requires = requirements
 )
