@@ -120,6 +120,11 @@ def set_auth(app:FastAPI):
     @app.middleware("http")
     async def auth_get(request:Request, call_next):
         '''  '''
+        logger.info("[pink bold]{}[/] request  - {} {} ".format(
+            current_user.username if current_user.get() else "",
+            request.method,
+            request.url,
+            ),extra={"markup": True})
         path = request.url.path
         if path not in ["/redoc","/docs","/index","/openapi.json","/login","/"] and request.method != "OPTIONS":
             # pass
@@ -129,10 +134,14 @@ def set_auth(app:FastAPI):
                     token = request.headers.get("access_token",default=None)
                 user = await get_current_user(token)
                 current_user.set(user)
-                logger.info(f"{request.cookies.get('access_token')} >>>>>>>>>")
+                logger.info(f"toekn:  {request.cookies.get('access_token')} ")
             except HTTPException as e:
-                return Response(e.detail,status_code=e.status_code,headers=e.headers )
-            request.headers.__dict__["_list"].append(("authorized-user".encode(),f"{user.username}".encode()))
-        response = await call_next(request)
-
+                return Response(e.detail,status_code=e.status_code,headers=e.headers )  # type: ignore
+        response:Response = await call_next(request)
+        logger.info("[pink bold]{}[/] response  - {} {} {}".format(
+            current_user.username if current_user.get() else "",
+            request.method,
+            request.url,
+            response.status_code
+            ),extra={"markup": True})
         return response

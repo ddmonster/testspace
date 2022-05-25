@@ -1,7 +1,7 @@
-from email.policy import default
+
 from sqlalchemy import Column, String, Boolean, Text
-from . import BaseMixin, Base
-from .redbtype import StringList, JSONList, UUIDList, JsonText
+from testspace.models import BaseMixin, Base
+from testspace.models.redbtype import StringList, JSONList, UUIDList, JsonText
 
 
 class Testcase(Base, BaseMixin):
@@ -30,3 +30,7 @@ class TestPlan(Base, BaseMixin):
     description = Column(Text, default='')
     labels = StringList(default=[])
     enums = JsonText(default={})
+
+
+if __name__ == "__main__":
+    print(type(TestPlan.__table__.columns[1]))

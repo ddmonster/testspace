@@ -2,9 +2,7 @@
 
 from sqlalchemy import true
 import uvicorn
-from testspace import app,config
-from pathlib import Path
-
-cur_dir = Path(__file__).parent
+from testspace import config,setup
 if __name__ == "__main__":
-    uvicorn.run("testspace:app", reload = True)
+    if config.tomlconfig.development.level == "DEBUG":
+        uvicorn.run("testspace.run:app", **config.tomlconfig.uvicorn)

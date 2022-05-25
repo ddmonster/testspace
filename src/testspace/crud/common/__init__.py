@@ -7,7 +7,7 @@ from typing import Any, List, TypeVar, Union
 import math
 from pydantic import BaseModel
 from testspace.db.base_class import Base
-DBModels = Base
+DBModels = TypeVar("DBModels",bound= Base)
 
 
 class PageDescription(BaseModel):
@@ -83,7 +83,6 @@ def R_page(s: Session, cls: DBModels, page: int, page_size: int = 100) -> List[D
 
 
 def R_page_description(s: Session, cls: DBModels,  page_size=100) -> PageDescription:
-    with s.begin():
         row_count = s.query(cls).count()
         if page_size == -1:
             return PageDescription(total_items=row_count, page_size=page_size, max_index=0)

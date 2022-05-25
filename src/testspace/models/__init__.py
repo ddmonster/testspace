@@ -1,25 +1,20 @@
-from email.policy import default
 from typing import Dict, Optional
-
 from sqlalchemy import Column, DateTime, Integer, Table
 from testspace.db.base_class import Base
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.dialects.postgresql import UUID
 # https://docs.sqlalchemy.org/en/14/dialects/postgresql.html#dialect-postgresql
-from testspace.components import current_user
 import datetime
-import json
-def curtime():
+def curtime() -> datetime.datetime:
     return datetime.datetime.now()
 def uuid_v4():
     import uuid
-    return str(uuid.uuid4())
-    
-def json_str_to_dict(json_str:str)->dict:
-    return json.loads(json_str)
+    return uuid.uuid4()
 
-def dict_to_json_str(dict_obj:dict)->str:
-    return json.dumps(dict_obj)
+__all__ = [
+    "BaseMixin",
+    "Base"
+]
 class BaseMixin(object):
     '''
     Note: make class name as table name

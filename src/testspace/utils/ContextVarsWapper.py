@@ -11,7 +11,8 @@ class ContextWarpper(Generic[T]):
         
     def __getattr__(self,__name):
         return getattr(self.__var.get(), __name)
-    
+    def get(self):
+        return self.__var.get()
     def set(self,value:T):
         self.__var.set(value)
 

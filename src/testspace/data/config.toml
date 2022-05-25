@@ -14,3 +14,8 @@ level = "DEBUG"
 
 [uvicorn]
 host = "0.0.0.0"
+reload = "True"
+
+[development]
+# 这里的配置是开发环境下的配置
+level = "DEBUG"

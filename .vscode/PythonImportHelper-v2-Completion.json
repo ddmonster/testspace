@@ -1440,27 +1440,19 @@
         "documentation": {}
     },
     {
+        "label": "__all__",
+        "importPath": "src.testspace.components.cache",
+        "description": "src.testspace.components.cache",
+        "isExtraImport": true,
+        "detail": "src.testspace.components.cache",
+        "documentation": {}
+    },
+    {
         "label": "contextmanager",
         "importPath": "contextlib",
         "description": "contextlib",
         "isExtraImport": true,
         "detail": "contextlib",
-        "documentation": {}
-    },
-    {
-        "label": "default",
-        "importPath": "email.policy",
-        "description": "email.policy",
-        "isExtraImport": true,
-        "detail": "email.policy",
-        "documentation": {}
-    },
-    {
-        "label": "default",
-        "importPath": "email.policy",
-        "description": "email.policy",
-        "isExtraImport": true,
-        "detail": "email.policy",
         "documentation": {}
     },
     {
@@ -1493,6 +1485,54 @@
         "description": "sqlalchemy.dialects.postgresql",
         "isExtraImport": true,
         "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "BaseMixin",
+        "importPath": "testspace.models",
+        "description": "testspace.models",
+        "isExtraImport": true,
+        "detail": "testspace.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "testspace.models",
+        "description": "testspace.models",
+        "isExtraImport": true,
+        "detail": "testspace.models",
+        "documentation": {}
+    },
+    {
+        "label": "StringList",
+        "importPath": "testspace.models.redbtype",
+        "description": "testspace.models.redbtype",
+        "isExtraImport": true,
+        "detail": "testspace.models.redbtype",
+        "documentation": {}
+    },
+    {
+        "label": "JSONList",
+        "importPath": "testspace.models.redbtype",
+        "description": "testspace.models.redbtype",
+        "isExtraImport": true,
+        "detail": "testspace.models.redbtype",
+        "documentation": {}
+    },
+    {
+        "label": "UUIDList",
+        "importPath": "testspace.models.redbtype",
+        "description": "testspace.models.redbtype",
+        "isExtraImport": true,
+        "detail": "testspace.models.redbtype",
+        "documentation": {}
+    },
+    {
+        "label": "JsonText",
+        "importPath": "testspace.models.redbtype",
+        "description": "testspace.models.redbtype",
+        "isExtraImport": true,
+        "detail": "testspace.models.redbtype",
         "documentation": {}
     },
     {
@@ -1560,6 +1600,14 @@
         "description": "rich.logging",
         "isExtraImport": true,
         "detail": "rich.logging",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "importPath": "testspace.setup",
+        "description": "testspace.setup",
+        "isExtraImport": true,
+        "detail": "testspace.setup",
         "documentation": {}
     },
     {
@@ -2467,6 +2515,15 @@
         "documentation": {}
     },
     {
+        "label": "__all__",
+        "kind": 5,
+        "importPath": "src.testspace.db.base_class",
+        "description": "src.testspace.db.base_class",
+        "peekOfCode": "__all__ = [\"Base\"]\nBase = declarative_base()",
+        "detail": "src.testspace.db.base_class",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "kind": 5,
         "importPath": "src.testspace.db.base_class",
@@ -2579,7 +2636,7 @@
         "kind": 6,
         "importPath": "src.testspace.models.testcase",
         "description": "src.testspace.models.testcase",
-        "peekOfCode": "class TestPlan(Base, BaseMixin):\n    name = Column(String)\n    description = Column(Text, default='')\n    labels = StringList(default=[])\n    enums = JsonText(default={})",
+        "peekOfCode": "class TestPlan(Base, BaseMixin):\n    name = Column(String)\n    description = Column(Text, default='')\n    labels = StringList(default=[])\n    enums = JsonText(default={})\nif __name__ == \"__main__\":\n    print(type(TestPlan.__table__.columns[1]))",
         "detail": "src.testspace.models.testcase",
         "documentation": {}
     },
@@ -2741,7 +2798,7 @@
         "kind": 6,
         "importPath": "src.testspace.utils.ContextVarsWapper",
         "description": "src.testspace.utils.ContextVarsWapper",
-        "peekOfCode": "class ContextWarpper(Generic[T]):\n    def __init__(self,name:str,value:Optional[T]) -> None:\n        self.__var = ContextVar(name,default=value)\n    def __getattr__(self,__name):\n        return getattr(self.__var.get(), __name)\n    def set(self,value:T):\n        self.__var.set(value)",
+        "peekOfCode": "class ContextWarpper(Generic[T]):\n    def __init__(self,name:str,value:Optional[T]) -> None:\n        self.__var = ContextVar(name,default=value)\n    def __getattr__(self,__name):\n        return getattr(self.__var.get(), __name)\n    def get(self):\n        return self.__var.get()\n    def set(self,value:T):\n        self.__var.set(value)",
         "detail": "src.testspace.utils.ContextVarsWapper",
         "documentation": {}
     },
@@ -2750,7 +2807,7 @@
         "kind": 5,
         "importPath": "src.testspace.utils.ContextVarsWapper",
         "description": "src.testspace.utils.ContextVarsWapper",
-        "peekOfCode": "__all__ = [\"ContextWarpper\"]\nT = TypeVar(\"T\")\nclass ContextWarpper(Generic[T]):\n    def __init__(self,name:str,value:Optional[T]) -> None:\n        self.__var = ContextVar(name,default=value)\n    def __getattr__(self,__name):\n        return getattr(self.__var.get(), __name)\n    def set(self,value:T):\n        self.__var.set(value)",
+        "peekOfCode": "__all__ = [\"ContextWarpper\"]\nT = TypeVar(\"T\")\nclass ContextWarpper(Generic[T]):\n    def __init__(self,name:str,value:Optional[T]) -> None:\n        self.__var = ContextVar(name,default=value)\n    def __getattr__(self,__name):\n        return getattr(self.__var.get(), __name)\n    def get(self):\n        return self.__var.get()\n    def set(self,value:T):",
         "detail": "src.testspace.utils.ContextVarsWapper",
         "documentation": {}
     },
@@ -2759,7 +2816,7 @@
         "kind": 5,
         "importPath": "src.testspace.utils.ContextVarsWapper",
         "description": "src.testspace.utils.ContextVarsWapper",
-        "peekOfCode": "T = TypeVar(\"T\")\nclass ContextWarpper(Generic[T]):\n    def __init__(self,name:str,value:Optional[T]) -> None:\n        self.__var = ContextVar(name,default=value)\n    def __getattr__(self,__name):\n        return getattr(self.__var.get(), __name)\n    def set(self,value:T):\n        self.__var.set(value)",
+        "peekOfCode": "T = TypeVar(\"T\")\nclass ContextWarpper(Generic[T]):\n    def __init__(self,name:str,value:Optional[T]) -> None:\n        self.__var = ContextVar(name,default=value)\n    def __getattr__(self,__name):\n        return getattr(self.__var.get(), __name)\n    def get(self):\n        return self.__var.get()\n    def set(self,value:T):\n        self.__var.set(value)",
         "detail": "src.testspace.utils.ContextVarsWapper",
         "documentation": {}
     },
@@ -2930,7 +2987,7 @@
         "kind": 2,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "def get_log_level(name:str):\n    log_level = [\"INFO\",\"DEBUG\"]\n    if name not in log_level:\n        raise Exception(f\"log level must be in {log_level}\")\n    return getattr(logging,name)\nFORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nfrom rich.logging import RichHandler\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT, datefmt=\"[%X]\", handlers=[RichHandler()]\n)",
+        "peekOfCode": "def get_log_level(name:str):\n    log_level = [\"INFO\",\"DEBUG\"]\n    if name not in log_level:\n        raise Exception(f\"log level must be in {log_level}\")\n    return getattr(logging,name)\nFORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%X]\", handlers=[RichHandler(show_time=False,rich_tracebacks=True,markup=True)]",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2939,7 +2996,16 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nfrom rich.logging import RichHandler\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT, datefmt=\"[%X]\", handlers=[RichHandler()]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nformatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"fastapi\")\nsqlalchemy_logger = logging.getLogger('sqlalchemy.engine')",
+        "peekOfCode": "FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%X]\", handlers=[RichHandler(show_time=False,rich_tracebacks=True,markup=True)]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nformatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")",
+        "detail": "src.testspace.log",
+        "documentation": {}
+    },
+    {
+        "label": "FORMAT_2",
+        "kind": 5,
+        "importPath": "src.testspace.log",
+        "description": "src.testspace.log",
+        "peekOfCode": "FORMAT_2 = ' %(asctime)s %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%X]\", handlers=[RichHandler(show_time=False,rich_tracebacks=True,markup=True)]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nformatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2948,7 +3014,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "log_level =  get_log_level(tomlconfig.logconfig.level)\nformatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"fastapi\")\nsqlalchemy_logger = logging.getLogger('sqlalchemy.engine')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.setLevel(logging.CRITICAL)",
+        "peekOfCode": "log_level =  get_log_level(tomlconfig.logconfig.level)\nformatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2957,7 +3023,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "formatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"fastapi\")\nsqlalchemy_logger = logging.getLogger('sqlalchemy.engine')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.setLevel(logging.CRITICAL)",
+        "peekOfCode": "formatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2966,7 +3032,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "handler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"fastapi\")\nsqlalchemy_logger = logging.getLogger('sqlalchemy.engine')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.setLevel(logging.CRITICAL)",
+        "peekOfCode": "handler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2975,7 +3041,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "logger = logging.getLogger(\"fastapi\")\nsqlalchemy_logger = logging.getLogger('sqlalchemy.engine')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.setLevel(logging.CRITICAL)",
+        "peekOfCode": "logger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2984,7 +3050,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "sqlalchemy_logger = logging.getLogger('sqlalchemy.engine')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.setLevel(logging.CRITICAL)",
+        "peekOfCode": "sqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2993,8 +3059,17 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "uvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.setLevel(logging.CRITICAL)",
+        "peekOfCode": "uvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
         "detail": "src.testspace.log",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.testspace.run",
+        "description": "src.testspace.run",
+        "peekOfCode": "app = create_app()",
+        "detail": "src.testspace.run",
         "documentation": {}
     },
     {

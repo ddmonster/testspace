@@ -1,4 +1,4 @@
-from email.policy import default
+
 from sqlalchemy import Column, String, Boolean
 
 from . import Base, BaseMixin
