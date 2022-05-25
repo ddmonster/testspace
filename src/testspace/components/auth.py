@@ -134,7 +134,7 @@ def set_auth(app:FastAPI):
                     token = request.headers.get("access_token",default=None)
                 user = await get_current_user(token)
                 current_user.set(user)
-                logger.info(f"toekn:  {request.cookies.get('access_token')} ")
+                logger.info(f"access token:  {request.cookies.get('access_token')} ")
             except HTTPException as e:
                 return Response(e.detail,status_code=e.status_code,headers=e.headers )  # type: ignore
         response:Response = await call_next(request)

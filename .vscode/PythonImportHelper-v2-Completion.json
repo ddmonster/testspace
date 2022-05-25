@@ -2987,7 +2987,7 @@
         "kind": 2,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "def get_log_level(name:str):\n    log_level = [\"INFO\",\"DEBUG\"]\n    if name not in log_level:\n        raise Exception(f\"log level must be in {log_level}\")\n    return getattr(logging,name)\nFORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%X]\", handlers=[RichHandler(show_time=False,rich_tracebacks=True,markup=True)]",
+        "peekOfCode": "def get_log_level(name:str):\n    log_level = [\"INFO\",\"DEBUG\"]\n    if name not in log_level:\n        raise Exception(f\"log level must be in {log_level}\")\n    return getattr(logging,name)\nFORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)\nlogging.basicConfig(",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2996,7 +2996,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%X]\", handlers=[RichHandler(show_time=False,rich_tracebacks=True,markup=True)]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nformatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")",
+        "peekOfCode": "FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3005,25 +3005,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "FORMAT_2 = ' %(asctime)s %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%X]\", handlers=[RichHandler(show_time=False,rich_tracebacks=True,markup=True)]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nformatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')",
-        "detail": "src.testspace.log",
-        "documentation": {}
-    },
-    {
-        "label": "log_level",
-        "kind": 5,
-        "importPath": "src.testspace.log",
-        "description": "src.testspace.log",
-        "peekOfCode": "log_level =  get_log_level(tomlconfig.logconfig.level)\nformatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
-        "detail": "src.testspace.log",
-        "documentation": {}
-    },
-    {
-        "label": "formatter",
-        "kind": 5,
-        "importPath": "src.testspace.log",
-        "description": "src.testspace.log",
-        "peekOfCode": "formatter = logging.Formatter()\nhandler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
+        "peekOfCode": "FORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3032,7 +3014,16 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "handler = logging.StreamHandler().setFormatter(formatter)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
+        "peekOfCode": "handler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)",
+        "detail": "src.testspace.log",
+        "documentation": {}
+    },
+    {
+        "label": "log_level",
+        "kind": 5,
+        "importPath": "src.testspace.log",
+        "description": "src.testspace.log",
+        "peekOfCode": "log_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(handler)",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3041,7 +3032,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "logger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
+        "peekOfCode": "logger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(handler)",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3050,7 +3041,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "sqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
+        "peekOfCode": "sqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(handler)",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3059,7 +3050,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "uvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(RichHandler())",
+        "peekOfCode": "uvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(handler)",
         "detail": "src.testspace.log",
         "documentation": {}
     },
