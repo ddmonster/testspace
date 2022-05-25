@@ -2,7 +2,7 @@ from contextlib import contextmanager
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session, scoped_session
 from testspace.config import tomlconfig
-
+from testspace.log import logger
 
 __all__ = [
     'session',
@@ -13,6 +13,7 @@ __all__ = [
 SQLALCHEMY_DATABASE_URL  = tomlconfig.database.SQLALCHEMY_DATABASE_URL
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
+logger.info(f"database set up {tomlconfig.database.SQLALCHEMY_DATABASE_URL}")
 # async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread":False})
 
 # _async_session = sessionmaker(

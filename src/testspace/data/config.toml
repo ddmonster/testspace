@@ -2,3 +2,15 @@
 # SQLALCHEMY_DATABASE_URL = "sqlite:///{data}\\testspace.db"
 SQLALCHEMY_DATABASE_URL = "postgresql://postgres:1996222@localhost:5432/postgres"
 REDIS_URL = "redis://127.0.0.1"
+[CROS]
+# 跨域设置
+origins = [
+    "http://localhost",
+    "http://127.0.0.1:3000",
+    "http://localhost:3000",
+]
+[logconfig]
+level = "DEBUG"
+
+[uvicorn]
+host = "0.0.0.0"

@@ -4,7 +4,7 @@ import aioredis
 from aioredis import Redis
 from testspace.utils.TypeWeakref import TypeWeakRef
 from testspace.config import tomlconfig
-
+from testspace.log import logger
 
 __all__ = [
     'redis',
@@ -26,9 +26,11 @@ class RedisWarpper():
 redis:Union[Redis,RedisWarpper] = RedisWarpper()            
     
 def register_redis(app:FastAPI):
+    
     @app.on_event("startup")
     async def on_startup():
         await redis.init_from_url(tomlconfig.database.REDIS_URL,app)
+        logger.info(f"redis set up {tomlconfig.database.REDIS_URL}")
         
     @app.on_event("shutdown")
     async def on_shutdown():

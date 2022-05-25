@@ -9,14 +9,16 @@
             "name": "Python: FastAPI",
             "type": "python",
             "request": "launch",
-            "module": "uvicorn",
-            "args": [
-                "testspace:app",
-                "--host",
-                "0.0.0.0",
-                "--reload",
+            "module": "testspace",
+            // "args": [
+            //     "testspace:app",
+            //     "--host",
+            //     "0.0.0.0",
+            //     "--reload",
+            //     "--log-level",
+            //     "debug"
 
-            ],
+            // ],
 
             // "jinja": true,
             "env": {
