@@ -217,6 +217,14 @@
         "documentation": {}
     },
     {
+        "label": "false",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "postgresql",
         "importPath": "sqlalchemy.dialects",
         "description": "sqlalchemy.dialects",
@@ -2564,7 +2572,7 @@
         "kind": 5,
         "importPath": "src.testspace.db.Session",
         "description": "src.testspace.db.Session",
-        "peekOfCode": "engine = create_engine(SQLALCHEMY_DATABASE_URL)\nlogger.info(f\"database set up {tomlconfig.database.SQLALCHEMY_DATABASE_URL}\")\n# async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL, connect_args={\"check_same_thread\":False})\n# _async_session = sessionmaker(\n#     async_engine, expire_on_commit=False, class_=AsyncSession\n# )\n# Async_session =  async_scoped_session(_async_session, scopefunc=current_task)\nSessionLocal = scoped_session(sessionmaker(autocommit=False, autoflush=True, bind=engine))\nsession:Session =SessionLocal()\n@contextmanager",
+        "peekOfCode": "engine = create_engine(SQLALCHEMY_DATABASE_URL)\nlogger.info(f\"database set up {tomlconfig.database.SQLALCHEMY_DATABASE_URL}\")\n# async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL, connect_args={\"check_same_thread\":False})\n# _async_session = sessionmaker(\n#     async_engine, expire_on_commit=False, class_=AsyncSession\n# )\n# Async_session =  async_scoped_session(_async_session, scopefunc=current_task)\nSessionLocal = scoped_session(sessionmaker(autocommit=False, bind=engine))\nsession:Session =SessionLocal()\n@contextmanager",
         "detail": "src.testspace.db.Session",
         "documentation": {}
     },
@@ -2573,7 +2581,7 @@
         "kind": 5,
         "importPath": "src.testspace.db.Session",
         "description": "src.testspace.db.Session",
-        "peekOfCode": "SessionLocal = scoped_session(sessionmaker(autocommit=False, autoflush=True, bind=engine))\nsession:Session =SessionLocal()\n@contextmanager\ndef openSession():\n    '''for context use'''\n    db:Session = session\n    try:\n        yield db\n    finally:\n        db.close()",
+        "peekOfCode": "SessionLocal = scoped_session(sessionmaker(autocommit=False, bind=engine))\nsession:Session =SessionLocal()\n@contextmanager\ndef openSession():\n    '''for context use'''\n    db:Session = session\n    try:\n        yield db\n    finally:\n        db.close()",
         "detail": "src.testspace.db.Session",
         "documentation": {}
     },
@@ -2987,7 +2995,7 @@
         "kind": 2,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "def get_log_level(name:str):\n    log_level = [\"INFO\",\"DEBUG\"]\n    if name not in log_level:\n        raise Exception(f\"log level must be in {log_level}\")\n    return getattr(logging,name)\nFORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)\nlogging.basicConfig(",
+        "peekOfCode": "def get_log_level(name:str):\n    log_level = [\"INFO\",\"DEBUG\"]\n    if name not in log_level:\n        raise Exception(f\"log level must be in {log_level}\")\n    return getattr(logging,name)\nFORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(\n    show_path=False,",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -2996,7 +3004,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')",
+        "peekOfCode": "FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks=True,\n    tracebacks_show_locals=True if tomlconfig.development.level == \"DEBUG\" else False,\n    markup=True)\nlogging.basicConfig(",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3005,7 +3013,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "FORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)",
+        "peekOfCode": "FORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks=True,\n    tracebacks_show_locals=True if tomlconfig.development.level == \"DEBUG\" else False,\n    markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3014,7 +3022,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "handler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)",
+        "peekOfCode": "handler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks=True,\n    tracebacks_show_locals=True if tomlconfig.development.level == \"DEBUG\" else False,\n    markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)",
         "detail": "src.testspace.log",
         "documentation": {}
     },

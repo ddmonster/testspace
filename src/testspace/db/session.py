@@ -20,7 +20,7 @@ logger.info(f"database set up {tomlconfig.database.SQLALCHEMY_DATABASE_URL}")
 #     async_engine, expire_on_commit=False, class_=AsyncSession
 # )
 # Async_session =  async_scoped_session(_async_session, scopefunc=current_task)
-SessionLocal = scoped_session(sessionmaker(autocommit=False, autoflush=True, bind=engine))
+SessionLocal = scoped_session(sessionmaker(autocommit=False, bind=engine))
 
 session:Session =SessionLocal()
 

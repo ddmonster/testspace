@@ -37,19 +37,24 @@ class QueryResult(QueryParam):
     data: List
 
     
-def filter_query(q: Query, params: List[FilterParam], tbj):
+def filter_query(q: Query, params: List[FilterParam], models):
     query = q
     for filter in params:
+        prop = getattr(models, filter.prop, None)
+        if prop is None:
+            raise Exception(f"{models} have no prop {filter.prop}, wrong filter type {filter}")
         if filter.type == FilterType.EQUAL:
             query = query.filter_by(**{filter.prop: filter.value})
         elif filter.type == FilterType.CONTAINS:
             query = query.filter(
-                getattr(tbj, filter.prop).contains(filter.value))
+                prop.contains(filter.value))
+        else:
+            raise Exception(f"no such type {filter.type}")
     return query
 
 
 def R_get_pages(s: Session, cls: DBModels, query: QueryParam):
-    result = QueryResult(**query.dict())
+    result = QueryResult(**query.dict(),data=[])
     query_stmt = filter_query(s.query(cls), query.filter, cls)
     row_count = query_stmt.count()
     _pages = math.ceil(row_count/query.page_size) - 1

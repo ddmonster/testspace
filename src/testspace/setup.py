@@ -34,7 +34,7 @@ def create_app() -> FastAPI:
                 
                 
     register_redis(app)
-    # antd_adapter(app)
+    antd_adapter(app)
     set_auth(app)
 
     # router

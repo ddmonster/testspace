@@ -24,7 +24,7 @@ def set_page_enable_api(router:APIRouter, cls, ItemProps: Any):
             return R_page(session ,cls,index)
     @router.post("/pages/", response_model= QueryResult)
     async def get_pages(query:QueryParam):
-        return R_get_pages(session,cls,query)
+            return R_get_pages(session,cls,query)
     # @router.get("/item/{uuid}", response_model=ItemProps)
     # async def get_Item_by_uuid(uuid: UUID,session: Session = Depends(get_db)):
     #     with session.begin() as s :

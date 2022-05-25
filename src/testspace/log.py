@@ -1,5 +1,6 @@
 import logging
 from rich.logging import RichHandler
+from sqlalchemy import false
 from testspace.config import tomlconfig
 
 def get_log_level(name:str):
@@ -11,7 +12,12 @@ def get_log_level(name:str):
 FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 FORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'
 from rich.logging import RichHandler
-handler = RichHandler(show_path=False,show_time=False,rich_tracebacks=True,tracebacks_show_locals=True,markup=True)
+handler = RichHandler(
+    show_path=False,
+    show_time=False,
+    rich_tracebacks=True,
+    tracebacks_show_locals=True if tomlconfig.development.level == "DEBUG" else False,
+    markup=True)
 logging.basicConfig(
     level="NOTSET", format=FORMAT_2, datefmt="[%x %X]", handlers=[handler]
 )
