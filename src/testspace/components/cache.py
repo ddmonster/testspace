@@ -1,4 +1,4 @@
-from typing import Optional, Union
+from typing import Optional, Union, cast
 from fastapi import FastAPI
 import aioredis
 from aioredis import Redis
@@ -17,7 +17,7 @@ class RedisWarpper():
     def __getattr__(self,__name:str):
         if not self.app:
             raise Exception("not setup  please register redis in app!!!")
-        return getattr(self.app.get().state.redis,__name)
+        return getattr(cast(FastAPI,self.app.get()).state.redis,__name)
     
     async def init_from_url(self,url, app:FastAPI):
         app.state.redis  =  await aioredis.from_url(url)

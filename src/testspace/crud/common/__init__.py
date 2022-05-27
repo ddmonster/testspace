@@ -1,13 +1,14 @@
 
 from enum import Enum
+from optparse import Option
 from uuid import UUID
-from sqlalchemy import func
+from sqlalchemy import desc, func
 from sqlalchemy.orm import Session, Query
-from typing import Any, List, TypeVar, Union
+from typing import Any, List, Literal, Optional, Type, TypeVar, Union
 import math
 from pydantic import BaseModel
 from testspace.db.base_class import Base
-DBModels = TypeVar("DBModels",bound= Base)
+DBModels = Type[Base]
 
 
 class PageDescription(BaseModel):
@@ -19,18 +20,22 @@ class PageDescription(BaseModel):
 class FilterType(Enum):
     EQUAL = "equal"
     CONTAINS = "contains"
-
+    GT = "gt"
 
 class FilterParam(BaseModel):
     type: FilterType
     prop: str
-    value: str
+    value: Union[str,List[str]] 
 
-
+class OrderParam(BaseModel):
+    prop:str
+    order: Literal["desc", "asc"]
+    
 class QueryParam(BaseModel):
     cur_page: int
     page_size: int
-    filter: List[FilterParam]
+    filters: List[FilterParam]
+    order: Optional[OrderParam]
 
 
 class QueryResult(QueryParam):
@@ -42,12 +47,16 @@ def filter_query(q: Query, params: List[FilterParam], models):
     for filter in params:
         prop = getattr(models, filter.prop, None)
         if prop is None:
-            raise Exception(f"{models} have no prop {filter.prop}, wrong filter type {filter}")
+            raise Exception(f"{models} have no prop {filter.prop}, wrong filter {filter}")
         if filter.type == FilterType.EQUAL:
             query = query.filter_by(**{filter.prop: filter.value})
         elif filter.type == FilterType.CONTAINS:
-            query = query.filter(
-                prop.contains(filter.value))
+            if type(filter.value) is str or type(filter.value) is list:
+                query = query.filter(
+                    prop.contains(filter.value))
+            else:
+                raise Exception("unsuported filter value ")
+                
         else:
             raise Exception(f"no such type {filter.type}")
     return query
@@ -55,7 +64,10 @@ def filter_query(q: Query, params: List[FilterParam], models):
 
 def R_get_pages(s: Session, cls: DBModels, query: QueryParam):
     result = QueryResult(**query.dict(),data=[])
-    query_stmt = filter_query(s.query(cls), query.filter, cls)
+    query_stmt = filter_query(s.query(cls), query.filters, cls)
+    if query.order:
+        order_prop = getattr(cls, query.order.prop)
+        query_stmt = query_stmt.order_by(desc(order_prop) if query.order.order == "desc" else order_prop)
     row_count = query_stmt.count()
     _pages = math.ceil(row_count/query.page_size) - 1
     if _pages == -1:
@@ -63,7 +75,7 @@ def R_get_pages(s: Session, cls: DBModels, query: QueryParam):
         return result
     if query.cur_page > _pages:
         raise Exception(f"out of page size max:{_pages}")
-    result.data = s.query(cls).offset(
+    result.data = query_stmt.offset(
         query.cur_page*query.page_size).limit(query.page_size).all()
     return result
 

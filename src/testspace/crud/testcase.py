@@ -63,9 +63,7 @@ def U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):
         raise NotFoundException(
             su, f"<uuid= {uuid}> not  found in table {TestSuite.name}")
     q.update(su.dict(exclude={'uuid'}, exclude_none=True),
-             synchronize_session="fetch")
-    s.commit()
-    s.refresh(suit)
+            synchronize_session="fetch")
     return suit
 
 

@@ -1,3 +1,4 @@
+# mypy: ignore-errors
 from datetime import datetime, timedelta
 from enum import Enum
 from typing import Optional,Union

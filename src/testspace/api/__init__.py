@@ -1,11 +1,10 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter
 from pydantic import BaseModel
-from typing import Any, Optional, List
+from typing import Optional, List, Type
 from testspace.crud.common import PageDescription,R_page,R_page_description,R_get_by_uuid, R_get_pages, QueryResult, QueryParam
 
 from testspace.db.Session import session
-
-def set_page_enable_api(router:APIRouter, cls, ItemProps: Any):
+def set_page_enable_api(router:APIRouter, cls, prop_model:Type[BaseModel]):
     """
     @router.get("/page/description", response_model=PageDescription )
     @router.get("/page/{index}", response_model=List[ItemProps])
@@ -17,7 +16,7 @@ def set_page_enable_api(router:APIRouter, cls, ItemProps: Any):
                 return R_page_description(session,cls,page_size)
             return R_page_description(session,cls)
 
-    @router.get("/page/{index}", response_model=List[ItemProps])
+    @router.get("/page/{index}", response_model=List[prop_model])
     async def get_page(index:int, page_size:Optional[int] = None, ):
             if page_size:
                 return R_page(session ,cls,index,page_size)

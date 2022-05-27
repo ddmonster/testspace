@@ -33,4 +33,4 @@ class TestPlan(Base, BaseMixin):
 
 
 if __name__ == "__main__":
-    print(type(TestPlan.__table__.columns[1]))
+    pass

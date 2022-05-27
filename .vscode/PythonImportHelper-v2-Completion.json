@@ -963,6 +963,14 @@
         "documentation": {}
     },
     {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -1292,15 +1300,6 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
         "label": "time",
         "kind": 6,
         "isExtraImport": true,
@@ -1391,10 +1390,10 @@
     },
     {
         "label": "Base",
-        "importPath": "testspace.db.base_class",
-        "description": "testspace.db.base_class",
+        "importPath": "base_class",
+        "description": "base_class",
         "isExtraImport": true,
-        "detail": "testspace.db.base_class",
+        "detail": "base_class",
         "documentation": {}
     },
     {
@@ -1445,14 +1444,6 @@
         "description": "sqlalchemy.ext.declarative",
         "isExtraImport": true,
         "detail": "sqlalchemy.ext.declarative",
-        "documentation": {}
-    },
-    {
-        "label": "__all__",
-        "importPath": "src.testspace.components.cache",
-        "description": "src.testspace.components.cache",
-        "isExtraImport": true,
-        "detail": "src.testspace.components.cache",
         "documentation": {}
     },
     {
@@ -1549,6 +1540,15 @@
         "description": "contextvars",
         "isExtraImport": true,
         "detail": "contextvars",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -1780,7 +1780,16 @@
         "kind": 2,
         "importPath": ".venv.Scripts.pywin32_postinstall",
         "description": ".venv.Scripts.pywin32_postinstall",
-        "peekOfCode": "def verify_destination(location):\n    if not os.path.isdir(location):\n        raise argparse.ArgumentTypeError('Path \"{}\" does not exist!'.format(location))\n    return location\nif __name__ == \"__main__\":\n    import argparse\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:",
+        "peekOfCode": "def verify_destination(location):\n    if not os.path.isdir(location):\n        raise argparse.ArgumentTypeError('Path \"{}\" does not exist!'.format(location))\n    return location\ndef main():\n    import argparse\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:",
+        "detail": ".venv.Scripts.pywin32_postinstall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_postinstall",
+        "description": ".venv.Scripts.pywin32_postinstall",
+        "peekOfCode": "def main():\n    import argparse\n    parser = argparse.ArgumentParser(\n        formatter_class=argparse.RawDescriptionHelpFormatter,\n        description=\"\"\"A post-install script for the pywin32 extensions.\n    * Typical usage:\n    > python pywin32_postinstall.py -install\n    If you installed pywin32 via a .exe installer, this should be run\n    automatically after installation, but if it fails you can run it again.\n    If you installed pywin32 via PIP, you almost certainly need to run this to",
         "detail": ".venv.Scripts.pywin32_postinstall",
         "documentation": {}
     },
@@ -1861,7 +1870,16 @@
         "kind": 2,
         "importPath": ".venv.Scripts.pywin32_testall",
         "description": ".venv.Scripts.pywin32_testall",
-        "peekOfCode": "def find_and_run(possible_locations, extras):\n    for maybe in possible_locations:\n        if os.path.isfile(maybe):\n            run_test(maybe, extras)\n            break\n    else:\n        raise RuntimeError(\n            \"Failed to locate a test script in one of %s\" % possible_locations\n        )\nif __name__ == \"__main__\":",
+        "peekOfCode": "def find_and_run(possible_locations, extras):\n    for maybe in possible_locations:\n        if os.path.isfile(maybe):\n            run_test(maybe, extras)\n            break\n    else:\n        raise RuntimeError(\n            \"Failed to locate a test script in one of %s\" % possible_locations\n        )\ndef main():",
+        "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": ".venv.Scripts.pywin32_testall",
+        "description": ".venv.Scripts.pywin32_testall",
+        "peekOfCode": "def main():\n    import argparse\n    code_directories = [this_dir] + site_packages\n    parser = argparse.ArgumentParser(\n        description=\"A script to trigger tests in all subprojects of PyWin32.\"\n    )\n    parser.add_argument(\n        \"-no-user-interaction\",\n        default=False,\n        action=\"store_true\",",
         "detail": ".venv.Scripts.pywin32_testall",
         "documentation": {}
     },
@@ -2293,7 +2311,7 @@
         "kind": 6,
         "importPath": "src.testspace.components.cache",
         "description": "src.testspace.components.cache",
-        "peekOfCode": "class RedisWarpper():\n    def __init__(self) -> None:\n        self.app:Optional[TypeWeakRef[FastAPI]] = None\n    def __getattr__(self,__name:str):\n        if not self.app:\n            raise Exception(\"not setup  please register redis in app!!!\")\n        return getattr(self.app.get().state.redis,__name)\n    async def init_from_url(self,url, app:FastAPI):\n        app.state.redis  =  await aioredis.from_url(url)\n        self.app = TypeWeakRef[FastAPI](app)",
+        "peekOfCode": "class RedisWarpper():\n    def __init__(self) -> None:\n        self.app:Optional[TypeWeakRef[FastAPI]] = None\n    def __getattr__(self,__name:str):\n        if not self.app:\n            raise Exception(\"not setup  please register redis in app!!!\")\n        return getattr(cast(FastAPI,self.app.get()).state.redis,__name)\n    async def init_from_url(self,url, app:FastAPI):\n        app.state.redis  =  await aioredis.from_url(url)\n        self.app = TypeWeakRef[FastAPI](app)",
         "detail": "src.testspace.components.cache",
         "documentation": {}
     },
@@ -2410,7 +2428,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:\n    return s.query(TestSuite).filter(TestSuite.testplans.contains([uuid])).order_by(TestSuite.created_at).all()\ndef U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)\n    suit = q.first()\n    if suit is None:\n        raise NotFoundException(\n            su, f\"<uuid= {uuid}> not  found in table {TestSuite.name}\")\n    q.update(su.dict(exclude={'uuid'}, exclude_none=True),\n             synchronize_session=\"fetch\")",
+        "peekOfCode": "def R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:\n    return s.query(TestSuite).filter(TestSuite.testplans.contains([uuid])).order_by(TestSuite.created_at).all()\ndef U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)\n    suit = q.first()\n    if suit is None:\n        raise NotFoundException(\n            su, f\"<uuid= {uuid}> not  found in table {TestSuite.name}\")\n    q.update(su.dict(exclude={'uuid'}, exclude_none=True),\n            synchronize_session=\"fetch\")",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
@@ -2419,7 +2437,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)\n    suit = q.first()\n    if suit is None:\n        raise NotFoundException(\n            su, f\"<uuid= {uuid}> not  found in table {TestSuite.name}\")\n    q.update(su.dict(exclude={'uuid'}, exclude_none=True),\n             synchronize_session=\"fetch\")\n    s.commit()\n    s.refresh(suit)",
+        "peekOfCode": "def U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)\n    suit = q.first()\n    if suit is None:\n        raise NotFoundException(\n            su, f\"<uuid= {uuid}> not  found in table {TestSuite.name}\")\n    q.update(su.dict(exclude={'uuid'}, exclude_none=True),\n            synchronize_session=\"fetch\")\n    return suit\ndef D_delete_testsuit_by_uuid(s: Session, uuid: UUID):",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
@@ -2509,7 +2527,7 @@
         "kind": 5,
         "importPath": "src.testspace.db.Base",
         "description": "src.testspace.db.Base",
-        "peekOfCode": "cur_path = Path(__file__).parent.parent.joinpath(\"models\")\n# get all modules in the routers package\nhave_base = lambda module: True if hasattr(module,'Base') else False\nfor mod in cur_path.iterdir():\n    if mod.is_dir():\n        mod_name = mod.name\n    elif mod.is_file() and mod.name.endswith('.py'):\n        mod_name = mod.name.strip(\".py\")\n    elif mod.name != '__pycache__' or mod.name != '__init__.py':\n        continue",
+        "peekOfCode": "cur_path = Path(__file__).parent.parent.joinpath(\"models\")\n# get all modules in the routers package\nhave_base = lambda module: True if hasattr(module,'Base') else False\n__all__ = [\"create_schema\"]\nfor mod in cur_path.iterdir():\n    mod_name = mod.name\n    if mod.is_file() and mod.name.endswith('.py'):\n        mod_name = mod.name.strip(\".py\")\n    elif mod.name != '__pycache__' or mod.name != '__init__.py':\n        continue",
         "detail": "src.testspace.db.Base",
         "documentation": {}
     },
@@ -2518,7 +2536,16 @@
         "kind": 5,
         "importPath": "src.testspace.db.Base",
         "description": "src.testspace.db.Base",
-        "peekOfCode": "have_base = lambda module: True if hasattr(module,'Base') else False\nfor mod in cur_path.iterdir():\n    if mod.is_dir():\n        mod_name = mod.name\n    elif mod.is_file() and mod.name.endswith('.py'):\n        mod_name = mod.name.strip(\".py\")\n    elif mod.name != '__pycache__' or mod.name != '__init__.py':\n        continue\n    importlib.import_module(f'testspace.models.{mod_name}')\ndef create_schema():",
+        "peekOfCode": "have_base = lambda module: True if hasattr(module,'Base') else False\n__all__ = [\"create_schema\"]\nfor mod in cur_path.iterdir():\n    mod_name = mod.name\n    if mod.is_file() and mod.name.endswith('.py'):\n        mod_name = mod.name.strip(\".py\")\n    elif mod.name != '__pycache__' or mod.name != '__init__.py':\n        continue\n    importlib.import_module(f'testspace.models.{mod_name}')\ndef create_schema():",
+        "detail": "src.testspace.db.Base",
+        "documentation": {}
+    },
+    {
+        "label": "__all__",
+        "kind": 5,
+        "importPath": "src.testspace.db.Base",
+        "description": "src.testspace.db.Base",
+        "peekOfCode": "__all__ = [\"create_schema\"]\nfor mod in cur_path.iterdir():\n    mod_name = mod.name\n    if mod.is_file() and mod.name.endswith('.py'):\n        mod_name = mod.name.strip(\".py\")\n    elif mod.name != '__pycache__' or mod.name != '__init__.py':\n        continue\n    importlib.import_module(f'testspace.models.{mod_name}')\ndef create_schema():\n    from testspace.db.Session import engine",
         "detail": "src.testspace.db.Base",
         "documentation": {}
     },
@@ -2644,7 +2671,7 @@
         "kind": 6,
         "importPath": "src.testspace.models.testcase",
         "description": "src.testspace.models.testcase",
-        "peekOfCode": "class TestPlan(Base, BaseMixin):\n    name = Column(String)\n    description = Column(Text, default='')\n    labels = StringList(default=[])\n    enums = JsonText(default={})\nif __name__ == \"__main__\":\n    print(type(TestPlan.__table__.columns[1]))",
+        "peekOfCode": "class TestPlan(Base, BaseMixin):\n    name = Column(String)\n    description = Column(Text, default='')\n    labels = StringList(default=[])\n    enums = JsonText(default={})\nif __name__ == \"__main__\":\n    pass",
         "detail": "src.testspace.models.testcase",
         "documentation": {}
     },
@@ -2871,6 +2898,15 @@
         "description": "src.testspace.utils.gen",
         "peekOfCode": "__all__ = [\n    \"curtime\",\n    \"uuid_v4\",\n    \"json_str_to_dict\",\n    \"dict_to_json_str\"\n]\ndef curtime():\n    return datetime.datetime.now()\ndef uuid_v4():\n    import uuid",
         "detail": "src.testspace.utils.gen",
+        "documentation": {}
+    },
+    {
+        "label": "export",
+        "kind": 2,
+        "importPath": "src.testspace.utils.ModuleExport",
+        "description": "src.testspace.utils.ModuleExport",
+        "peekOfCode": "def export(fn):",
+        "detail": "src.testspace.utils.ModuleExport",
         "documentation": {}
     },
     {
