@@ -11,8 +11,7 @@
                 "command": "$env:PYTHONPATH;${command:python.interpreterPath} -m alembic revision --autogenerate -m ${input:message}  "
             },
             "options": {
-                "cwd": "${workspaceFolder}",
-                // "PYTHONPATH": "${workspaceFolder}\\src\\testspace;${workspaceFolder}\\tests;"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 "reveal": "always",
@@ -28,8 +27,7 @@
                 "command": "$env:PYTHONPATH;${command:python.interpreterPath}  -m alembic upgrade head"
             },
             "options": {
-                "cwd": "${workspaceFolder}",
-                // "PYTHONPATH": "${workspaceFolder}\\src\\testspace;${workspaceFolder}\\tests;"
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 "reveal": "always",
@@ -40,12 +38,53 @@
         {
             "label": "build testspace pakage",
             "type": "shell",
-            "command": "pip freeze > requirements.txt ; ${command:python.interpreterPath} -m build",
+            "command": "${command:python.interpreterPath} -m build",
             "windows": {
                 "command": "${command:python.interpreterPath} -m build"
             },
             "options": {
-                // "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "dependsOn": [
+                "freeze testspace pakage"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "upgrade all pakage",
+            "type": "shell",
+            "command":"${command:python.interpreterPath} -m pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}",
+            "windows": {
+                "command": "${command:python.interpreterPath} -m pip freeze | %{$_.split('==')[0]} | %{pip install --upgrade $_}",
+            },
+            "linux": {
+                "command": "${command:python.interpreterPath} -m pip list --outdated --format=freeze | grep -v '^\\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "dependsOn": [
+                
+            ],
+            "problemMatcher": [],
+        },
+        {
+            "label": "freeze testspace pakage",
+            "type": "shell",
+            "command": "${command:python.interpreterPath} -m pip freeze > requirements.txt",
+            "windows": {
+                "command": "${command:python.interpreterPath} -m pip freeze > requirements.txt"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
             },
             "presentation": {
                 "reveal": "always",
