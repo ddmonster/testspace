@@ -1389,14 +1389,6 @@
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "base_class",
-        "description": "base_class",
-        "isExtraImport": true,
-        "detail": "base_class",
-        "documentation": {}
-    },
-    {
         "label": "pathlib",
         "kind": 6,
         "isExtraImport": true,
