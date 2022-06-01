@@ -15,7 +15,7 @@ from testspace.schemas.testcase import \
 def C_create_testcase(s: Session, case: TestcaseCreate) -> TestcaseProps:
     ts = Testcase(**case.dict())
     s.add(ts)
-    s.commit()
+    
     return ts
 
 
@@ -44,7 +44,7 @@ def D_delete_testcase_by_uuid(s: Session, uuid: UUID):
 def C_create_testsuit(s: Session, suit: TestSuitCreate) -> TestSuitProps:
     ts = TestSuite(**suit.dict(exclude_none=True))
     s.add(ts)
-    s.commit()
+    
     return ts
 
 
@@ -75,7 +75,7 @@ def D_delete_testsuit_by_uuid(s: Session, uuid: UUID):
 def C_create_testplan(s: Session, plan: TestPlanCreate) -> TestPlanProps:
     ts = TestPlan(**plan.dict(exclude_none=True))
     s.add(ts)
-    s.commit()
+    
     return ts
 
 
@@ -90,9 +90,7 @@ def U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):
         raise NotFoundException(
             p, f"<uuid= {uuid}> not  found in table {TestPlan.name}")
     q.update(p.dict(exclude={'uuid'}, exclude_none=True),
-             synchronize_session="fetch")
-    s.commit()
-    s.refresh(plan)
+            synchronize_session="fetch")
     return plan
 
 

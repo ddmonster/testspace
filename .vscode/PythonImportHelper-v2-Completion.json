@@ -2366,7 +2366,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def C_create_testcase(s: Session, case: TestcaseCreate) -> TestcaseProps:\n    ts = Testcase(**case.dict())\n    s.add(ts)\n    s.commit()\n    return ts\ndef R_get_testcases_by_uuid(s: Session, uuid: UUID) -> Union[TestcaseProps, None]:\n    return s.query(Testcase).filter_by(uuid=uuid).first()\ndef U_update_testcase_by_uuid(s: Session, uuid: UUID, case: TestcaseUpdate):\n    q = s.query(Testcase).filter_by(uuid=uuid)\n    c = q.first()",
+        "peekOfCode": "def C_create_testcase(s: Session, case: TestcaseCreate) -> TestcaseProps:\n    ts = Testcase(**case.dict())\n    s.add(ts)\n    return ts\ndef R_get_testcases_by_uuid(s: Session, uuid: UUID) -> Union[TestcaseProps, None]:\n    return s.query(Testcase).filter_by(uuid=uuid).first()\ndef U_update_testcase_by_uuid(s: Session, uuid: UUID, case: TestcaseUpdate):\n    q = s.query(Testcase).filter_by(uuid=uuid)\n    c = q.first()\n    if c is None:",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
@@ -2393,7 +2393,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def D_delete_testcase_by_uuid(s: Session, uuid: UUID):\n    s.query(Testcase).filter_by(uuid=uuid).delete()\n# testsuit\ndef C_create_testsuit(s: Session, suit: TestSuitCreate) -> TestSuitProps:\n    ts = TestSuite(**suit.dict(exclude_none=True))\n    s.add(ts)\n    s.commit()\n    return ts\ndef R_get_testsuit_by_uuid(s: Session, uuid: UUID) -> Union[TestSuitProps, None]:\n    return s.query(TestSuite).filter_by(uuid=uuid).first()",
+        "peekOfCode": "def D_delete_testcase_by_uuid(s: Session, uuid: UUID):\n    s.query(Testcase).filter_by(uuid=uuid).delete()\n# testsuit\ndef C_create_testsuit(s: Session, suit: TestSuitCreate) -> TestSuitProps:\n    ts = TestSuite(**suit.dict(exclude_none=True))\n    s.add(ts)\n    return ts\ndef R_get_testsuit_by_uuid(s: Session, uuid: UUID) -> Union[TestSuitProps, None]:\n    return s.query(TestSuite).filter_by(uuid=uuid).first()\ndef R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
@@ -2402,7 +2402,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def C_create_testsuit(s: Session, suit: TestSuitCreate) -> TestSuitProps:\n    ts = TestSuite(**suit.dict(exclude_none=True))\n    s.add(ts)\n    s.commit()\n    return ts\ndef R_get_testsuit_by_uuid(s: Session, uuid: UUID) -> Union[TestSuitProps, None]:\n    return s.query(TestSuite).filter_by(uuid=uuid).first()\ndef R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:\n    return s.query(TestSuite).filter(TestSuite.testplans.contains([uuid])).order_by(TestSuite.created_at).all()\ndef U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):",
+        "peekOfCode": "def C_create_testsuit(s: Session, suit: TestSuitCreate) -> TestSuitProps:\n    ts = TestSuite(**suit.dict(exclude_none=True))\n    s.add(ts)\n    return ts\ndef R_get_testsuit_by_uuid(s: Session, uuid: UUID) -> Union[TestSuitProps, None]:\n    return s.query(TestSuite).filter_by(uuid=uuid).first()\ndef R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:\n    return s.query(TestSuite).filter(TestSuite.testplans.contains([uuid])).order_by(TestSuite.created_at).all()\ndef U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
@@ -2438,7 +2438,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def D_delete_testsuit_by_uuid(s: Session, uuid: UUID):\n    s.query(TestSuite).filter_by(uuid=uuid).delete()\n# testplan\ndef C_create_testplan(s: Session, plan: TestPlanCreate) -> TestPlanProps:\n    ts = TestPlan(**plan.dict(exclude_none=True))\n    s.add(ts)\n    s.commit()\n    return ts\ndef R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()",
+        "peekOfCode": "def D_delete_testsuit_by_uuid(s: Session, uuid: UUID):\n    s.query(TestSuite).filter_by(uuid=uuid).delete()\n# testplan\ndef C_create_testplan(s: Session, plan: TestPlanCreate) -> TestPlanProps:\n    ts = TestPlan(**plan.dict(exclude_none=True))\n    s.add(ts)\n    return ts\ndef R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()\ndef U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
@@ -2447,7 +2447,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def C_create_testplan(s: Session, plan: TestPlanCreate) -> TestPlanProps:\n    ts = TestPlan(**plan.dict(exclude_none=True))\n    s.add(ts)\n    s.commit()\n    return ts\ndef R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()\ndef U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()",
+        "peekOfCode": "def C_create_testplan(s: Session, plan: TestPlanCreate) -> TestPlanProps:\n    ts = TestPlan(**plan.dict(exclude_none=True))\n    s.add(ts)\n    return ts\ndef R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()\ndef U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()\n    if plan is None:",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
@@ -2456,7 +2456,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()\ndef U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()\n    if plan is None:\n        raise NotFoundException(\n            p, f\"<uuid= {uuid}> not  found in table {TestPlan.name}\")\n    q.update(p.dict(exclude={'uuid'}, exclude_none=True),\n             synchronize_session=\"fetch\")",
+        "peekOfCode": "def R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()\ndef U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()\n    if plan is None:\n        raise NotFoundException(\n            p, f\"<uuid= {uuid}> not  found in table {TestPlan.name}\")\n    q.update(p.dict(exclude={'uuid'}, exclude_none=True),\n            synchronize_session=\"fetch\")",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
@@ -2465,7 +2465,7 @@
         "kind": 2,
         "importPath": "src.testspace.crud.testcase",
         "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()\n    if plan is None:\n        raise NotFoundException(\n            p, f\"<uuid= {uuid}> not  found in table {TestPlan.name}\")\n    q.update(p.dict(exclude={'uuid'}, exclude_none=True),\n             synchronize_session=\"fetch\")\n    s.commit()\n    s.refresh(plan)",
+        "peekOfCode": "def U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()\n    if plan is None:\n        raise NotFoundException(\n            p, f\"<uuid= {uuid}> not  found in table {TestPlan.name}\")\n    q.update(p.dict(exclude={'uuid'}, exclude_none=True),\n            synchronize_session=\"fetch\")\n    return plan\ndef D_delete_testplan_by_uuid(s: Session, uuid: UUID):",
         "detail": "src.testspace.crud.testcase",
         "documentation": {}
     },
