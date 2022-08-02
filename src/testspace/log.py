@@ -1,6 +1,5 @@
 import logging
 from rich.logging import RichHandler
-from sqlalchemy import false
 from testspace.config import tomlconfig
 
 def get_log_level(name:str):
@@ -12,25 +11,23 @@ def get_log_level(name:str):
 FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 FORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'
 from rich.logging import RichHandler
-handler = RichHandler(
+rich_handler = RichHandler(
     show_path=False,
     show_time=False,
-    rich_tracebacks=True,
-    tracebacks_show_locals=True if tomlconfig.development.level == "DEBUG" else False,
+    rich_tracebacks= False,
+    tracebacks_show_locals= False,
     markup=True)
+
 logging.basicConfig(
-    level="NOTSET", format=FORMAT_2, datefmt="[%x %X]", handlers=[handler]
+    level="NOTSET", format=FORMAT_2, datefmt="[%x %X]", handlers=[rich_handler], force=True
 )
 
 log_level =  get_log_level(tomlconfig.logconfig.level)
-
 logger = logging.getLogger("testspace")
 
-
-# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')
+logger.setLevel(log_level)
+sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')
 # sqlalchemy_engine_logger.setLevel(log_level)
-
-sqlalchemy_logger = logging.getLogger('sqlalchemy')
-sqlalchemy_logger.setLevel(log_level)
-uvicorn_logger = logging.getLogger("uvicorn")
-uvicorn_logger.addHandler(handler)
+# sqlalchemy_engine_logger.addHandler(rich_handler)
+# sqlalchemy_logger = logging.getLogger('sqlalchemy')
+# uvicorn_logger = logging.getLogger("uvicorn")

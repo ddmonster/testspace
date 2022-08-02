@@ -3,38 +3,7 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "alembic generate script",
-            "type": "shell",
-            "command": "${command:python.interpreterPath} -m alembic revision --autogenerate -m \"${input:message}\" ",
-            "windows": {
-                "command": "$env:PYTHONPATH;${command:python.interpreterPath} -m alembic revision --autogenerate -m ${input:message}  "
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "alembic commit change",
-            "type": "shell",
-            "command": "${command:python.interpreterPath} -m alembic upgrade head",
-            "windows": {
-                "command": "$env:PYTHONPATH;${command:python.interpreterPath}  -m alembic upgrade head"
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            },
-            "problemMatcher": []
-        },
+        
         {
             "label": "build testspace pakage",
             "type": "shell",

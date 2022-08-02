@@ -72,866 +72,32 @@
         "documentation": {}
     },
     {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
         "isExtraImport": true,
-        "detail": "alembic",
+        "detail": "io",
         "documentation": {}
     },
     {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
+        "label": "StringIO",
+        "importPath": "io",
+        "description": "io",
         "isExtraImport": true,
-        "detail": "alembic",
+        "detail": "io",
         "documentation": {}
     },
     {
-        "label": "context",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
-        "documentation": {}
-    },
-    {
-        "label": "sqlalchemy",
+        "label": "typing",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "detail": "sqlalchemy",
+        "importPath": "typing",
+        "description": "typing",
+        "detail": "typing",
         "documentation": {}
     },
     {
-        "label": "engine_from_config",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "pool",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "desc",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "func",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "create_engine",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Column",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "String",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Column",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "String",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Boolean",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Text",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Column",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "String",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Boolean",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "false",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "postgresql",
-        "importPath": "sqlalchemy.dialects",
-        "description": "sqlalchemy.dialects",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.dialects",
-        "documentation": {}
-    },
-    {
-        "label": "postgresql",
-        "importPath": "sqlalchemy.dialects",
-        "description": "sqlalchemy.dialects",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.dialects",
-        "documentation": {}
-    },
-    {
-        "label": "fileConfig",
-        "importPath": "logging.config",
-        "description": "logging.config",
-        "isExtraImport": true,
-        "detail": "logging.config",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "testspace.db.Base",
-        "description": "testspace.db.Base",
-        "isExtraImport": true,
-        "detail": "testspace.db.Base",
-        "documentation": {}
-    },
-    {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Header",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Header",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Query",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Header",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Cookie",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Header",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Cookie",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "HTTPException",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "status",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Request",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Header",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "HTTPException",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Request",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Testcase",
-        "importPath": "testspace.models.testcase",
-        "description": "testspace.models.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.models.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestSuite",
-        "importPath": "testspace.models.testcase",
-        "description": "testspace.models.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.models.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestPlan",
-        "importPath": "testspace.models.testcase",
-        "description": "testspace.models.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.models.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestSuite",
-        "importPath": "testspace.models.testcase",
-        "description": "testspace.models.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.models.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestPlan",
-        "importPath": "testspace.models.testcase",
-        "description": "testspace.models.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.models.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "Testcase",
-        "importPath": "testspace.models.testcase",
-        "description": "testspace.models.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.models.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestSuite",
-        "importPath": "testspace.models.testcase",
-        "description": "testspace.models.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.models.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "testspace.schemas.testcase",
-        "description": "testspace.schemas.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "testspace.schemas.testcase",
-        "description": "testspace.schemas.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "testspace.schemas.testcase",
-        "description": "testspace.schemas.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "\\",
-        "importPath": "testspace.schemas.testcase",
-        "description": "testspace.schemas.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "testspace.db.Session",
-        "description": "testspace.db.Session",
-        "isExtraImport": true,
-        "detail": "testspace.db.Session",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "testspace.db.Session",
-        "description": "testspace.db.Session",
-        "isExtraImport": true,
-        "detail": "testspace.db.Session",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "testspace.db.Session",
-        "description": "testspace.db.Session",
-        "isExtraImport": true,
-        "detail": "testspace.db.Session",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "testspace.db.Session",
-        "description": "testspace.db.Session",
-        "isExtraImport": true,
-        "detail": "testspace.db.Session",
-        "documentation": {}
-    },
-    {
-        "label": "session",
-        "importPath": "testspace.db.Session",
-        "description": "testspace.db.Session",
-        "isExtraImport": true,
-        "detail": "testspace.db.Session",
-        "documentation": {}
-    },
-    {
-        "label": "openSession",
-        "importPath": "testspace.db.Session",
-        "description": "testspace.db.Session",
-        "isExtraImport": true,
-        "detail": "testspace.db.Session",
-        "documentation": {}
-    },
-    {
-        "label": "C_create_testcase",
-        "importPath": "testspace.crud.testcase",
-        "description": "testspace.crud.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "\\",
-        "importPath": "testspace.crud.testcase",
-        "description": "testspace.crud.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "testspace.crud.testcase",
-        "description": "testspace.crud.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "C_create_testsuit",
-        "importPath": "testspace.crud.testcase",
-        "description": "testspace.crud.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "D_delete_testsuit_by_uuid",
-        "importPath": "testspace.crud.testcase",
-        "description": "testspace.crud.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_testsuit_by_uuid",
-        "importPath": "testspace.crud.testcase",
-        "description": "testspace.crud.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "U_update_testsuit_by_uuid",
-        "importPath": "testspace.crud.testcase",
-        "description": "testspace.crud.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "U_update_testsuit_by_uuid",
-        "importPath": "testspace.crud.testcase",
-        "description": "testspace.crud.testcase",
-        "isExtraImport": true,
-        "detail": "testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "redis",
-        "importPath": "testspace.components.cache",
-        "description": "testspace.components.cache",
-        "isExtraImport": true,
-        "detail": "testspace.components.cache",
-        "documentation": {}
-    },
-    {
-        "label": "register_redis",
-        "importPath": "testspace.components.cache",
-        "description": "testspace.components.cache",
-        "isExtraImport": true,
-        "detail": "testspace.components.cache",
-        "documentation": {}
-    },
-    {
-        "label": "asyncio",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "asyncio",
-        "description": "asyncio",
-        "detail": "asyncio",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "datetime",
-        "description": "datetime",
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "testspace.models.user",
-        "description": "testspace.models.user",
-        "isExtraImport": true,
-        "detail": "testspace.models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "testspace.models.user",
-        "description": "testspace.models.user",
-        "isExtraImport": true,
-        "detail": "testspace.models.user",
-        "documentation": {}
-    },
-    {
-        "label": "set_page_enable_api",
-        "importPath": "testspace.api",
-        "description": "testspace.api",
-        "isExtraImport": true,
-        "detail": "testspace.api",
-        "documentation": {}
-    },
-    {
-        "label": "CryptContext",
-        "importPath": "passlib.context",
-        "description": "passlib.context",
-        "isExtraImport": true,
-        "detail": "passlib.context",
-        "documentation": {}
-    },
-    {
-        "label": "CryptContext",
-        "importPath": "passlib.context",
-        "description": "passlib.context",
-        "isExtraImport": true,
-        "detail": "passlib.context",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "testspace.schemas.user",
-        "description": "testspace.schemas.user",
-        "isExtraImport": true,
-        "detail": "testspace.schemas.user",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "testspace.schemas.user",
-        "description": "testspace.schemas.user",
-        "isExtraImport": true,
-        "detail": "testspace.schemas.user",
-        "documentation": {}
-    },
-    {
-        "label": "CreateUser",
-        "importPath": "testspace.schemas.user",
-        "description": "testspace.schemas.user",
-        "isExtraImport": true,
-        "detail": "testspace.schemas.user",
-        "documentation": {}
-    },
-    {
-        "label": "CreateUser",
-        "importPath": "testspace.schemas.user",
-        "description": "testspace.schemas.user",
-        "isExtraImport": true,
-        "detail": "testspace.schemas.user",
-        "documentation": {}
-    },
-    {
-        "label": "C_create_user",
-        "importPath": "testspace.crud.user",
-        "description": "testspace.crud.user",
-        "isExtraImport": true,
-        "detail": "testspace.crud.user",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_user_by_email",
-        "importPath": "testspace.crud.user",
-        "description": "testspace.crud.user",
-        "isExtraImport": true,
-        "detail": "testspace.crud.user",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_user_by_name",
-        "importPath": "testspace.crud.user",
-        "description": "testspace.crud.user",
-        "isExtraImport": true,
-        "detail": "testspace.crud.user",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_user_by_name",
-        "importPath": "testspace.crud.user",
-        "description": "testspace.crud.user",
-        "isExtraImport": true,
-        "detail": "testspace.crud.user",
-        "documentation": {}
-    },
-    {
-        "label": "C_create_user",
-        "importPath": "testspace.crud.user",
-        "description": "testspace.crud.user",
-        "isExtraImport": true,
-        "detail": "testspace.crud.user",
-        "documentation": {}
-    },
-    {
-        "label": "current_user",
-        "importPath": "testspace.components.auth",
-        "description": "testspace.components.auth",
-        "isExtraImport": true,
-        "detail": "testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "pwd_context",
-        "importPath": "testspace.components.auth",
-        "description": "testspace.components.auth",
-        "isExtraImport": true,
-        "detail": "testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "set_auth",
-        "importPath": "testspace.components.auth",
-        "description": "testspace.components.auth",
-        "isExtraImport": true,
-        "detail": "testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "pwd_context",
-        "importPath": "testspace.components.auth",
-        "description": "testspace.components.auth",
-        "isExtraImport": true,
-        "detail": "testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "IntEnum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
+        "label": "TextIO",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -939,7 +105,23 @@
         "documentation": {}
     },
     {
-        "label": "Union",
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypedDict",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -971,14 +153,6 @@
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -987,7 +161,7 @@
         "documentation": {}
     },
     {
-        "label": "Union",
+        "label": "Literal",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -995,7 +169,7 @@
         "documentation": {}
     },
     {
-        "label": "Union",
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -1003,7 +177,7 @@
         "documentation": {}
     },
     {
-        "label": "Union",
+        "label": "Mapping",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -1027,15 +201,7 @@
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
+        "label": "Mapping",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -1075,6 +241,62 @@
         "documentation": {}
     },
     {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TYPE_CHECKING",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Generic",
         "importPath": "typing",
         "description": "typing",
@@ -1104,6 +326,559 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "venv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "venv",
+        "description": "venv",
+        "detail": "venv",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "UUID4",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Extra",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Engine",
+        "importPath": "sqlalchemy.engine.base",
+        "description": "sqlalchemy.engine.base",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.engine.base",
+        "documentation": {}
+    },
+    {
+        "label": "Engine",
+        "importPath": "sqlalchemy.engine.base",
+        "description": "sqlalchemy.engine.base",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.engine.base",
+        "documentation": {}
+    },
+    {
+        "label": "Engine",
+        "importPath": "sqlalchemy.engine.base",
+        "description": "sqlalchemy.engine.base",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.engine.base",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "SQLModel",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "SQLModel",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "VARCHAR",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Relationship",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "SQLModel",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "BOOLEAN",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Relationship",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "SQLModel",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlmodel",
+        "description": "sqlmodel",
+        "isExtraImport": true,
+        "detail": "sqlmodel",
+        "documentation": {}
+    },
+    {
+        "label": "TestItem",
+        "importPath": "testspace.models.testitem",
+        "description": "testspace.models.testitem",
+        "isExtraImport": true,
+        "detail": "testspace.models.testitem",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Omit",
+        "importPath": "testspace.utils.pydantictools",
+        "description": "testspace.utils.pydantictools",
+        "isExtraImport": true,
+        "detail": "testspace.utils.pydantictools",
+        "documentation": {}
+    },
+    {
+        "label": "Partial",
+        "importPath": "testspace.utils.pydantictools",
+        "description": "testspace.utils.pydantictools",
+        "isExtraImport": true,
+        "detail": "testspace.utils.pydantictools",
+        "documentation": {}
+    },
+    {
+        "label": "Omit",
+        "importPath": "testspace.utils.pydantictools",
+        "description": "testspace.utils.pydantictools",
+        "isExtraImport": true,
+        "detail": "testspace.utils.pydantictools",
+        "documentation": {}
+    },
+    {
+        "label": "oauth2_scheme",
+        "importPath": "testspace.components.auth",
+        "description": "testspace.components.auth",
+        "isExtraImport": true,
+        "detail": "testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_password_hash",
+        "importPath": "testspace.components.auth",
+        "description": "testspace.components.auth",
+        "isExtraImport": true,
+        "detail": "testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "oauth2_scheme",
+        "importPath": "testspace.components.auth",
+        "description": "testspace.components.auth",
+        "isExtraImport": true,
+        "detail": "testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "setup_auth_component",
+        "importPath": "testspace.components.auth",
+        "description": "testspace.components.auth",
+        "isExtraImport": true,
+        "detail": "testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "testspace.db.session",
+        "description": "testspace.db.session",
+        "isExtraImport": true,
+        "detail": "testspace.db.session",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "testspace.db.session",
+        "description": "testspace.db.session",
+        "isExtraImport": true,
+        "detail": "testspace.db.session",
+        "documentation": {}
+    },
+    {
+        "label": "get_engine",
+        "importPath": "testspace.db.session",
+        "description": "testspace.db.session",
+        "isExtraImport": true,
+        "detail": "testspace.db.session",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "testspace.models.user",
+        "description": "testspace.models.user",
+        "isExtraImport": true,
+        "detail": "testspace.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserGroup",
+        "importPath": "testspace.models.user",
+        "description": "testspace.models.user",
+        "isExtraImport": true,
+        "detail": "testspace.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "testspace.models.user",
+        "description": "testspace.models.user",
+        "isExtraImport": true,
+        "detail": "testspace.models.user",
         "documentation": {}
     },
     {
@@ -1123,27 +898,44 @@
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "fastapi.responses",
-        "description": "fastapi.responses",
+        "label": "OAuth2PasswordBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
         "isExtraImport": true,
-        "detail": "fastapi.responses",
+        "detail": "fastapi.security",
         "documentation": {}
     },
     {
-        "label": "HTMLResponse",
-        "importPath": "fastapi.responses",
-        "description": "fastapi.responses",
+        "label": "OAuth2PasswordRequestForm",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
         "isExtraImport": true,
-        "detail": "fastapi.responses",
+        "detail": "fastapi.security",
         "documentation": {}
     },
     {
-        "label": "RedirectResponse",
-        "importPath": "fastapi.responses",
-        "description": "fastapi.responses",
+        "label": "datetime",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "fastapi.responses",
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -1163,79 +955,32 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "sqlalchemy",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "pydantic",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
         "documentation": {}
     },
     {
-        "label": "Json",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "sqlalchemy",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "VARCHAR",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "sqlalchemy",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "importPath": "testspace.log",
-        "description": "testspace.log",
-        "isExtraImport": true,
-        "detail": "testspace.log",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "importPath": "testspace.log",
-        "description": "testspace.log",
-        "isExtraImport": true,
-        "detail": "testspace.log",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "importPath": "testspace.log",
-        "description": "testspace.log",
-        "isExtraImport": true,
-        "detail": "testspace.log",
-        "documentation": {}
-    },
-    {
-        "label": "logger",
-        "importPath": "testspace.log",
-        "description": "testspace.log",
-        "isExtraImport": true,
-        "detail": "testspace.log",
-        "documentation": {}
-    },
-    {
-        "label": "SECRET_KEY",
+        "label": "TomlConfig",
         "importPath": "testspace.config",
         "description": "testspace.config",
         "isExtraImport": true,
@@ -1267,11 +1012,27 @@
         "documentation": {}
     },
     {
-        "label": "ROOT_PATH",
+        "label": "DATA_DIR",
         "importPath": "testspace.config",
         "description": "testspace.config",
         "isExtraImport": true,
         "detail": "testspace.config",
+        "documentation": {}
+    },
+    {
+        "label": "TomlConfig",
+        "importPath": "testspace.config",
+        "description": "testspace.config",
+        "isExtraImport": true,
+        "detail": "testspace.config",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
         "documentation": {}
     },
     {
@@ -1297,6 +1058,54 @@
         "description": "testspace.utils.TypeWeakref",
         "isExtraImport": true,
         "detail": "testspace.utils.TypeWeakref",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "testspace.log",
+        "description": "testspace.log",
+        "isExtraImport": true,
+        "detail": "testspace.log",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "testspace.log",
+        "description": "testspace.log",
+        "isExtraImport": true,
+        "detail": "testspace.log",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "testspace.log",
+        "description": "testspace.log",
+        "isExtraImport": true,
+        "detail": "testspace.log",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "testspace.log",
+        "description": "testspace.log",
+        "isExtraImport": true,
+        "detail": "testspace.log",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "testspace.log",
+        "description": "testspace.log",
+        "isExtraImport": true,
+        "detail": "testspace.log",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "testspace.log",
+        "description": "testspace.log",
+        "isExtraImport": true,
+        "detail": "testspace.log",
         "documentation": {}
     },
     {
@@ -1333,23 +1142,127 @@
         "documentation": {}
     },
     {
-        "label": "UUID",
-        "importPath": "uuid",
-        "description": "uuid",
+        "label": "get_redoc_html",
+        "importPath": "fastapi.openapi.docs",
+        "description": "fastapi.openapi.docs",
         "isExtraImport": true,
-        "detail": "uuid",
+        "detail": "fastapi.openapi.docs",
+        "documentation": {}
+    },
+    {
+        "label": "get_swagger_ui_html",
+        "importPath": "fastapi.openapi.docs",
+        "description": "fastapi.openapi.docs",
+        "isExtraImport": true,
+        "detail": "fastapi.openapi.docs",
+        "documentation": {}
+    },
+    {
+        "label": "get_swagger_ui_oauth2_redirect_html",
+        "importPath": "fastapi.openapi.docs",
+        "description": "fastapi.openapi.docs",
+        "isExtraImport": true,
+        "detail": "fastapi.openapi.docs",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "create_database",
+        "importPath": "sqlalchemy_utils",
+        "description": "sqlalchemy_utils",
+        "isExtraImport": true,
+        "detail": "sqlalchemy_utils",
+        "documentation": {}
+    },
+    {
+        "label": "database_exists",
+        "importPath": "sqlalchemy_utils",
+        "description": "sqlalchemy_utils",
+        "isExtraImport": true,
+        "detail": "sqlalchemy_utils",
+        "documentation": {}
+    },
+    {
+        "label": "Select",
+        "importPath": "sqlmodel.sql.expression",
+        "description": "sqlmodel.sql.expression",
+        "isExtraImport": true,
+        "detail": "sqlmodel.sql.expression",
+        "documentation": {}
+    },
+    {
+        "label": "SelectOfScalar",
+        "importPath": "sqlmodel.sql.expression",
+        "description": "sqlmodel.sql.expression",
+        "isExtraImport": true,
+        "detail": "sqlmodel.sql.expression",
         "documentation": {}
     },
     {
         "label": "UUID",
-        "importPath": "uuid",
-        "description": "uuid",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
         "isExtraImport": true,
-        "detail": "uuid",
+        "detail": "sqlalchemy.dialects.postgresql",
         "documentation": {}
     },
     {
-        "label": "Session",
+        "label": "JSON",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "ARRAY",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "JSON",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "backref",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -1357,35 +1270,20 @@
         "documentation": {}
     },
     {
-        "label": "Session",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
+        "label": "ContextVar",
+        "importPath": "contextvars",
+        "description": "contextvars",
         "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
+        "detail": "contextvars",
         "documentation": {}
     },
     {
-        "label": "sessionmaker",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
+        "label": "json",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
-        "documentation": {}
-    },
-    {
-        "label": "Session",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
-        "documentation": {}
-    },
-    {
-        "label": "scoped_session",
-        "importPath": "sqlalchemy.orm",
-        "description": "sqlalchemy.orm",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.orm",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -1394,22 +1292,6 @@
         "isExtraImport": true,
         "importPath": "pathlib",
         "description": "pathlib",
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
         "detail": "pathlib",
         "documentation": {}
     },
@@ -1431,116 +1313,46 @@
         "documentation": {}
     },
     {
-        "label": "declarative_base",
-        "importPath": "sqlalchemy.ext.declarative",
-        "description": "sqlalchemy.ext.declarative",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.ext.declarative",
-        "documentation": {}
-    },
-    {
-        "label": "contextmanager",
-        "importPath": "contextlib",
-        "description": "contextlib",
-        "isExtraImport": true,
-        "detail": "contextlib",
-        "documentation": {}
-    },
-    {
-        "label": "default",
-        "importPath": "email.policy",
-        "description": "email.policy",
-        "isExtraImport": true,
-        "detail": "email.policy",
-        "documentation": {}
-    },
-    {
-        "label": "UUID",
-        "importPath": "sqlalchemy.dialects.postgresql",
-        "description": "sqlalchemy.dialects.postgresql",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.dialects.postgresql",
-        "documentation": {}
-    },
-    {
-        "label": "ARRAY",
-        "importPath": "sqlalchemy.dialects.postgresql",
-        "description": "sqlalchemy.dialects.postgresql",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.dialects.postgresql",
-        "documentation": {}
-    },
-    {
-        "label": "JSON",
-        "importPath": "sqlalchemy.dialects.postgresql",
-        "description": "sqlalchemy.dialects.postgresql",
-        "isExtraImport": true,
-        "detail": "sqlalchemy.dialects.postgresql",
-        "documentation": {}
-    },
-    {
-        "label": "BaseMixin",
-        "importPath": "testspace.models",
-        "description": "testspace.models",
-        "isExtraImport": true,
-        "detail": "testspace.models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "testspace.models",
-        "description": "testspace.models",
-        "isExtraImport": true,
-        "detail": "testspace.models",
-        "documentation": {}
-    },
-    {
-        "label": "StringList",
-        "importPath": "testspace.models.redbtype",
-        "description": "testspace.models.redbtype",
-        "isExtraImport": true,
-        "detail": "testspace.models.redbtype",
-        "documentation": {}
-    },
-    {
-        "label": "JSONList",
-        "importPath": "testspace.models.redbtype",
-        "description": "testspace.models.redbtype",
-        "isExtraImport": true,
-        "detail": "testspace.models.redbtype",
-        "documentation": {}
-    },
-    {
-        "label": "UUIDList",
-        "importPath": "testspace.models.redbtype",
-        "description": "testspace.models.redbtype",
-        "isExtraImport": true,
-        "detail": "testspace.models.redbtype",
-        "documentation": {}
-    },
-    {
-        "label": "JsonText",
-        "importPath": "testspace.models.redbtype",
-        "description": "testspace.models.redbtype",
-        "isExtraImport": true,
-        "detail": "testspace.models.redbtype",
-        "documentation": {}
-    },
-    {
-        "label": "ContextVar",
-        "importPath": "contextvars",
-        "description": "contextvars",
-        "isExtraImport": true,
-        "detail": "contextvars",
-        "documentation": {}
-    },
-    {
-        "label": "json",
+        "label": "importlib.machinery",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
+        "importPath": "importlib.machinery",
+        "description": "importlib.machinery",
+        "detail": "importlib.machinery",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "ModuleType",
+        "importPath": "types",
+        "description": "types",
+        "isExtraImport": true,
+        "detail": "types",
+        "documentation": {}
+    },
+    {
+        "label": "isclass",
+        "importPath": "inspect",
+        "description": "inspect",
+        "isExtraImport": true,
+        "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "copy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "copy",
+        "description": "copy",
+        "detail": "copy",
         "documentation": {}
     },
     {
@@ -1578,6 +1390,22 @@
         "documentation": {}
     },
     {
+        "label": "IntEnum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "importPath": "testspace.setup",
+        "description": "testspace.setup",
+        "isExtraImport": true,
+        "detail": "testspace.setup",
+        "documentation": {}
+    },
+    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
@@ -1603,19 +1431,27 @@
         "documentation": {}
     },
     {
-        "label": "create_app",
-        "importPath": "testspace.setup",
-        "description": "testspace.setup",
-        "isExtraImport": true,
-        "detail": "testspace.setup",
-        "documentation": {}
-    },
-    {
         "label": "StaticFiles",
         "importPath": "fastapi.staticfiles",
         "description": "fastapi.staticfiles",
         "isExtraImport": true,
         "detail": "fastapi.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "HTMLResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "RedirectResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
         "documentation": {}
     },
     {
@@ -1632,6 +1468,46 @@
         "description": "testspace.components.middleware",
         "isExtraImport": true,
         "detail": "testspace.components.middleware",
+        "documentation": {}
+    },
+    {
+        "label": "setup_swagger_ui",
+        "importPath": "testspace.components.swaggerui",
+        "description": "testspace.components.swaggerui",
+        "isExtraImport": true,
+        "detail": "testspace.components.swaggerui",
+        "documentation": {}
+    },
+    {
+        "label": "register_redis",
+        "importPath": "testspace.components.cache",
+        "description": "testspace.components.cache",
+        "isExtraImport": true,
+        "detail": "testspace.components.cache",
+        "documentation": {}
+    },
+    {
+        "label": "create_schema",
+        "importPath": "testspace.db.Base",
+        "description": "testspace.db.Base",
+        "isExtraImport": true,
+        "detail": "testspace.db.Base",
+        "documentation": {}
+    },
+    {
+        "label": "drop_all_schema",
+        "importPath": "testspace.db.Base",
+        "description": "testspace.db.Base",
+        "isExtraImport": true,
+        "detail": "testspace.db.Base",
+        "documentation": {}
+    },
+    {
+        "label": "register_routers",
+        "importPath": "testspace.apimanager",
+        "description": "testspace.apimanager",
+        "isExtraImport": true,
+        "detail": "testspace.apimanager",
         "documentation": {}
     },
     {
@@ -1903,255 +1779,30 @@
         "documentation": {}
     },
     {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.14b6046be217_add_testcase",
-        "description": "alembic.versions.14b6046be217_add_testcase",
-        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testplan',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(as_uuid=True), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),\n    sa.Column('updated_at', sa.DateTime(), nullable=True),\n    sa.Column('update_by', postgresql.UUID(as_uuid=True), nullable=True),\n    sa.Column('create_by', postgresql.UUID(as_uuid=True), nullable=True),\n    sa.Column('name', sa.String(), nullable=True),",
-        "detail": "alembic.versions.14b6046be217_add_testcase",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.14b6046be217_add_testcase",
-        "description": "alembic.versions.14b6046be217_add_testcase",
-        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('testsuite', 'testplans')\n    op.drop_table('testplan')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.14b6046be217_add_testcase",
-        "documentation": {}
-    },
-    {
-        "label": "revision",
+        "label": "router",
         "kind": 5,
-        "importPath": "alembic.versions.14b6046be217_add_testcase",
-        "description": "alembic.versions.14b6046be217_add_testcase",
-        "peekOfCode": "revision = '14b6046be217'\ndown_revision = '4a78159af963'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testplan',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(as_uuid=True), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),",
-        "detail": "alembic.versions.14b6046be217_add_testcase",
+        "importPath": "src.testspace.api.testitem",
+        "description": "src.testspace.api.testitem",
+        "peekOfCode": "router = APIRouter(tags=[\"testitem management\"],dependencies=[Depends(oauth2_scheme)])\nTestItemAdd = Omit[\"TestItemAdd\",TestItem,\"uuid\",\"id\",\"parent_id\"]\nTestItemUpdate = Partial[\"TestItemUpdate\",TestItemAdd]\n@router.post(\"/\",response_model=TestItem)\nasync def add(item:TestItemAdd):\n    with Session(engine) as s:\n        _item = TestItem(**item.dict(exclude_unset=True))\n        s.add(_item)\n        s.commit()\n        s.refresh(_item)",
+        "detail": "src.testspace.api.testitem",
         "documentation": {}
     },
     {
-        "label": "down_revision",
+        "label": "TestItemAdd",
         "kind": 5,
-        "importPath": "alembic.versions.14b6046be217_add_testcase",
-        "description": "alembic.versions.14b6046be217_add_testcase",
-        "peekOfCode": "down_revision = '4a78159af963'\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testplan',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(as_uuid=True), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),\n    sa.Column('updated_at', sa.DateTime(), nullable=True),",
-        "detail": "alembic.versions.14b6046be217_add_testcase",
+        "importPath": "src.testspace.api.testitem",
+        "description": "src.testspace.api.testitem",
+        "peekOfCode": "TestItemAdd = Omit[\"TestItemAdd\",TestItem,\"uuid\",\"id\",\"parent_id\"]\nTestItemUpdate = Partial[\"TestItemUpdate\",TestItemAdd]\n@router.post(\"/\",response_model=TestItem)\nasync def add(item:TestItemAdd):\n    with Session(engine) as s:\n        _item = TestItem(**item.dict(exclude_unset=True))\n        s.add(_item)\n        s.commit()\n        s.refresh(_item)\n        return _item",
+        "detail": "src.testspace.api.testitem",
         "documentation": {}
     },
     {
-        "label": "branch_labels",
+        "label": "TestItemUpdate",
         "kind": 5,
-        "importPath": "alembic.versions.14b6046be217_add_testcase",
-        "description": "alembic.versions.14b6046be217_add_testcase",
-        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testplan',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(as_uuid=True), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),\n    sa.Column('updated_at', sa.DateTime(), nullable=True),\n    sa.Column('update_by', postgresql.UUID(as_uuid=True), nullable=True),",
-        "detail": "alembic.versions.14b6046be217_add_testcase",
-        "documentation": {}
-    },
-    {
-        "label": "depends_on",
-        "kind": 5,
-        "importPath": "alembic.versions.14b6046be217_add_testcase",
-        "description": "alembic.versions.14b6046be217_add_testcase",
-        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testplan',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(as_uuid=True), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),\n    sa.Column('updated_at', sa.DateTime(), nullable=True),\n    sa.Column('update_by', postgresql.UUID(as_uuid=True), nullable=True),\n    sa.Column('create_by', postgresql.UUID(as_uuid=True), nullable=True),",
-        "detail": "alembic.versions.14b6046be217_add_testcase",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.4a78159af963_hello",
-        "description": "alembic.versions.4a78159af963_hello",
-        "peekOfCode": "def upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testcase',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),\n    sa.Column('updated_at', sa.DateTime(), nullable=True),\n    sa.Column('update_by', postgresql.UUID(), nullable=True),\n    sa.Column('create_by', postgresql.UUID(), nullable=True),\n    sa.Column('name', sa.String(), nullable=True),",
-        "detail": "alembic.versions.4a78159af963_hello",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.4a78159af963_hello",
-        "description": "alembic.versions.4a78159af963_hello",
-        "peekOfCode": "def downgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_index(op.f('ix_user_username'), table_name='user')\n    op.drop_index(op.f('ix_user_email'), table_name='user')\n    op.drop_index(op.f('ix_user_accountname'), table_name='user')\n    op.drop_table('user')\n    op.drop_table('testsuite')\n    op.drop_table('testcase')\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.4a78159af963_hello",
-        "documentation": {}
-    },
-    {
-        "label": "revision",
-        "kind": 5,
-        "importPath": "alembic.versions.4a78159af963_hello",
-        "description": "alembic.versions.4a78159af963_hello",
-        "peekOfCode": "revision = '4a78159af963'\ndown_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testcase',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),",
-        "detail": "alembic.versions.4a78159af963_hello",
-        "documentation": {}
-    },
-    {
-        "label": "down_revision",
-        "kind": 5,
-        "importPath": "alembic.versions.4a78159af963_hello",
-        "description": "alembic.versions.4a78159af963_hello",
-        "peekOfCode": "down_revision = None\nbranch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testcase',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),\n    sa.Column('updated_at', sa.DateTime(), nullable=True),",
-        "detail": "alembic.versions.4a78159af963_hello",
-        "documentation": {}
-    },
-    {
-        "label": "branch_labels",
-        "kind": 5,
-        "importPath": "alembic.versions.4a78159af963_hello",
-        "description": "alembic.versions.4a78159af963_hello",
-        "peekOfCode": "branch_labels = None\ndepends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testcase',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),\n    sa.Column('updated_at', sa.DateTime(), nullable=True),\n    sa.Column('update_by', postgresql.UUID(), nullable=True),",
-        "detail": "alembic.versions.4a78159af963_hello",
-        "documentation": {}
-    },
-    {
-        "label": "depends_on",
-        "kind": 5,
-        "importPath": "alembic.versions.4a78159af963_hello",
-        "description": "alembic.versions.4a78159af963_hello",
-        "peekOfCode": "depends_on = None\ndef upgrade():\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('testcase',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('uuid', postgresql.UUID(), nullable=False),\n    sa.Column('created_at', sa.DateTime(), nullable=True),\n    sa.Column('updated_at', sa.DateTime(), nullable=True),\n    sa.Column('update_by', postgresql.UUID(), nullable=True),\n    sa.Column('create_by', postgresql.UUID(), nullable=True),",
-        "detail": "alembic.versions.4a78159af963_hello",
-        "documentation": {}
-    },
-    {
-        "label": "run_migrations_offline",
-        "kind": 2,
-        "importPath": "alembic.env",
-        "description": "alembic.env",
-        "peekOfCode": "def run_migrations_offline():\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n    Calls to context.execute() here emit the given string to the\n    script output.\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")",
-        "detail": "alembic.env",
-        "documentation": {}
-    },
-    {
-        "label": "run_migrations_online",
-        "kind": 2,
-        "importPath": "alembic.env",
-        "description": "alembic.env",
-        "peekOfCode": "def run_migrations_online():\n    \"\"\"Run migrations in 'online' mode.\n    In this scenario we need to create an Engine\n    and associate a connection with the context.\n    \"\"\"\n    connectable = engine_from_config(\n        config.get_section(config.config_ini_section),\n        prefix=\"sqlalchemy.\",\n        poolclass=pool.NullPool,\n    )",
-        "detail": "alembic.env",
-        "documentation": {}
-    },
-    {
-        "label": "config",
-        "kind": 5,
-        "importPath": "alembic.env",
-        "description": "alembic.env",
-        "peekOfCode": "config = context.config\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nfileConfig(config.config_file_name)\n# add your model's MetaData object here\n# for 'autogenerate' support\n# from myapp import mymodel\n# target_metadata = mymodel.Base.metadata\nfrom testspace.db.Base import Base\ntarget_metadata = Base.metadata",
-        "detail": "alembic.env",
-        "documentation": {}
-    },
-    {
-        "label": "target_metadata",
-        "kind": 5,
-        "importPath": "alembic.env",
-        "description": "alembic.env",
-        "peekOfCode": "target_metadata = Base.metadata\n# other values from the config, defined by the needs of env.py,\n# can be acquired:\n# my_important_option = config.get_main_option(\"my_important_option\")\n# ... etc.\ndef run_migrations_offline():\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation",
-        "detail": "alembic.env",
-        "documentation": {}
-    },
-    {
-        "label": "create_testcase",
-        "kind": 2,
-        "importPath": "src.testspace.api.testcase",
-        "description": "src.testspace.api.testcase",
-        "peekOfCode": "def create_testcase(case:TestcaseCreate):\n    return C_create_testcase(session,case)\n@router.get(\"/{uuid}\",response_model=TestcaseProps)\ndef get_testcase(uuid:UUID):\n    return R_get_testcases_by_uuid(session,uuid)\n@router.patch(\"/{uuid}\", response_model=TestcaseProps)\ndef update_case(uuid:UUID,case:TestcaseUpdate):\n    return U_update_testcase_by_uuid(session,uuid,case)\n@router.delete(\"/{uuid}\")\ndef delete_testcase(uuid:UUID):",
-        "detail": "src.testspace.api.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "get_testcase",
-        "kind": 2,
-        "importPath": "src.testspace.api.testcase",
-        "description": "src.testspace.api.testcase",
-        "peekOfCode": "def get_testcase(uuid:UUID):\n    return R_get_testcases_by_uuid(session,uuid)\n@router.patch(\"/{uuid}\", response_model=TestcaseProps)\ndef update_case(uuid:UUID,case:TestcaseUpdate):\n    return U_update_testcase_by_uuid(session,uuid,case)\n@router.delete(\"/{uuid}\")\ndef delete_testcase(uuid:UUID):\n    D_delete_testcase_by_uuid(session,uuid)",
-        "detail": "src.testspace.api.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "update_case",
-        "kind": 2,
-        "importPath": "src.testspace.api.testcase",
-        "description": "src.testspace.api.testcase",
-        "peekOfCode": "def update_case(uuid:UUID,case:TestcaseUpdate):\n    return U_update_testcase_by_uuid(session,uuid,case)\n@router.delete(\"/{uuid}\")\ndef delete_testcase(uuid:UUID):\n    D_delete_testcase_by_uuid(session,uuid)",
-        "detail": "src.testspace.api.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "delete_testcase",
-        "kind": 2,
-        "importPath": "src.testspace.api.testcase",
-        "description": "src.testspace.api.testcase",
-        "peekOfCode": "def delete_testcase(uuid:UUID):\n    D_delete_testcase_by_uuid(session,uuid)",
-        "detail": "src.testspace.api.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "create_testplan",
-        "kind": 2,
-        "importPath": "src.testspace.api.testplan",
-        "description": "src.testspace.api.testplan",
-        "peekOfCode": "def create_testplan(plan:TestPlanCreate):\n    return C_create_testplan(session,plan)\n@router.get(\"/{uuid}\", response_model=TestPlanProps)\ndef get_testplan(uuid:UUID, details:bool = False):\n    testplan =  R_get_testplan_by_uuid(session,uuid)\n    testplan_props = TestPlanProps.from_orm(testplan)\n    if details:\n        testplan_props.testsuits = R_get_testsuits_by_testplan_uuid(session,uuid)\n    return testplan_props\n@router.patch(\"/{uuid}\", response_model=TestPlanProps)",
-        "detail": "src.testspace.api.testplan",
-        "documentation": {}
-    },
-    {
-        "label": "get_testplan",
-        "kind": 2,
-        "importPath": "src.testspace.api.testplan",
-        "description": "src.testspace.api.testplan",
-        "peekOfCode": "def get_testplan(uuid:UUID, details:bool = False):\n    testplan =  R_get_testplan_by_uuid(session,uuid)\n    testplan_props = TestPlanProps.from_orm(testplan)\n    if details:\n        testplan_props.testsuits = R_get_testsuits_by_testplan_uuid(session,uuid)\n    return testplan_props\n@router.patch(\"/{uuid}\", response_model=TestPlanProps)\ndef update_testplan(uuid:UUID,plan:TestPlanUpdate):\n    return U_update_testplan_by_uuid(session,uuid,plan)\n@router.delete(\"/{uuid}\")",
-        "detail": "src.testspace.api.testplan",
-        "documentation": {}
-    },
-    {
-        "label": "update_testplan",
-        "kind": 2,
-        "importPath": "src.testspace.api.testplan",
-        "description": "src.testspace.api.testplan",
-        "peekOfCode": "def update_testplan(uuid:UUID,plan:TestPlanUpdate):\n    return U_update_testplan_by_uuid(session,uuid,plan)\n@router.delete(\"/{uuid}\")\ndef delete_testplan(uuid:UUID):\n    D_delete_testplan_by_uuid(session,uuid)\n    return True\n@router.get(\"/cache/{key}\")\nasync def get_cache(key:str):\n    return await redis.get(key)\n@router.post(\"/cache/{key}\")",
-        "detail": "src.testspace.api.testplan",
-        "documentation": {}
-    },
-    {
-        "label": "delete_testplan",
-        "kind": 2,
-        "importPath": "src.testspace.api.testplan",
-        "description": "src.testspace.api.testplan",
-        "peekOfCode": "def delete_testplan(uuid:UUID):\n    D_delete_testplan_by_uuid(session,uuid)\n    return True\n@router.get(\"/cache/{key}\")\nasync def get_cache(key:str):\n    return await redis.get(key)\n@router.post(\"/cache/{key}\")\nasync def create_key(key:str,value:str):\n    await redis.set(key,value)",
-        "detail": "src.testspace.api.testplan",
-        "documentation": {}
-    },
-    {
-        "label": "create_testsuit",
-        "kind": 2,
-        "importPath": "src.testspace.api.testsuit",
-        "description": "src.testspace.api.testsuit",
-        "peekOfCode": "def create_testsuit(suit:TestSuitCreate):\n    return C_create_testsuit(session,suit)\n@router.get(\"/{uuid}\",response_model=TestSuitProps)\ndef get_testsuit(uuid:UUID, ):\n    return R_get_testsuit_by_uuid(session,uuid)\n@router.patch(\"/{uuid}\",response_model=TestSuitProps)\ndef update_testsuit(uuid:UUID,case:TestSuitUpdate):\n    return U_update_testsuit_by_uuid(session,uuid,case)\n@router.delete(\"/{uuid}\")\ndef delete_testsuit(uuid:UUID):",
-        "detail": "src.testspace.api.testsuit",
-        "documentation": {}
-    },
-    {
-        "label": "get_testsuit",
-        "kind": 2,
-        "importPath": "src.testspace.api.testsuit",
-        "description": "src.testspace.api.testsuit",
-        "peekOfCode": "def get_testsuit(uuid:UUID, ):\n    return R_get_testsuit_by_uuid(session,uuid)\n@router.patch(\"/{uuid}\",response_model=TestSuitProps)\ndef update_testsuit(uuid:UUID,case:TestSuitUpdate):\n    return U_update_testsuit_by_uuid(session,uuid,case)\n@router.delete(\"/{uuid}\")\ndef delete_testsuit(uuid:UUID):\n    D_delete_testsuit_by_uuid(session,uuid)\n    return True",
-        "detail": "src.testspace.api.testsuit",
-        "documentation": {}
-    },
-    {
-        "label": "update_testsuit",
-        "kind": 2,
-        "importPath": "src.testspace.api.testsuit",
-        "description": "src.testspace.api.testsuit",
-        "peekOfCode": "def update_testsuit(uuid:UUID,case:TestSuitUpdate):\n    return U_update_testsuit_by_uuid(session,uuid,case)\n@router.delete(\"/{uuid}\")\ndef delete_testsuit(uuid:UUID):\n    D_delete_testsuit_by_uuid(session,uuid)\n    return True",
-        "detail": "src.testspace.api.testsuit",
-        "documentation": {}
-    },
-    {
-        "label": "delete_testsuit",
-        "kind": 2,
-        "importPath": "src.testspace.api.testsuit",
-        "description": "src.testspace.api.testsuit",
-        "peekOfCode": "def delete_testsuit(uuid:UUID):\n    D_delete_testsuit_by_uuid(session,uuid)\n    return True",
-        "detail": "src.testspace.api.testsuit",
+        "importPath": "src.testspace.api.testitem",
+        "description": "src.testspace.api.testitem",
+        "peekOfCode": "TestItemUpdate = Partial[\"TestItemUpdate\",TestItemAdd]\n@router.post(\"/\",response_model=TestItem)\nasync def add(item:TestItemAdd):\n    with Session(engine) as s:\n        _item = TestItem(**item.dict(exclude_unset=True))\n        s.add(_item)\n        s.commit()\n        s.refresh(_item)\n        return _item\n# @router.get(\"/\",response_model=List[TestItem])",
+        "detail": "src.testspace.api.testitem",
         "documentation": {}
     },
     {
@@ -2159,7 +1810,16 @@
         "kind": 5,
         "importPath": "src.testspace.api.user",
         "description": "src.testspace.api.user",
-        "peekOfCode": "router = APIRouter(tags=[\"usermanagement\"])\nset_page_enable_api(router, User, UserProps)\n@router.post(\"/\", status_code=201, response_model=UserProps)\nasync def create_user(item: CreateUser):\n        item.password = pwd_context.hash(item.password)\n        return C_create_user(session, item)\n@router.get(\"/me\", response_model=UserProps)\nasync def read_current_user():\n    '''  return current login user '''\n    if current_user is not None:",
+        "peekOfCode": "router = APIRouter(tags=[\"usermanagement\"],dependencies=[Depends(oauth2_scheme)])\nUserModel = Omit[\"UserModel\", User, \"password\"]\n@router.post(\"/\",response_model=UserModel)\nasync def add_user(user: Omit[\"UserCreate\",User,\"uuid\",\"id\"]):\n    new_user  = User(**user.dict(exclude_unset=True))\n    new_user.password =  get_password_hash(new_user.password)\n    with Session(engine) as s:\n        s.add(new_user)\n        s.commit()\n        s.refresh(new_user)",
+        "detail": "src.testspace.api.user",
+        "documentation": {}
+    },
+    {
+        "label": "UserModel",
+        "kind": 5,
+        "importPath": "src.testspace.api.user",
+        "description": "src.testspace.api.user",
+        "peekOfCode": "UserModel = Omit[\"UserModel\", User, \"password\"]\n@router.post(\"/\",response_model=UserModel)\nasync def add_user(user: Omit[\"UserCreate\",User,\"uuid\",\"id\"]):\n    new_user  = User(**user.dict(exclude_unset=True))\n    new_user.password =  get_password_hash(new_user.password)\n    with Session(engine) as s:\n        s.add(new_user)\n        s.commit()\n        s.refresh(new_user)\n        return new_user",
         "detail": "src.testspace.api.user",
         "documentation": {}
     },
@@ -2168,52 +1828,7 @@
         "kind": 6,
         "importPath": "src.testspace.components.auth",
         "description": "src.testspace.components.auth",
-        "peekOfCode": "class Token(BaseModel):\n    access_token: str\n    token_type: str\nclass TokenData(BaseModel):\n    username: str\nclass LoginType(str, Enum):\n    email = \"email\"\n    username =\"username\"\nclass LoginArgs(BaseModel):\n    account:str",
-        "detail": "src.testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "TokenData",
-        "kind": 6,
-        "importPath": "src.testspace.components.auth",
-        "description": "src.testspace.components.auth",
-        "peekOfCode": "class TokenData(BaseModel):\n    username: str\nclass LoginType(str, Enum):\n    email = \"email\"\n    username =\"username\"\nclass LoginArgs(BaseModel):\n    account:str\n    password:str\n    login_type:str\nALGORITHM = \"HS256\"",
-        "detail": "src.testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "LoginType",
-        "kind": 6,
-        "importPath": "src.testspace.components.auth",
-        "description": "src.testspace.components.auth",
-        "peekOfCode": "class LoginType(str, Enum):\n    email = \"email\"\n    username =\"username\"\nclass LoginArgs(BaseModel):\n    account:str\n    password:str\n    login_type:str\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 720\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"login\")",
-        "detail": "src.testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "LoginArgs",
-        "kind": 6,
-        "importPath": "src.testspace.components.auth",
-        "description": "src.testspace.components.auth",
-        "peekOfCode": "class LoginArgs(BaseModel):\n    account:str\n    password:str\n    login_type:str\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 720\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"login\")\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\ndef get_user_by_name(name:str):\n    return R_get_user_by_name(session,name)",
-        "detail": "src.testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "get_user_by_name",
-        "kind": 2,
-        "importPath": "src.testspace.components.auth",
-        "description": "src.testspace.components.auth",
-        "peekOfCode": "def get_user_by_name(name:str):\n    return R_get_user_by_name(session,name)\ndef get_user_by_email(mail:str):\n    return R_get_user_by_email(session,mail)\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(value: str, password: str, login_type=\"username\"):\n    if login_type == LoginType.username:",
-        "detail": "src.testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "get_user_by_email",
-        "kind": 2,
-        "importPath": "src.testspace.components.auth",
-        "description": "src.testspace.components.auth",
-        "peekOfCode": "def get_user_by_email(mail:str):\n    return R_get_user_by_email(session,mail)\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(value: str, password: str, login_type=\"username\"):\n    if login_type == LoginType.username:\n        user = get_user_by_name(value)\n    elif login_type == LoginType.email:",
+        "peekOfCode": "class Token(BaseModel):\n    access_token: str\n    token_type: str\ndef verify_password(plain_password:str, hashed_password:str):\n    return crypt_context.verify(plain_password, hashed_password)\ndef get_password_hash(password:str):\n    return crypt_context.hash(password.encode(\"utf-8\"))\ndef create_access_token(data: dict, expires_delta: timedelta | None = None):\n    to_encode = data.copy()\n    if expires_delta:",
         "detail": "src.testspace.components.auth",
         "documentation": {}
     },
@@ -2222,7 +1837,7 @@
         "kind": 2,
         "importPath": "src.testspace.components.auth",
         "description": "src.testspace.components.auth",
-        "peekOfCode": "def verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(value: str, password: str, login_type=\"username\"):\n    if login_type == LoginType.username:\n        user = get_user_by_name(value)\n    elif login_type == LoginType.email:\n        user = get_user_by_email(value)\n    else:",
+        "peekOfCode": "def verify_password(plain_password:str, hashed_password:str):\n    return crypt_context.verify(plain_password, hashed_password)\ndef get_password_hash(password:str):\n    return crypt_context.hash(password.encode(\"utf-8\"))\ndef create_access_token(data: dict, expires_delta: timedelta | None = None):\n    to_encode = data.copy()\n    if expires_delta:\n        expire = datetime.utcnow() + expires_delta\n    else:\n        expire = datetime.utcnow() + timedelta(minutes=15)",
         "detail": "src.testspace.components.auth",
         "documentation": {}
     },
@@ -2231,16 +1846,7 @@
         "kind": 2,
         "importPath": "src.testspace.components.auth",
         "description": "src.testspace.components.auth",
-        "peekOfCode": "def get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(value: str, password: str, login_type=\"username\"):\n    if login_type == LoginType.username:\n        user = get_user_by_name(value)\n    elif login_type == LoginType.email:\n        user = get_user_by_email(value)\n    else:\n        raise Exception(f\"unsupported login_type {login_type}\")\n    if not user:",
-        "detail": "src.testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "authenticate_user",
-        "kind": 2,
-        "importPath": "src.testspace.components.auth",
-        "description": "src.testspace.components.auth",
-        "peekOfCode": "def authenticate_user(value: str, password: str, login_type=\"username\"):\n    if login_type == LoginType.username:\n        user = get_user_by_name(value)\n    elif login_type == LoginType.email:\n        user = get_user_by_email(value)\n    else:\n        raise Exception(f\"unsupported login_type {login_type}\")\n    if not user:\n        return False\n    if not verify_password(password, user.password):",
+        "peekOfCode": "def get_password_hash(password:str):\n    return crypt_context.hash(password.encode(\"utf-8\"))\ndef create_access_token(data: dict, expires_delta: timedelta | None = None):\n    to_encode = data.copy()\n    if expires_delta:\n        expire = datetime.utcnow() + expires_delta\n    else:\n        expire = datetime.utcnow() + timedelta(minutes=15)\n    to_encode.update({\"exp\": expire})\n    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)",
         "detail": "src.testspace.components.auth",
         "documentation": {}
     },
@@ -2249,16 +1855,52 @@
         "kind": 2,
         "importPath": "src.testspace.components.auth",
         "description": "src.testspace.components.auth",
-        "peekOfCode": "def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):\n    to_encode = data.copy()\n    if expires_delta:\n        expire = datetime.utcnow() + expires_delta\n    else:\n        expire = datetime.utcnow() + timedelta(minutes=15)\n    to_encode.update({\"exp\": expire})\n    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)\n    return encoded_jwt\nasync def get_current_user(access_token: Optional[str]= Cookie(None)):",
+        "peekOfCode": "def create_access_token(data: dict, expires_delta: timedelta | None = None):\n    to_encode = data.copy()\n    if expires_delta:\n        expire = datetime.utcnow() + expires_delta\n    else:\n        expire = datetime.utcnow() + timedelta(minutes=15)\n    to_encode.update({\"exp\": expire})\n    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)\n    return encoded_jwt\nasync def get_current_user(engine:Engine,token: str = Depends(oauth2_scheme)):",
         "detail": "src.testspace.components.auth",
         "documentation": {}
     },
     {
-        "label": "set_auth",
+        "label": "get_user",
         "kind": 2,
         "importPath": "src.testspace.components.auth",
         "description": "src.testspace.components.auth",
-        "peekOfCode": "def set_auth(app:FastAPI):\n    @app.post(\"/login\", tags=[\"user login\"], response_model=Token)\n    async def login(response: Response, login_data: LoginArgs):\n        user = authenticate_user(login_data.account, login_data.password, login_data.login_type)\n        if not user:\n            raise HTTPException(\n                status_code=status.HTTP_401_UNAUTHORIZED,\n                detail=\"Incorrect account or password\",\n                headers={\"WWW-Authenticate\": \"Bearer\"},\n            )",
+        "peekOfCode": "def get_user(engine:Engine, username: str):\n    with Session(engine) as s:\n        user = s.exec(select(User).where(User.username == username)).first()\n        if user:\n            return user\ndef authenticate_user(engine:Engine,username: str, password: str):\n    with Session(engine) as s:\n        user = s.exec(select(User).where(User.username == username)).first()\n    if not user:\n        return False",
+        "detail": "src.testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate_user",
+        "kind": 2,
+        "importPath": "src.testspace.components.auth",
+        "description": "src.testspace.components.auth",
+        "peekOfCode": "def authenticate_user(engine:Engine,username: str, password: str):\n    with Session(engine) as s:\n        user = s.exec(select(User).where(User.username == username)).first()\n    if not user:\n        return False\n    if not verify_password(password, user.password):\n        return False\n    return user\ndef setup_auth_component(app:FastAPI,engine:Engine):\n    @app.post(\"/token\", response_model=Token)",
+        "detail": "src.testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "setup_auth_component",
+        "kind": 2,
+        "importPath": "src.testspace.components.auth",
+        "description": "src.testspace.components.auth",
+        "peekOfCode": "def setup_auth_component(app:FastAPI,engine:Engine):\n    @app.post(\"/token\", response_model=Token)\n    async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):\n        user = authenticate_user(engine,form_data.username, form_data.password)\n        if not user:\n            raise HTTPException(\n                status_code=status.HTTP_401_UNAUTHORIZED,\n                detail=\"Incorrect username or password\",\n                headers={\"WWW-Authenticate\": \"Bearer\"},\n            )",
+        "detail": "src.testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "__all__",
+        "kind": 5,
+        "importPath": "src.testspace.components.auth",
+        "description": "src.testspace.components.auth",
+        "peekOfCode": "__all__ = [\"get_password_hash\",\"verify_password\",\"authenticate_user\",\"setup_auth_component\",\"oauth2_scheme\"]\nSECRET_KEY = \"09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7\"\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 30\ncrypt_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\ndef verify_password(plain_password:str, hashed_password:str):",
+        "detail": "src.testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "src.testspace.components.auth",
+        "description": "src.testspace.components.auth",
+        "peekOfCode": "SECRET_KEY = \"09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7\"\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 30\ncrypt_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\ndef verify_password(plain_password:str, hashed_password:str):\n    return crypt_context.verify(plain_password, hashed_password)",
         "detail": "src.testspace.components.auth",
         "documentation": {}
     },
@@ -2267,7 +1909,7 @@
         "kind": 5,
         "importPath": "src.testspace.components.auth",
         "description": "src.testspace.components.auth",
-        "peekOfCode": "ALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 720\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"login\")\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\ndef get_user_by_name(name:str):\n    return R_get_user_by_name(session,name)\ndef get_user_by_email(mail:str):\n    return R_get_user_by_email(session,mail)\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)",
+        "peekOfCode": "ALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 30\ncrypt_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\ndef verify_password(plain_password:str, hashed_password:str):\n    return crypt_context.verify(plain_password, hashed_password)\ndef get_password_hash(password:str):",
         "detail": "src.testspace.components.auth",
         "documentation": {}
     },
@@ -2276,7 +1918,16 @@
         "kind": 5,
         "importPath": "src.testspace.components.auth",
         "description": "src.testspace.components.auth",
-        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = 720\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"login\")\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\ndef get_user_by_name(name:str):\n    return R_get_user_by_name(session,name)\ndef get_user_by_email(mail:str):\n    return R_get_user_by_email(session,mail)\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = 30\ncrypt_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\ndef verify_password(plain_password:str, hashed_password:str):\n    return crypt_context.verify(plain_password, hashed_password)\ndef get_password_hash(password:str):\n    return crypt_context.hash(password.encode(\"utf-8\"))",
+        "detail": "src.testspace.components.auth",
+        "documentation": {}
+    },
+    {
+        "label": "crypt_context",
+        "kind": 5,
+        "importPath": "src.testspace.components.auth",
+        "description": "src.testspace.components.auth",
+        "peekOfCode": "crypt_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\ndef verify_password(plain_password:str, hashed_password:str):\n    return crypt_context.verify(plain_password, hashed_password)\ndef get_password_hash(password:str):\n    return crypt_context.hash(password.encode(\"utf-8\"))\ndef create_access_token(data: dict, expires_delta: timedelta | None = None):",
         "detail": "src.testspace.components.auth",
         "documentation": {}
     },
@@ -2285,16 +1936,7 @@
         "kind": 5,
         "importPath": "src.testspace.components.auth",
         "description": "src.testspace.components.auth",
-        "peekOfCode": "oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"login\")\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\ndef get_user_by_name(name:str):\n    return R_get_user_by_name(session,name)\ndef get_user_by_email(mail:str):\n    return R_get_user_by_email(session,mail)\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)",
-        "detail": "src.testspace.components.auth",
-        "documentation": {}
-    },
-    {
-        "label": "pwd_context",
-        "kind": 5,
-        "importPath": "src.testspace.components.auth",
-        "description": "src.testspace.components.auth",
-        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\ndef get_user_by_name(name:str):\n    return R_get_user_by_name(session,name)\ndef get_user_by_email(mail:str):\n    return R_get_user_by_email(session,mail)\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(value: str, password: str, login_type=\"username\"):",
+        "peekOfCode": "oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\ndef verify_password(plain_password:str, hashed_password:str):\n    return crypt_context.verify(plain_password, hashed_password)\ndef get_password_hash(password:str):\n    return crypt_context.hash(password.encode(\"utf-8\"))\ndef create_access_token(data: dict, expires_delta: timedelta | None = None):\n    to_encode = data.copy()",
         "detail": "src.testspace.components.auth",
         "documentation": {}
     },
@@ -2303,7 +1945,7 @@
         "kind": 6,
         "importPath": "src.testspace.components.cache",
         "description": "src.testspace.components.cache",
-        "peekOfCode": "class RedisWarpper():\n    def __init__(self) -> None:\n        self.app:Optional[TypeWeakRef[FastAPI]] = None\n    def __getattr__(self,__name:str):\n        if not self.app:\n            raise Exception(\"not setup  please register redis in app!!!\")\n        return getattr(cast(FastAPI,self.app.get()).state.redis,__name)\n    async def init_from_url(self,url, app:FastAPI):\n        app.state.redis  =  await aioredis.from_url(url)\n        self.app = TypeWeakRef[FastAPI](app)",
+        "peekOfCode": "class RedisWarpper():\n    def __init__(self) -> None:\n        self.app:Optional[TypeWeakRef[FastAPI]] = None\n    def __getattr__(self,__name:str):\n        if not self.app:\n            raise Exception(\"not setup  please register redis in app!!!\")\n        return getattr(cast(FastAPI,self.app.get()).state.redis,__name)\n    async def init_from_url(self,url, app:FastAPI):\n        app.state.redis  =  await aioredis.from_url(url)\n        # if await app.state.redis.ping():",
         "detail": "src.testspace.components.cache",
         "documentation": {}
     },
@@ -2353,156 +1995,12 @@
         "documentation": {}
     },
     {
-        "label": "NotFoundException",
-        "kind": 6,
-        "importPath": "src.testspace.crud.common.exception",
-        "description": "src.testspace.crud.common.exception",
-        "peekOfCode": "class NotFoundException(Exception):\n    def __init__(self, item, message) -> None:\n        super().__init__(item, message)\n        self.item = item\n        self.message = message",
-        "detail": "src.testspace.crud.common.exception",
-        "documentation": {}
-    },
-    {
-        "label": "C_create_testcase",
+        "label": "setup_swagger_ui",
         "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def C_create_testcase(s: Session, case: TestcaseCreate) -> TestcaseProps:\n    ts = Testcase(**case.dict())\n    s.add(ts)\n    return ts\ndef R_get_testcases_by_uuid(s: Session, uuid: UUID) -> Union[TestcaseProps, None]:\n    return s.query(Testcase).filter_by(uuid=uuid).first()\ndef U_update_testcase_by_uuid(s: Session, uuid: UUID, case: TestcaseUpdate):\n    q = s.query(Testcase).filter_by(uuid=uuid)\n    c = q.first()\n    if c is None:",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_testcases_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def R_get_testcases_by_uuid(s: Session, uuid: UUID) -> Union[TestcaseProps, None]:\n    return s.query(Testcase).filter_by(uuid=uuid).first()\ndef U_update_testcase_by_uuid(s: Session, uuid: UUID, case: TestcaseUpdate):\n    q = s.query(Testcase).filter_by(uuid=uuid)\n    c = q.first()\n    if c is None:\n        raise NotFoundException(\n            case, f\"<uuid= {uuid}> not  found in table {Testcase.name}\")\n    q.update(case.dict(exclude={'uuid'},\n             exclude_none=True), synchronize_session=\"fetch\")",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "U_update_testcase_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def U_update_testcase_by_uuid(s: Session, uuid: UUID, case: TestcaseUpdate):\n    q = s.query(Testcase).filter_by(uuid=uuid)\n    c = q.first()\n    if c is None:\n        raise NotFoundException(\n            case, f\"<uuid= {uuid}> not  found in table {Testcase.name}\")\n    q.update(case.dict(exclude={'uuid'},\n             exclude_none=True), synchronize_session=\"fetch\")\n    s.refresh(c)\n    return c",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "D_delete_testcase_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def D_delete_testcase_by_uuid(s: Session, uuid: UUID):\n    s.query(Testcase).filter_by(uuid=uuid).delete()\n# testsuit\ndef C_create_testsuit(s: Session, suit: TestSuitCreate) -> TestSuitProps:\n    ts = TestSuite(**suit.dict(exclude_none=True))\n    s.add(ts)\n    return ts\ndef R_get_testsuit_by_uuid(s: Session, uuid: UUID) -> Union[TestSuitProps, None]:\n    return s.query(TestSuite).filter_by(uuid=uuid).first()\ndef R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "C_create_testsuit",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def C_create_testsuit(s: Session, suit: TestSuitCreate) -> TestSuitProps:\n    ts = TestSuite(**suit.dict(exclude_none=True))\n    s.add(ts)\n    return ts\ndef R_get_testsuit_by_uuid(s: Session, uuid: UUID) -> Union[TestSuitProps, None]:\n    return s.query(TestSuite).filter_by(uuid=uuid).first()\ndef R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:\n    return s.query(TestSuite).filter(TestSuite.testplans.contains([uuid])).order_by(TestSuite.created_at).all()\ndef U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_testsuit_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def R_get_testsuit_by_uuid(s: Session, uuid: UUID) -> Union[TestSuitProps, None]:\n    return s.query(TestSuite).filter_by(uuid=uuid).first()\ndef R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:\n    return s.query(TestSuite).filter(TestSuite.testplans.contains([uuid])).order_by(TestSuite.created_at).all()\ndef U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)\n    suit = q.first()\n    if suit is None:\n        raise NotFoundException(\n            su, f\"<uuid= {uuid}> not  found in table {TestSuite.name}\")",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_testsuits_by_testplan_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def R_get_testsuits_by_testplan_uuid(s: Session, uuid: UUID) -> List[TestSuitProps]:\n    return s.query(TestSuite).filter(TestSuite.testplans.contains([uuid])).order_by(TestSuite.created_at).all()\ndef U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)\n    suit = q.first()\n    if suit is None:\n        raise NotFoundException(\n            su, f\"<uuid= {uuid}> not  found in table {TestSuite.name}\")\n    q.update(su.dict(exclude={'uuid'}, exclude_none=True),\n            synchronize_session=\"fetch\")",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "U_update_testsuit_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def U_update_testsuit_by_uuid(s: Session, uuid: UUID, su: TestSuitUpdate):\n    q = s.query(TestSuite).filter_by(uuid=uuid)\n    suit = q.first()\n    if suit is None:\n        raise NotFoundException(\n            su, f\"<uuid= {uuid}> not  found in table {TestSuite.name}\")\n    q.update(su.dict(exclude={'uuid'}, exclude_none=True),\n            synchronize_session=\"fetch\")\n    return suit\ndef D_delete_testsuit_by_uuid(s: Session, uuid: UUID):",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "D_delete_testsuit_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def D_delete_testsuit_by_uuid(s: Session, uuid: UUID):\n    s.query(TestSuite).filter_by(uuid=uuid).delete()\n# testplan\ndef C_create_testplan(s: Session, plan: TestPlanCreate) -> TestPlanProps:\n    ts = TestPlan(**plan.dict(exclude_none=True))\n    s.add(ts)\n    return ts\ndef R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()\ndef U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "C_create_testplan",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def C_create_testplan(s: Session, plan: TestPlanCreate) -> TestPlanProps:\n    ts = TestPlan(**plan.dict(exclude_none=True))\n    s.add(ts)\n    return ts\ndef R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()\ndef U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()\n    if plan is None:",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_testplan_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def R_get_testplan_by_uuid(s: Session, uuid: UUID) -> Union[TestPlanProps, None]:\n    return s.query(TestPlan).filter_by(uuid=uuid).first()\ndef U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()\n    if plan is None:\n        raise NotFoundException(\n            p, f\"<uuid= {uuid}> not  found in table {TestPlan.name}\")\n    q.update(p.dict(exclude={'uuid'}, exclude_none=True),\n            synchronize_session=\"fetch\")",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "U_update_testplan_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def U_update_testplan_by_uuid(s: Session, uuid: UUID, p: TestPlanUpdate):\n    q = s.query(TestPlan).filter_by(uuid=uuid)\n    plan = q.first()\n    if plan is None:\n        raise NotFoundException(\n            p, f\"<uuid= {uuid}> not  found in table {TestPlan.name}\")\n    q.update(p.dict(exclude={'uuid'}, exclude_none=True),\n            synchronize_session=\"fetch\")\n    return plan\ndef D_delete_testplan_by_uuid(s: Session, uuid: UUID):",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "D_delete_testplan_by_uuid",
-        "kind": 2,
-        "importPath": "src.testspace.crud.testcase",
-        "description": "src.testspace.crud.testcase",
-        "peekOfCode": "def D_delete_testplan_by_uuid(s: Session, uuid: UUID):\n    s.query(TestPlan).filter_by(uuid=uuid).delete()",
-        "detail": "src.testspace.crud.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "C_create_user",
-        "kind": 2,
-        "importPath": "src.testspace.crud.user",
-        "description": "src.testspace.crud.user",
-        "peekOfCode": "def C_create_user(s:Session, create_schema:CreateUser) -> UserProps:\n    user = User(**create_schema.dict())\n    s.add(user)\n    s.commit()\n    return user\ndef R_get_user_by_name(s:Session, name:str) -> Union[None,UserProps]:\n    return s.query(User).filter_by(username=name).first()\ndef R_get_user_by_email(s:Session, mail:str) -> Union[None,UserProps]:\n    return s.query(User).filter_by(mail=mail).first()",
-        "detail": "src.testspace.crud.user",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_user_by_name",
-        "kind": 2,
-        "importPath": "src.testspace.crud.user",
-        "description": "src.testspace.crud.user",
-        "peekOfCode": "def R_get_user_by_name(s:Session, name:str) -> Union[None,UserProps]:\n    return s.query(User).filter_by(username=name).first()\ndef R_get_user_by_email(s:Session, mail:str) -> Union[None,UserProps]:\n    return s.query(User).filter_by(mail=mail).first()",
-        "detail": "src.testspace.crud.user",
-        "documentation": {}
-    },
-    {
-        "label": "R_get_user_by_email",
-        "kind": 2,
-        "importPath": "src.testspace.crud.user",
-        "description": "src.testspace.crud.user",
-        "peekOfCode": "def R_get_user_by_email(s:Session, mail:str) -> Union[None,UserProps]:\n    return s.query(User).filter_by(mail=mail).first()",
-        "detail": "src.testspace.crud.user",
+        "importPath": "src.testspace.components.swaggerui",
+        "description": "src.testspace.components.swaggerui",
+        "peekOfCode": "def setup_swagger_ui(app:FastAPI):\n    \"\"\"set up static point mount first\"\"\"\n    @app.get(\"/localdocs\", include_in_schema=False)\n    async def custom_swagger_ui_html():\n        return get_swagger_ui_html(\n            openapi_url=app.openapi_url,  # type: ignore\n            title=app.title + \" - Swagger UI\",\n            oauth2_redirect_url=app.swagger_ui_oauth2_redirect_url,\n            # swagger_js_url=BASE_DIR/'static'/'swagger-ui'/'swagger-ui-bundle.js',\n            # swagger_css_url=BASE_DIR/'static'/'swagger-ui'/'swagger-ui.css',",
+        "detail": "src.testspace.components.swaggerui",
         "documentation": {}
     },
     {
@@ -2510,25 +2008,16 @@
         "kind": 2,
         "importPath": "src.testspace.db.Base",
         "description": "src.testspace.db.Base",
-        "peekOfCode": "def create_schema():\n    from testspace.db.Session import engine\n    Base.metadata.create_all(bind = engine, checkfirst=True)\nif __name__ == \"__main__\":\n    from testspace.db.Session import engine\n    Base.metadata.create_all(bind = engine, checkfirst=True)",
+        "peekOfCode": "def create_schema(engine):\n    import testspace\n    from testspace.utils.libautoimport import Module\n    _models = Module(testspace)[\"models\"]\n    for i in _models.iter_children():\n        i.import_module()\n        logger.info(f\"add schema module [bold blue]{i.module_path}[/bold blue]\")\n    SQLModel.metadata.create_all(bind=engine,checkfirst=True)\ndef drop_all_schema(engine):\n    SQLModel.metadata.drop_all(engine)",
         "detail": "src.testspace.db.Base",
         "documentation": {}
     },
     {
-        "label": "cur_path",
-        "kind": 5,
+        "label": "drop_all_schema",
+        "kind": 2,
         "importPath": "src.testspace.db.Base",
         "description": "src.testspace.db.Base",
-        "peekOfCode": "cur_path = Path(__file__).parent.parent.joinpath(\"models\")\n# get all modules in the routers package\nhave_base = lambda module: True if hasattr(module,'Base') else False\n__all__ = [\"create_schema\"]\nfor mod in cur_path.iterdir():\n    mod_name = mod.name\n    if mod.is_file() and mod.name.endswith('.py'):\n        mod_name = mod.name.strip(\".py\")\n    elif mod.name != '__pycache__' or mod.name != '__init__.py':\n        continue",
-        "detail": "src.testspace.db.Base",
-        "documentation": {}
-    },
-    {
-        "label": "have_base",
-        "kind": 5,
-        "importPath": "src.testspace.db.Base",
-        "description": "src.testspace.db.Base",
-        "peekOfCode": "have_base = lambda module: True if hasattr(module,'Base') else False\n__all__ = [\"create_schema\"]\nfor mod in cur_path.iterdir():\n    mod_name = mod.name\n    if mod.is_file() and mod.name.endswith('.py'):\n        mod_name = mod.name.strip(\".py\")\n    elif mod.name != '__pycache__' or mod.name != '__init__.py':\n        continue\n    importlib.import_module(f'testspace.models.{mod_name}')\ndef create_schema():",
+        "peekOfCode": "def drop_all_schema(engine):\n    SQLModel.metadata.drop_all(engine)",
         "detail": "src.testspace.db.Base",
         "documentation": {}
     },
@@ -2537,134 +2026,71 @@
         "kind": 5,
         "importPath": "src.testspace.db.Base",
         "description": "src.testspace.db.Base",
-        "peekOfCode": "__all__ = [\"create_schema\"]\nfor mod in cur_path.iterdir():\n    mod_name = mod.name\n    if mod.is_file() and mod.name.endswith('.py'):\n        mod_name = mod.name.strip(\".py\")\n    elif mod.name != '__pycache__' or mod.name != '__init__.py':\n        continue\n    importlib.import_module(f'testspace.models.{mod_name}')\ndef create_schema():\n    from testspace.db.Session import engine",
+        "peekOfCode": "__all__ = [\"create_schema\",\"drop_all_schema\"]\nfrom testspace.log import logger\ndef create_schema(engine):\n    import testspace\n    from testspace.utils.libautoimport import Module\n    _models = Module(testspace)[\"models\"]\n    for i in _models.iter_children():\n        i.import_module()\n        logger.info(f\"add schema module [bold blue]{i.module_path}[/bold blue]\")\n    SQLModel.metadata.create_all(bind=engine,checkfirst=True)",
         "detail": "src.testspace.db.Base",
         "documentation": {}
     },
     {
-        "label": "__all__",
-        "kind": 5,
-        "importPath": "src.testspace.db.base_class",
-        "description": "src.testspace.db.base_class",
-        "peekOfCode": "__all__ = [\"Base\"]\nBase = declarative_base()",
-        "detail": "src.testspace.db.base_class",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "kind": 5,
-        "importPath": "src.testspace.db.base_class",
-        "description": "src.testspace.db.base_class",
-        "peekOfCode": "Base = declarative_base()",
-        "detail": "src.testspace.db.base_class",
-        "documentation": {}
-    },
-    {
-        "label": "openSession",
+        "label": "get_engine",
         "kind": 2,
-        "importPath": "src.testspace.db.Session",
-        "description": "src.testspace.db.Session",
-        "peekOfCode": "def openSession():\n    '''for context use'''\n    db:Session = session\n    try:\n        yield db\n    finally:\n        db.close()\ndef get_db():\n    '''for fastapi dependence only'''\n    db:Session = session",
-        "detail": "src.testspace.db.Session",
+        "importPath": "src.testspace.db.session",
+        "description": "src.testspace.db.session",
+        "peekOfCode": "def get_engine(SQLALCHEMY_DATABASE_URL):\n    global engine\n    if not  database_exists(SQLALCHEMY_DATABASE_URL):\n        create_database(SQLALCHEMY_DATABASE_URL)\n    engine = create_engine(SQLALCHEMY_DATABASE_URL,query_cache_size=1200)\n    try:\n        engine.execute(\"SELECT 1\")\n    except Exception as e :\n        logger.error(f\"connect to db {SQLALCHEMY_DATABASE_URL} failed {repr(e)}\")\n        raise e",
+        "detail": "src.testspace.db.session",
         "documentation": {}
     },
     {
-        "label": "get_db",
-        "kind": 2,
-        "importPath": "src.testspace.db.Session",
-        "description": "src.testspace.db.Session",
-        "peekOfCode": "def get_db():\n    '''for fastapi dependence only'''\n    db:Session = session\n    try:\n        yield db\n    finally:\n        db.close()",
-        "detail": "src.testspace.db.Session",
+        "label": "SelectOfScalar.inherit_cache",
+        "kind": 5,
+        "importPath": "src.testspace.db.session",
+        "description": "src.testspace.db.session",
+        "peekOfCode": "SelectOfScalar.inherit_cache = True  # type: ignore\nSelect.inherit_cache = True  # type: ignore\n__all__ = [\n    \"get_engine\",\n    \"engine\"\n]\nengine:Engine \n@cache\ndef get_engine(SQLALCHEMY_DATABASE_URL):\n    global engine",
+        "detail": "src.testspace.db.session",
+        "documentation": {}
+    },
+    {
+        "label": "Select.inherit_cache",
+        "kind": 5,
+        "importPath": "src.testspace.db.session",
+        "description": "src.testspace.db.session",
+        "peekOfCode": "Select.inherit_cache = True  # type: ignore\n__all__ = [\n    \"get_engine\",\n    \"engine\"\n]\nengine:Engine \n@cache\ndef get_engine(SQLALCHEMY_DATABASE_URL):\n    global engine\n    if not  database_exists(SQLALCHEMY_DATABASE_URL):",
+        "detail": "src.testspace.db.session",
         "documentation": {}
     },
     {
         "label": "__all__",
         "kind": 5,
-        "importPath": "src.testspace.db.Session",
-        "description": "src.testspace.db.Session",
-        "peekOfCode": "__all__ = [\n    'session',\n    'openSession',\n    \"get_db\"\n]\nSQLALCHEMY_DATABASE_URL  = tomlconfig.database.SQLALCHEMY_DATABASE_URL\nengine = create_engine(SQLALCHEMY_DATABASE_URL)\nlogger.info(f\"database set up {tomlconfig.database.SQLALCHEMY_DATABASE_URL}\")\n# async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL, connect_args={\"check_same_thread\":False})\n# _async_session = sessionmaker(",
-        "detail": "src.testspace.db.Session",
+        "importPath": "src.testspace.db.session",
+        "description": "src.testspace.db.session",
+        "peekOfCode": "__all__ = [\n    \"get_engine\",\n    \"engine\"\n]\nengine:Engine \n@cache\ndef get_engine(SQLALCHEMY_DATABASE_URL):\n    global engine\n    if not  database_exists(SQLALCHEMY_DATABASE_URL):\n        create_database(SQLALCHEMY_DATABASE_URL)",
+        "detail": "src.testspace.db.session",
         "documentation": {}
     },
     {
-        "label": "engine",
-        "kind": 5,
-        "importPath": "src.testspace.db.Session",
-        "description": "src.testspace.db.Session",
-        "peekOfCode": "engine = create_engine(SQLALCHEMY_DATABASE_URL)\nlogger.info(f\"database set up {tomlconfig.database.SQLALCHEMY_DATABASE_URL}\")\n# async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL, connect_args={\"check_same_thread\":False})\n# _async_session = sessionmaker(\n#     async_engine, expire_on_commit=False, class_=AsyncSession\n# )\n# Async_session =  async_scoped_session(_async_session, scopefunc=current_task)\nSessionLocal = scoped_session(sessionmaker(autocommit=False, bind=engine))\nsession:Session =SessionLocal()\n@contextmanager",
-        "detail": "src.testspace.db.Session",
-        "documentation": {}
-    },
-    {
-        "label": "SessionLocal",
-        "kind": 5,
-        "importPath": "src.testspace.db.Session",
-        "description": "src.testspace.db.Session",
-        "peekOfCode": "SessionLocal = scoped_session(sessionmaker(autocommit=False, bind=engine))\nsession:Session =SessionLocal()\n@contextmanager\ndef openSession():\n    '''for context use'''\n    db:Session = session\n    try:\n        yield db\n    finally:\n        db.close()",
-        "detail": "src.testspace.db.Session",
-        "documentation": {}
-    },
-    {
-        "label": "StringList",
-        "kind": 2,
-        "importPath": "src.testspace.models.redbtype",
-        "description": "src.testspace.models.redbtype",
-        "peekOfCode": "def StringList(*args,**kwargs) -> Union[Column,List[str]]:\n    return Column(ARRAY(String,as_tuple=True),*args, **kwargs)\ndef JSONList(*args,**kwargs) -> Union[Column,List[Json]]:\n    return Column(ARRAY(JSON(astext_type=True),as_tuple=True),*args, **kwargs)\ndef UUIDList(*args,**kwargs) -> Union[Column, List[UUID]]:\n    return Column(ARRAY(UUID(as_uuid=True),as_tuple=True),*args, **kwargs)\ndef JsonText(*args, **kwargs) ->Union[Column,Json]:\n    return Column(JSON(astext_type=True),*args,**kwargs)",
-        "detail": "src.testspace.models.redbtype",
-        "documentation": {}
-    },
-    {
-        "label": "JSONList",
-        "kind": 2,
-        "importPath": "src.testspace.models.redbtype",
-        "description": "src.testspace.models.redbtype",
-        "peekOfCode": "def JSONList(*args,**kwargs) -> Union[Column,List[Json]]:\n    return Column(ARRAY(JSON(astext_type=True),as_tuple=True),*args, **kwargs)\ndef UUIDList(*args,**kwargs) -> Union[Column, List[UUID]]:\n    return Column(ARRAY(UUID(as_uuid=True),as_tuple=True),*args, **kwargs)\ndef JsonText(*args, **kwargs) ->Union[Column,Json]:\n    return Column(JSON(astext_type=True),*args,**kwargs)",
-        "detail": "src.testspace.models.redbtype",
-        "documentation": {}
-    },
-    {
-        "label": "UUIDList",
-        "kind": 2,
-        "importPath": "src.testspace.models.redbtype",
-        "description": "src.testspace.models.redbtype",
-        "peekOfCode": "def UUIDList(*args,**kwargs) -> Union[Column, List[UUID]]:\n    return Column(ARRAY(UUID(as_uuid=True),as_tuple=True),*args, **kwargs)\ndef JsonText(*args, **kwargs) ->Union[Column,Json]:\n    return Column(JSON(astext_type=True),*args,**kwargs)",
-        "detail": "src.testspace.models.redbtype",
-        "documentation": {}
-    },
-    {
-        "label": "JsonText",
-        "kind": 2,
-        "importPath": "src.testspace.models.redbtype",
-        "description": "src.testspace.models.redbtype",
-        "peekOfCode": "def JsonText(*args, **kwargs) ->Union[Column,Json]:\n    return Column(JSON(astext_type=True),*args,**kwargs)",
-        "detail": "src.testspace.models.redbtype",
-        "documentation": {}
-    },
-    {
-        "label": "Testcase",
+        "label": "TestItem",
         "kind": 6,
-        "importPath": "src.testspace.models.testcase",
-        "description": "src.testspace.models.testcase",
-        "peekOfCode": "class Testcase(Base, BaseMixin):\n    name = Column(String, unique=True)\n    description = Column(Text, default=\"\")\n    precondition = StringList(default=[])\n    steps = JSONList(default=[])\n    affect = StringList(default=[])\n    component = StringList(default=[])\n    suites = UUIDList(default=[])\n    labels = StringList(default=[])\n    deleted = Column(Boolean, default=False)",
-        "detail": "src.testspace.models.testcase",
+        "importPath": "src.testspace.models.testitem",
+        "description": "src.testspace.models.testitem",
+        "peekOfCode": "class TestItem(SQLModel, table=True, extra=Extra.allow):\n    id: int = Field(default=None, primary_key=True)\n    uuid: Optional[UUID] = Field(...,sa_column=Column(PGUUID(as_uuid=True),default=uuid4,index=True,unique=True))\n    name: str = Field(...,sa_column=Column(VARCHAR,unique=True))\n    type: Literal[\"TestPlan\",\"TestCase\",\"TestSuite\",\"Free\"] = Field(...,sa_column=Column(VARCHAR,default=\"Free\"))\n    description: str = Field(...,sa_column=Column(Text))\n    property: Mapping[str,str] = Field({},sa_column=Column(JSON(astext_type=True)))\n    labels: List[str] = Field([],regex=\"[a-z_]*\",sa_column=Column(ARRAY(VARCHAR,as_tuple=True)))\n    deleted: bool =  Field(False,sa_column=Column(BOOLEAN,default=False))\n    parent_id: Optional[int] = Field(default=None, foreign_key='testitem.id',nullable=True)",
+        "detail": "src.testspace.models.testitem",
         "documentation": {}
     },
     {
-        "label": "TestSuite",
+        "label": "UserGroupLink",
         "kind": 6,
-        "importPath": "src.testspace.models.testcase",
-        "description": "src.testspace.models.testcase",
-        "peekOfCode": "class TestSuite(Base, BaseMixin):\n    name = Column(String)\n    description = Column(Text, default='')\n    enums = JsonText(default={})\n    labels = StringList(default=[])\n    testplans = UUIDList(default=[])\nclass TestPlan(Base, BaseMixin):\n    name = Column(String)\n    description = Column(Text, default='')\n    labels = StringList(default=[])",
-        "detail": "src.testspace.models.testcase",
+        "importPath": "src.testspace.models.user",
+        "description": "src.testspace.models.user",
+        "peekOfCode": "class UserGroupLink(SQLModel, table=True):\n    user_id: Optional[int] = Field(\n        default=None, foreign_key=\"user.id\", primary_key=True\n    )\n    group_id: Optional[int] = Field(\n        default=None, foreign_key=\"usergroup.id\", primary_key=True\n    )\nclass UserGroup(SQLModel,table=True):\n    id: int = Field(default=None, primary_key=True)\n    uuid: UUID = Field(...,sa_column=Column(PGUUID(as_uuid=True),default=uuid4,index=True))",
+        "detail": "src.testspace.models.user",
         "documentation": {}
     },
     {
-        "label": "TestPlan",
+        "label": "UserGroup",
         "kind": 6,
-        "importPath": "src.testspace.models.testcase",
-        "description": "src.testspace.models.testcase",
-        "peekOfCode": "class TestPlan(Base, BaseMixin):\n    name = Column(String)\n    description = Column(Text, default='')\n    labels = StringList(default=[])\n    enums = JsonText(default={})\nif __name__ == \"__main__\":\n    pass",
-        "detail": "src.testspace.models.testcase",
+        "importPath": "src.testspace.models.user",
+        "description": "src.testspace.models.user",
+        "peekOfCode": "class UserGroup(SQLModel,table=True):\n    id: int = Field(default=None, primary_key=True)\n    uuid: UUID = Field(...,sa_column=Column(PGUUID(as_uuid=True),default=uuid4,index=True))\n    name:str\n    property: Mapping[str,str] = Field({},sa_column=Column(JSON(astext_type=True)))\n    users: List[\"User\"] = Relationship(back_populates=\"groups\",link_model=UserGroupLink)\nclass User(SQLModel, table=True):\n    id: int = Field(default=None, primary_key=True)\n    uuid: UUID = Field(...,sa_column=Column(PGUUID(as_uuid=True),default=uuid4,index=True))\n    username: str = Field(...,sa_column=Column(VARCHAR,unique=True,index=True))",
+        "detail": "src.testspace.models.user",
         "documentation": {}
     },
     {
@@ -2672,152 +2098,8 @@
         "kind": 6,
         "importPath": "src.testspace.models.user",
         "description": "src.testspace.models.user",
-        "peekOfCode": "class User(Base, BaseMixin):\n    username = Column(String, index=True, unique=True)\n    accountname = Column(String, index=True)\n    password = Column(String)\n    email = Column(String, index=True)\n    active = Column(Boolean, default=False)\n    admin = Column(Boolean, default=False)\n    avatar = Column(String,default=\"\")\n    group = UUIDList()\n    def __repr__(self):",
+        "peekOfCode": "class User(SQLModel, table=True):\n    id: int = Field(default=None, primary_key=True)\n    uuid: UUID = Field(...,sa_column=Column(PGUUID(as_uuid=True),default=uuid4,index=True))\n    username: str = Field(...,sa_column=Column(VARCHAR,unique=True,index=True))\n    password: str \n    email : Optional[str]\n    phone : Optional[str]\n    active: Optional[bool] = Field(sa_column_kwargs={\"default\":True})\n    admin: Optional[bool] = Field(sa_column_kwargs={\"default\":False})\n    avatar: Optional[str] = Field(sa_column=Column(VARCHAR))",
         "detail": "src.testspace.models.user",
-        "documentation": {}
-    },
-    {
-        "label": "UseORM",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class UseORM(BaseModel):\n    class Config:\n        orm_mode = True\nclass UseArbitrary(BaseModel):\n    class Config:\n        arbitrary_types_allowed = True\nclass Steps(UseORM):\n    type:str\n    action:str\nclass TestcaseProps(UseORM,CommonProps):",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "UseArbitrary",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class UseArbitrary(BaseModel):\n    class Config:\n        arbitrary_types_allowed = True\nclass Steps(UseORM):\n    type:str\n    action:str\nclass TestcaseProps(UseORM,CommonProps):\n    name:str\n    precondition:List[str]\n    steps:List[Steps]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "Steps",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class Steps(UseORM):\n    type:str\n    action:str\nclass TestcaseProps(UseORM,CommonProps):\n    name:str\n    precondition:List[str]\n    steps:List[Steps]\n    affect : List[str]\n    component : List[str]\n    suites: List[UUID]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestcaseProps",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestcaseProps(UseORM,CommonProps):\n    name:str\n    precondition:List[str]\n    steps:List[Steps]\n    affect : List[str]\n    component : List[str]\n    suites: List[UUID]\n    labels : List[str]\n    deleted: bool\nclass TestcaseUpdate(BaseModel):",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestcaseUpdate",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestcaseUpdate(BaseModel):\n    uuid: Optional[UUID]\n    name:Optional[str]\n    update_by:Optional[UUID]\n    precondition:Optional[List[str]]\n    steps:Optional[List[Steps]]\n    affect : Optional[List[str]]\n    component : Optional[List[str]]\n    suites: Optional[List[UUID]]\n    labels : Optional[List[str]]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestcaseCreate",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestcaseCreate(BaseModel):\n    name:str\n    create_by:Optional[UUID]\n    update_by:Optional[UUID]\n    precondition:Optional[List[str]]\n    steps:Optional[List[Steps]]\n    affect : Optional[List[str]]\n    component : Optional[List[str]]\n    suites: Optional[List[UUID]]\n    labels : Optional[List[str]]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestSuitProps",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestSuitProps(UseORM, CommonProps):\n    name:str\n    description: str\n    enums: dict\n    testplans:List[UUID]\n    labels : List[str]\nclass TestSuitCreate(BaseModel):\n    name:str\n    description: Optional[str]\n    enums: Optional[dict]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestSuitCreate",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestSuitCreate(BaseModel):\n    name:str\n    description: Optional[str]\n    enums: Optional[dict]\n    create_by: Optional[UUID]\n    testplans:List[UUID]\n    labels : Optional[List[str]]\nclass TestSuitUpdate(UseArbitrary,BaseModel):\n    uuid:Optional[UUID]\n    update_by: Optional[UUID]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestSuitUpdate",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestSuitUpdate(UseArbitrary,BaseModel):\n    uuid:Optional[UUID]\n    update_by: Optional[UUID]\n    name:Optional[str]\n    description: Optional[str]\n    enums: Optional[dict]\n    testplans:Optional[List[UUID]]\n    labels : Optional[List[str]]\n    testcases: AdditionalProp[List[TestcaseProps]]\nclass TestPlanProps(UseArbitrary,UseORM,CommonProps):",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestPlanProps",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestPlanProps(UseArbitrary,UseORM,CommonProps):\n    name: str\n    description:str\n    enums:dict\n    labels: List[str]\n    testsuits:AdditionalProp[List[TestSuitProps]]\nclass TestPlanCreate(BaseModel):\n    name: str\n    description:Optional[str]\n    create_by:Optional[UUID]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestPlanCreate",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestPlanCreate(BaseModel):\n    name: str\n    description:Optional[str]\n    create_by:Optional[UUID]\n    enums: Optional[dict]\n    labels: Optional[List[str]]\nclass TestPlanUpdate(BaseModel):\n    name: Optional[str]\n    description:Optional[str]\n    update_by:Optional[UUID]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "TestPlanUpdate",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.testcase",
-        "description": "src.testspace.schemas.testcase",
-        "peekOfCode": "class TestPlanUpdate(BaseModel):\n    name: Optional[str]\n    description:Optional[str]\n    update_by:Optional[UUID]\n    enums: Optional[dict]\n    labels : Optional[List[str]]",
-        "detail": "src.testspace.schemas.testcase",
-        "documentation": {}
-    },
-    {
-        "label": "UseConfig",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.user",
-        "description": "src.testspace.schemas.user",
-        "peekOfCode": "class UseConfig(BaseModel):\n    class Config:\n        orm_mode = True\nclass UserProps(UseConfig,CommonProps):\n    username: str\n    accountname: str\n    email: str\n    active: bool\n    admin: bool\n    avatar:str",
-        "detail": "src.testspace.schemas.user",
-        "documentation": {}
-    },
-    {
-        "label": "UserProps",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.user",
-        "description": "src.testspace.schemas.user",
-        "peekOfCode": "class UserProps(UseConfig,CommonProps):\n    username: str\n    accountname: str\n    email: str\n    active: bool\n    admin: bool\n    avatar:str\n    password: Optional[str]\nclass CreateUser(UseConfig):\n    username: str",
-        "detail": "src.testspace.schemas.user",
-        "documentation": {}
-    },
-    {
-        "label": "CreateUser",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.user",
-        "description": "src.testspace.schemas.user",
-        "peekOfCode": "class CreateUser(UseConfig):\n    username: str\n    accountname: str\n    email: str\n    password: str\n    admin: Optional[bool]\n    avatar:Optional[str]\nclass UpdateUser(UseConfig):\n    username: Optional[str]\n    accountname: Optional[str] ",
-        "detail": "src.testspace.schemas.user",
-        "documentation": {}
-    },
-    {
-        "label": "UpdateUser",
-        "kind": 6,
-        "importPath": "src.testspace.schemas.user",
-        "description": "src.testspace.schemas.user",
-        "peekOfCode": "class UpdateUser(UseConfig):\n    username: Optional[str]\n    accountname: Optional[str] \n    email: Optional[str] \n    avatar:Optional[str]\n    password: Optional[str]\n    admin: Optional[bool]",
-        "detail": "src.testspace.schemas.user",
         "documentation": {}
     },
     {
@@ -2893,12 +2175,75 @@
         "documentation": {}
     },
     {
-        "label": "export",
+        "label": "Module",
+        "kind": 6,
+        "importPath": "src.testspace.utils.libautoimport",
+        "description": "src.testspace.utils.libautoimport",
+        "peekOfCode": "class Module:\n    def __init__(self,package:pathlib.Path | ModuleType , parent:Optional[\"Module\"] = None) -> None:\n        self.mark = package\n        self.parent = parent\n    def is_package(self):\n        if self.path.is_dir(): \n            return True\n        return False\n    @property\n    def path(self) -> pathlib.Path:",
+        "detail": "src.testspace.utils.libautoimport",
+        "documentation": {}
+    },
+    {
+        "label": "__all__",
+        "kind": 5,
+        "importPath": "src.testspace.utils.libautoimport",
+        "description": "src.testspace.utils.libautoimport",
+        "peekOfCode": "__all__ = [\"Module\"]\nclass Module:\n    def __init__(self,package:pathlib.Path | ModuleType , parent:Optional[\"Module\"] = None) -> None:\n        self.mark = package\n        self.parent = parent\n    def is_package(self):\n        if self.path.is_dir(): \n            return True\n        return False\n    @property",
+        "detail": "src.testspace.utils.libautoimport",
+        "documentation": {}
+    },
+    {
+        "label": "Partial",
+        "kind": 6,
+        "importPath": "src.testspace.utils.pydantictools",
+        "description": "src.testspace.utils.pydantictools",
+        "peekOfCode": "class Partial(BaseModel):\n    def __class_getitem__(cls,items):\n        first_param, *params = items\n        exclude = []\n        if isclass(first_param):\n            if all(params):\n                exclude = params\n                return partial_func_cached(\"_\",first_param,*exclude)\n        return partial_func_cached(first_param,params[0])\nclass Pick(BaseModel):",
+        "detail": "src.testspace.utils.pydantictools",
+        "documentation": {}
+    },
+    {
+        "label": "Pick",
+        "kind": 6,
+        "importPath": "src.testspace.utils.pydantictools",
+        "description": "src.testspace.utils.pydantictools",
+        "peekOfCode": "class Pick(BaseModel):\n    def __class_getitem__(cls,items):\n        \"\"\"Pick[Cls, \"name\",\"property\"]\"\"\"\n        first_param, *params = items\n        if isclass(first_param):\n            params.sort()\n            return pick_func_cached(\"_\", first_param,*params)\n        pick_cls, *pick_params = params\n        pick_params.sort()\n        return pick_func_cached(first_param, pick_cls,*pick_params)",
+        "detail": "src.testspace.utils.pydantictools",
+        "documentation": {}
+    },
+    {
+        "label": "Omit",
+        "kind": 6,
+        "importPath": "src.testspace.utils.pydantictools",
+        "description": "src.testspace.utils.pydantictools",
+        "peekOfCode": "class Omit(BaseModel):\n    \"\"\"Omit[Cls, \"name\",\"property\"]\n        class User(BaseModel):\n            id:int = Feild(...,primary_key=True)\n            name:str\n            password:str\n            avator:str\n        UserUpdate = Omit[User,\"id\"]\n    \"\"\"\n    def __class_getitem__(cls,items):",
+        "detail": "src.testspace.utils.pydantictools",
+        "documentation": {}
+    },
+    {
+        "label": "partial_func_cached",
         "kind": 2,
-        "importPath": "src.testspace.utils.ModuleExport",
-        "description": "src.testspace.utils.ModuleExport",
-        "peekOfCode": "def export(fn):",
-        "detail": "src.testspace.utils.ModuleExport",
+        "importPath": "src.testspace.utils.pydantictools",
+        "description": "src.testspace.utils.pydantictools",
+        "peekOfCode": "def partial_func_cached(name,cls,exclude_params=[]):\n        annotations = cls.__annotations__.copy()\n        fields =  copy.deepcopy(cls.__fields__)\n        for i in annotations.keys():\n            if i in exclude_params:\n                continue\n            if cls.__module__ == typing:\n                if annotations[i].__origin__ == Union and annotations[i].__args__[1] == None:\n                    continue \n            annotations[i] = Optional[annotations[i]] # type: ignore",
+        "detail": "src.testspace.utils.pydantictools",
+        "documentation": {}
+    },
+    {
+        "label": "omit_func_cached",
+        "kind": 2,
+        "importPath": "src.testspace.utils.pydantictools",
+        "description": "src.testspace.utils.pydantictools",
+        "peekOfCode": "def omit_func_cached(name,omit_cls,*omit_params):\n        annotations = omit_cls.__annotations__.copy()\n        fields = omit_cls.__fields__.copy()\n        for i in omit_params:\n            del annotations[i]\n            del fields[i]\n        NewType = type(name,(BaseModel,),{\n            \"__annotations__\":annotations,\n            \"__fields__\":fields,\n        })  ",
+        "detail": "src.testspace.utils.pydantictools",
+        "documentation": {}
+    },
+    {
+        "label": "pick_func_cached",
+        "kind": 2,
+        "importPath": "src.testspace.utils.pydantictools",
+        "description": "src.testspace.utils.pydantictools",
+        "peekOfCode": "def pick_func_cached(name,pick_cls,*pick_params):\n        annotations = pick_cls.__annotations__.copy()\n        fields = pick_cls.__fields__.copy()\n        for i in set(annotations.keys()) - set(pick_params):\n            del annotations[i]\n            del fields[i]\n        _pydantic_type = type(name,(BaseModel,),{\n            \"__annotations__\":annotations,\n            \"__fields__\":fields,\n        })  ",
+        "detail": "src.testspace.utils.pydantictools",
         "documentation": {}
     },
     {
@@ -2917,6 +2262,15 @@
         "description": "src.testspace.utils.TypeWeakref",
         "peekOfCode": "T = TypeVar(\"T\")\nclass TypeWeakRef(Generic[T]):\n    def __init__(self, ref:T) -> None:\n        self.__ref = weakref.ref(ref)\n    def get(self) -> Optional[T]:\n        return self.__ref()",
         "detail": "src.testspace.utils.TypeWeakref",
+        "documentation": {}
+    },
+    {
+        "label": "register_routers",
+        "kind": 2,
+        "importPath": "src.testspace.apimanager",
+        "description": "src.testspace.apimanager",
+        "peekOfCode": "def register_routers(app: FastAPI):\n        router = APIRouter(prefix=\"/api\")\n        import testspace\n        from testspace.utils.libautoimport import Module\n        # get all modules in the routers package\n        have_router = lambda module: isinstance(module.router, APIRouter) if hasattr(module,'router') else False\n        root = Module(testspace)[\"api\"]\n        for m in root.iter_children():\n            if have_router(m.module):\n                router.include_router(m.router,prefix=\"/\"+m.name)   ",
+        "detail": "src.testspace.apimanager",
         "documentation": {}
     },
     {
@@ -3019,11 +2373,20 @@
         "documentation": {}
     },
     {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.testspace.instance",
+        "description": "src.testspace.instance",
+        "peekOfCode": "app = create_app(tomlconfig)",
+        "detail": "src.testspace.instance",
+        "documentation": {}
+    },
+    {
         "label": "get_log_level",
         "kind": 2,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "def get_log_level(name:str):\n    log_level = [\"INFO\",\"DEBUG\"]\n    if name not in log_level:\n        raise Exception(f\"log level must be in {log_level}\")\n    return getattr(logging,name)\nFORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(\n    show_path=False,",
+        "peekOfCode": "def get_log_level(name:str):\n    log_level = [\"INFO\",\"DEBUG\"]\n    if name not in log_level:\n        raise Exception(f\"log level must be in {log_level}\")\n    return getattr(logging,name)\nFORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nrich_handler = RichHandler(\n    show_path=False,",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3032,7 +2395,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks=True,\n    tracebacks_show_locals=True if tomlconfig.development.level == \"DEBUG\" else False,\n    markup=True)\nlogging.basicConfig(",
+        "peekOfCode": "FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'\nFORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nrich_handler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks= False,\n    tracebacks_show_locals= False,\n    markup=True)\nlogging.basicConfig(",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3041,16 +2404,16 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "FORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nhandler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks=True,\n    tracebacks_show_locals=True if tomlconfig.development.level == \"DEBUG\" else False,\n    markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]",
+        "peekOfCode": "FORMAT_2 = ' %(asctime)s - %(threadName)s :%(thread)d  p:%(process)d - %(name)s [%(filename)s:%(lineno)d]  :  %(message)s'\nfrom rich.logging import RichHandler\nrich_handler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks= False,\n    tracebacks_show_locals= False,\n    markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[rich_handler], force=True",
         "detail": "src.testspace.log",
         "documentation": {}
     },
     {
-        "label": "handler",
+        "label": "rich_handler",
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "handler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks=True,\n    tracebacks_show_locals=True if tomlconfig.development.level == \"DEBUG\" else False,\n    markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[handler]\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)",
+        "peekOfCode": "rich_handler = RichHandler(\n    show_path=False,\n    show_time=False,\n    rich_tracebacks= False,\n    tracebacks_show_locals= False,\n    markup=True)\nlogging.basicConfig(\n    level=\"NOTSET\", format=FORMAT_2, datefmt=\"[%x %X]\", handlers=[rich_handler], force=True\n)\nlog_level =  get_log_level(tomlconfig.logconfig.level)",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3059,7 +2422,7 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "log_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(handler)",
+        "peekOfCode": "log_level =  get_log_level(tomlconfig.logconfig.level)\nlogger = logging.getLogger(\"testspace\")\nlogger.setLevel(log_level)\nsqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\n# sqlalchemy_engine_logger.addHandler(rich_handler)\n# sqlalchemy_logger = logging.getLogger('sqlalchemy')\n# uvicorn_logger = logging.getLogger(\"uvicorn\")",
         "detail": "src.testspace.log",
         "documentation": {}
     },
@@ -3068,35 +2431,17 @@
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "logger = logging.getLogger(\"testspace\")\n# sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\nsqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(handler)",
+        "peekOfCode": "logger = logging.getLogger(\"testspace\")\nlogger.setLevel(log_level)\nsqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\n# sqlalchemy_engine_logger.addHandler(rich_handler)\n# sqlalchemy_logger = logging.getLogger('sqlalchemy')\n# uvicorn_logger = logging.getLogger(\"uvicorn\")",
         "detail": "src.testspace.log",
         "documentation": {}
     },
     {
-        "label": "sqlalchemy_logger",
+        "label": "sqlalchemy_engine_logger",
         "kind": 5,
         "importPath": "src.testspace.log",
         "description": "src.testspace.log",
-        "peekOfCode": "sqlalchemy_logger = logging.getLogger('sqlalchemy')\nsqlalchemy_logger.setLevel(log_level)\nuvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(handler)",
+        "peekOfCode": "sqlalchemy_engine_logger = logging.getLogger('sqlalchemy.engine')\n# sqlalchemy_engine_logger.setLevel(log_level)\n# sqlalchemy_engine_logger.addHandler(rich_handler)\n# sqlalchemy_logger = logging.getLogger('sqlalchemy')\n# uvicorn_logger = logging.getLogger(\"uvicorn\")",
         "detail": "src.testspace.log",
-        "documentation": {}
-    },
-    {
-        "label": "uvicorn_logger",
-        "kind": 5,
-        "importPath": "src.testspace.log",
-        "description": "src.testspace.log",
-        "peekOfCode": "uvicorn_logger = logging.getLogger(\"uvicorn\")\nuvicorn_logger.addHandler(handler)",
-        "detail": "src.testspace.log",
-        "documentation": {}
-    },
-    {
-        "label": "app",
-        "kind": 5,
-        "importPath": "src.testspace.run",
-        "description": "src.testspace.run",
-        "peekOfCode": "app = create_app()",
-        "detail": "src.testspace.run",
         "documentation": {}
     },
     {
@@ -3104,7 +2449,16 @@
         "kind": 2,
         "importPath": "src.testspace.setup",
         "description": "src.testspace.setup",
-        "peekOfCode": "def create_app() -> FastAPI:\n    app = FastAPI()\n    logger.info(\"config file: {}\", tomlconfig._dict)\n    @app.on_event(\"startup\")\n    async def startup_event():\n        with openSession() as s:\n            from testspace.db.Base import create_schema\n            create_schema()\n            admin = R_get_user_by_name(s,'admin')\n            if admin is None:",
+        "peekOfCode": "def create_app(tomlconfig:TomlConfig) -> FastAPI:\n    app = FastAPI()\n    app.state.config = tomlconfig\n    SQLALCHEMY_DATABASE_URL  = tomlconfig.database.SQLALCHEMY_DATABASE_URL\n    if tomlconfig.app.CHANNEL == 'dev':\n        SQLALCHEMY_DATABASE_URL = tomlconfig.database.SQLALCHEMY_DATABASE_URL_dev\n    elif tomlconfig.app.CHANNEL == \"release\":\n        SQLALCHEMY_DATABASE_URL = tomlconfig.database.SQLALCHEMY_DATABASE_URL\n    elif tomlconfig.app.CHANNEL == \"test\":\n        SQLALCHEMY_DATABASE_URL = tomlconfig.database.SQLALCHEMY_DATABASE_URL_test",
+        "detail": "src.testspace.setup",
+        "documentation": {}
+    },
+    {
+        "label": "init_db_data",
+        "kind": 2,
+        "importPath": "src.testspace.setup",
+        "description": "src.testspace.setup",
+        "peekOfCode": "def init_db_data(engine):\n    from testspace.models.user import User, UserGroup\n    from testspace.components.auth import get_password_hash\n    from sqlmodel import select\n    from sqlmodel import Session\n    with Session(engine) as s:\n        admin  = s.exec(select(User).where(User.username == \"admin\")).first()\n        admin_group = s.exec(select(UserGroup).where(UserGroup.name == \"admin\")).first()\n        if not admin and not admin_group:\n            admin_group = UserGroup(**{\"name\":\"admin\",\"property\":{}})",
         "detail": "src.testspace.setup",
         "documentation": {}
     },

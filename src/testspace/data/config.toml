@@ -1,7 +1,15 @@
+[app]
+CHANNEL = "dev"  #dev release test
+drop_all_table=true
 [database]
-# SQLALCHEMY_DATABASE_URL = "sqlite:///{data}\\testspace.db"
-SQLALCHEMY_DATABASE_URL = "postgresql://postgres:1996222@localhost:5432/postgres"
+
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:1996222@localhost:5432/testspace"
+SQLALCHEMY_DATABASE_URL_dev = "postgresql://postgres:1996222@localhost:5432/testspace_dev"
+SQLALCHEMY_DATABASE_URL_test = "postgresql://postgres:1996222@localhost:5432/testspace_test"
 REDIS_URL = "redis://127.0.0.1"
+
+
+
 [CROS]
 # 跨域设置
 origins = [
@@ -9,13 +17,11 @@ origins = [
     "http://127.0.0.1:3000",
     "http://localhost:3000",
 ]
+
 [logconfig]
 level = "DEBUG"
 
 [uvicorn]
-host = "0.0.0.0"
+host = "127.0.0.1"
 reload = "True"
-
-[development]
-# 这里的配置是开发环境下的配置
-level = "DEBUG"
+port = 8000

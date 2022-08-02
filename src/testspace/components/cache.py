@@ -21,6 +21,11 @@ class RedisWarpper():
     
     async def init_from_url(self,url, app:FastAPI):
         app.state.redis  =  await aioredis.from_url(url)
+        # if await app.state.redis.ping():
+        #     logger.info("redis connected ............ ping success")
+        # else:
+            # raise Exception("redis not connected..........ping fail")
+            # ...
         self.app = TypeWeakRef[FastAPI](app)
         
 redis:Union[Redis,RedisWarpper] = RedisWarpper()            
@@ -29,8 +34,10 @@ def register_redis(app:FastAPI):
     
     @app.on_event("startup")
     async def on_startup():
+        
         await redis.init_from_url(tomlconfig.database.REDIS_URL,app)
         logger.info(f"redis set up {tomlconfig.database.REDIS_URL}")
+        
         
     @app.on_event("shutdown")
     async def on_shutdown():
