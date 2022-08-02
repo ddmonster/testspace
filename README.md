@@ -55,3 +55,6 @@ dist/
   example-package-YOUR-USERNAME-HERE-0.0.1-py3-none-any.whl
   example-package-YOUR-USERNAME-HERE-0.0.1.tar.gz
 The tar.gz file is a source archive whereas the .whl file is a built distribution. Newer pip versions preferentially install built distributions, but will fall back to source archives if needed. You should always upload a source archive and provide built archives for the platforms your project is compatible with. In this case, our example package is compatible with Python on any platform so only one built distribution is needed.
+## Fix SQLAlchemy version 1.4.36 breaks SQLModel relationships
+https://github.com/tiangolo/sqlmodel/pull/322
+sqlalchemy == 1.4.35 

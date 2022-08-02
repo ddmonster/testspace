@@ -1,43 +1,33 @@
-from contextlib import contextmanager
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, Session, scoped_session
-from testspace.config import tomlconfig
+
+from functools import cache
 from testspace.log import logger
+from sqlalchemy import create_engine
+from sqlalchemy_utils import create_database, database_exists
+from sqlalchemy.engine.base import Engine
+
+# issue fix for sqlmodel
+# https://github.com/tiangolo/sqlmodel/issues/189#issuecomment-1065790432
+from sqlmodel.sql.expression import Select, SelectOfScalar
+SelectOfScalar.inherit_cache = True  # type: ignore
+Select.inherit_cache = True  # type: ignore
 
 __all__ = [
-    'session',
-    'openSession',
-    "get_db"
+    "get_engine",
+    "engine"
 ]
+engine:Engine 
 
-SQLALCHEMY_DATABASE_URL  = tomlconfig.database.SQLALCHEMY_DATABASE_URL
-
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
-logger.info(f"database set up {tomlconfig.database.SQLALCHEMY_DATABASE_URL}")
-# async_engine = create_async_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread":False})
-
-# _async_session = sessionmaker(
-#     async_engine, expire_on_commit=False, class_=AsyncSession
-# )
-# Async_session =  async_scoped_session(_async_session, scopefunc=current_task)
-SessionLocal = scoped_session(sessionmaker(autocommit=False, bind=engine))
-
-session:Session =SessionLocal()
-
-
-@contextmanager
-def openSession():
-    '''for context use'''
-    db:Session = session
+@cache
+def get_engine(SQLALCHEMY_DATABASE_URL):
+    global engine
+    if not  database_exists(SQLALCHEMY_DATABASE_URL):
+        create_database(SQLALCHEMY_DATABASE_URL)
+    engine = create_engine(SQLALCHEMY_DATABASE_URL,query_cache_size=1200)
     try:
-        yield db
-    finally:
-        db.close()
-
-def get_db():
-    '''for fastapi dependence only'''
-    db:Session = session
-    try:
-        yield db
-    finally:
-        db.close()
+        engine.execute("SELECT 1")
+    except Exception as e :
+        logger.error(f"connect to db {SQLALCHEMY_DATABASE_URL} failed {repr(e)}")
+        raise e
+    logger.info(f"connect to db {SQLALCHEMY_DATABASE_URL} success ")
+        
+    return engine

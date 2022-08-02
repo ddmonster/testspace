@@ -1,66 +1,38 @@
-
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, RedirectResponse
-from testspace.config import ROOT_PATH
-from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from testspace.components.middleware import antd_adapter
-from testspace.components.auth import set_auth,pwd_context
+from testspace.components.swaggerui import setup_swagger_ui
 from testspace.components.cache import register_redis
-from testspace.schemas.user import CreateUser
-from testspace.crud.user import R_get_user_by_name, C_create_user
-from testspace.schemas.user import CreateUser
-from testspace.db.Session import openSession
-from .config import tomlconfig
-from .log import logger
-
-def create_app() -> FastAPI:
+from testspace.components.auth import setup_auth_component
+from testspace.db.Base import create_schema,drop_all_schema
+from testspace.db.session import get_engine
+from testspace.config import DATA_DIR,TomlConfig
+from testspace.log import logger
+from testspace.apimanager import register_routers
+def create_app(tomlconfig:TomlConfig) -> FastAPI:
     app = FastAPI()
-
-    logger.info("config file: {}", tomlconfig._dict)
-    @app.on_event("startup")
-    async def startup_event():
-        with openSession() as s:
-            from testspace.db.Base import create_schema
-            create_schema()
-            admin = R_get_user_by_name(s,'admin')
-            if admin is None:
-                user = CreateUser(username='admin',\
-                    accountname="Admin",\
-                        email='', password=pwd_context.hash("123"),admin=True,avatar="icons/icons8-avatar-64.png")
-                C_create_user(s,create_schema=user)
-                
-                
-                
+    app.state.config = tomlconfig
+    SQLALCHEMY_DATABASE_URL  = tomlconfig.database.SQLALCHEMY_DATABASE_URL
+    if tomlconfig.app.CHANNEL == 'dev':
+        SQLALCHEMY_DATABASE_URL = tomlconfig.database.SQLALCHEMY_DATABASE_URL_dev
+    elif tomlconfig.app.CHANNEL == "release":
+        SQLALCHEMY_DATABASE_URL = tomlconfig.database.SQLALCHEMY_DATABASE_URL
+    elif tomlconfig.app.CHANNEL == "test":
+        SQLALCHEMY_DATABASE_URL = tomlconfig.database.SQLALCHEMY_DATABASE_URL_test
+    engine = get_engine(SQLALCHEMY_DATABASE_URL)
+    
+    if tomlconfig.app.drop_all_table:
+        drop_all_schema(engine)
+    
+    create_schema(engine)
+    setup_auth_component(app,engine)
     register_redis(app)
     antd_adapter(app)
-    set_auth(app)
-
-    # router
-    def register_routers(app: FastAPI):
-        import importlib
-        router = APIRouter(prefix="/api")
-        cur_path = Path(__file__).parent.joinpath("api")
-        # get all modules in the routers package
-        have_router = lambda module: isinstance(module.router, APIRouter) if hasattr(module,'router') else False
-        for mod in cur_path.iterdir():
-            mod_name = mod.name
-            if mod.is_file() and mod.name.endswith('.py'):
-                mod_name = mod.name.rstrip(".py")
-            elif mod.name == '__pycache__' or mod.name == '__init__.py':
-                continue
-            module = importlib.import_module(f'testspace.api.{mod_name}')
-            if have_router(module):
-                router.include_router(module.router,prefix=f"/{mod_name}")
-                
-        app.include_router(router)
     register_routers(app)
-
-
-    # task = endpoint.subscribe(ALL_TOPICS, call_back)
-    # asyncio.create_task(task)
-
+    init_db_data(engine)
+        
     # CROS
     app.add_middleware(
         CORSMiddleware,
@@ -70,52 +42,42 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
+    app.mount("/static",StaticFiles(directory=DATA_DIR.joinpath("static")),"static")
+    setup_swagger_ui(app)
 
-    # swagger-ui
-    from fastapi.openapi.docs import (
-    get_redoc_html,
-    get_swagger_ui_html,
-    get_swagger_ui_oauth2_redirect_html,
-)
-    app.mount("/static",StaticFiles(directory=ROOT_PATH),"static")
-    @app.get("/docs", include_in_schema=False)
-    async def custom_swagger_ui_html():
-        return get_swagger_ui_html(
-            openapi_url=app.openapi_url,  # type: ignore
-            title=app.title + " - Swagger UI",
-            oauth2_redirect_url=app.swagger_ui_oauth2_redirect_url,
-            # swagger_js_url=BASE_DIR/'static'/'swagger-ui'/'swagger-ui-bundle.js',
-            # swagger_css_url=BASE_DIR/'static'/'swagger-ui'/'swagger-ui.css',
-            swagger_js_url="/static/swagger-ui-bundle.js",
-            swagger_css_url="/static/swagger-ui.css",
-        )
-    
-    @app.get(app.swagger_ui_oauth2_redirect_url, include_in_schema=False)  # type: ignore
-    async def swagger_ui_redirect():
-        return get_swagger_ui_oauth2_redirect_html()
-    @app.get("/redoc", include_in_schema=False)
-    async def redoc_html():
-        return get_redoc_html(
-            openapi_url=app.openapi_url,  # type: ignore
-            title=app.title + " - ReDoc",
-            redoc_js_url="/static/redoc.standalone.js",
-        )
         
-        
-    @app.get("/index", response_class=HTMLResponse)
+    # set up swagger ui doc link in index
+    @app.get("/apiUI", response_class=HTMLResponse,include_in_schema=False)
     def index():
-        index = ROOT_PATH.joinpath("static/html/index.html")
+        index = DATA_DIR.joinpath("static/html/index.html")
         logger.info(index)
         if index.exists():
             return index.read_text()
         else:
             return ""
 
-    @app.get("/", response_class=RedirectResponse)
+    @app.get("/", response_class=RedirectResponse, include_in_schema=False)
     def root():
-        return RedirectResponse("/index")
+        return RedirectResponse("/apiUI")
     
     return app
 
-
-
+    
+def init_db_data(engine):
+    from testspace.models.user import User, UserGroup
+    from testspace.components.auth import get_password_hash
+    from sqlmodel import select
+    
+    from sqlmodel import Session
+    with Session(engine) as s:
+        admin  = s.exec(select(User).where(User.username == "admin")).first()
+        admin_group = s.exec(select(UserGroup).where(UserGroup.name == "admin")).first()
+        if not admin and not admin_group:
+            admin_group = UserGroup(**{"name":"admin","property":{}})
+            admin_password = get_password_hash("123")
+            admin = User(**{"username":"admin","password":admin_password,"admin":True,"groups":[admin_group]})
+            
+            s.add(admin_group)
+            s.add(admin)
+            s.commit()
+            logger.info(f"admin")
